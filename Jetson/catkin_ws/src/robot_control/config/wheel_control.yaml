@@ -1,0 +1,8 @@
+robot_geometry:
+  wheel_separation_width: 0.25
+  wheel_separation_length: 0.26
+  front_four_bar_separation: 0.21
+  wheel_radius: 0.03
+  deceleration_rate: 0.4
+  vcenter_max_speed: 0.8
+  vcenter_min_speed: -0.8

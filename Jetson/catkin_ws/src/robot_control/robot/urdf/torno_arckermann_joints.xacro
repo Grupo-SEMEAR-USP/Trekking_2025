@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:property name="degrees_45" value="0.785398163"/>
+    <xacro:property name="degrees_90" value="1.57079633"/>
+    <xacro:property name="degrees_60" value="1.04719667"/>
+    
+    <joint name="joint_acker_front_left" type="revolute">
+      <origin xyz="0.10378 0.21397 -0.0371" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_acker_front_left"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="-${degrees_60}" upper="${degrees_60}" effort="5.0" velocity="15.0"/>
+    </joint>
+
+    <joint name="joint_acker_front_right" type="revolute">
+      <origin xyz="-0.10624 0.21396 -0.0371" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_acker_front_right"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="-${degrees_60}" upper="${degrees_60}" effort="5.0" velocity="15.0"/>
+    </joint>
+
+</robot>

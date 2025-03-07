@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+  <robot name="Ackermann_robot">
+
+    <link name="base_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="2.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Base">
+        <origin xyz="-0.00055 -0.06897 0.06435" rpy="0 -3.14159 -0.00587"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/Base.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="base_color"/>
+      </visual>
+      <collision name="Base">
+        <origin xyz="-0.00102 -0.09748 0.0092" rpy="0 3.14159 -0.00587"/>
+        <geometry>
+          <box size="0.22043 0.27703 0.12452"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="base_link_front">
+    </link>
+
+    <link name="link_acker_front_left">
+      <visual name="encaixe_front_left">
+        <origin xyz="0.03048 0 0" rpy="0 3.14159 -2e-05"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/encaixe_front_left.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="link_roda_color"/>
+      </visual>
+    </link>
+
+    <link name="link_acker_front_right">
+      <visual name="encaixe_front_right">
+        <origin xyz="-0.03049 0 0" rpy="0 0 -2e-05"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/encaixe_front_right.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="link_roda_color"/>
+      </visual>
+    </link>
+
+    <link name="link_wheel_front_left">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_front_left">
+        <origin xyz="0 0 0" rpy="-1.57081 2e-05 -2.01041"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_front_left.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_front_left">
+        <origin xyz="0 0 0" rpy="-1e-05 2e-05 -2.01041"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_front_right">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_front_right">
+        <origin xyz="0 0 0" rpy="-1.57079 -2e-05 -2.01041"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_front_right.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_front_right">
+        <origin xyz="0 0 0" rpy="1e-05 -2e-05 -2.01041"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_rear_left">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_rear_left">
+        <origin xyz="0 0 0" rpy="-1.5708 0 1.47321"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_rear_left.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_rear_left">
+        <origin xyz="0 0 0" rpy="0 0 1.47321"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_rear_right">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_rear_right">
+        <origin xyz="0 0 0" rpy="-1.5708 0 -1.61495"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_rear_right.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_rear_right">
+        <origin xyz="0 0 0" rpy="0 0 -1.61495"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="base_link_front" type="fixed">
+      <origin xyz="0 -0.21396 0" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="base_link_front"/>
+    </joint>
+
+    <joint name="link_acker_front_left" type="revolute">
+      <origin xyz="0.10378 -0.21397 -0.0371" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_acker_front_left"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="-3.14" upper="3.14" effort="5.0" velocity="15.0"/>
+    </joint>
+
+    <joint name="link_acker_front_right" type="revolute">
+      <origin xyz="-0.10624 -0.21396 -0.0371" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="link_acker_front_right"/>
+      <axis xyz="0 0 1.0"/>
+      <limit lower="-3.14" upper="3.14" effort="5.0" velocity="15.0"/>
+    </joint>
+
+    <joint name="link_wheel_front_left" type="continuous">
+      <origin xyz="0.03048 0 0" rpy="0 1.5708 0"/>
+      <parent link="link_acker_front_left"/>
+      <child link="link_wheel_front_left"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>
+
+    <joint name="link_wheel_front_right" type="continuous">
+      <origin xyz="-0.03049 0 0" rpy="0 -1.5708 0"/>
+      <parent link="link_acker_front_right"/>
+      <child link="link_wheel_front_right"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>
+
+    <joint name="link_wheel_rear_left" type="continuous">
+      <origin xyz="0.13691 0.00033 -0.0371" rpy="0 1.5708 0"/>
+      <parent link="base_link"/>
+      <child link="link_wheel_rear_left"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>
+
+    <joint name="link_wheel_rear_right" type="continuous">
+      <origin xyz="-0.13691 0.00033 -0.0371" rpy="0 -1.5708 0"/>
+      <parent link="base_link"/>
+      <child link="link_wheel_rear_right"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>
+
+    <material name="base_color">
+      <color rgba="0.8 0.8 0.8 1.0"/>
+    </material>
+
+    <material name="pneu_color">
+      <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="link_roda_color">
+      <color rgba="0.5 0.5 0.5 1.0"/>
+    </material>
+
+  </robot>

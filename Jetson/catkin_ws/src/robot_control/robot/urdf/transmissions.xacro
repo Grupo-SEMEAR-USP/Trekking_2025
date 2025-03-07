@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!--transmissões dos tornos-->
+    <transmission name="acker_front_left_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <actuator name="$acker_front_left_servo">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+        <joint name="joint_acker_front_left">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+    </transmission>
+
+    <transmission name="acker_front_right_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <actuator name="$acker_front_right_servo">
+          <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+        <joint name="joint_acker_front_right">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+    </transmission>
+
+    <gazebo reference="link_acker_front_left">
+      <material>Gazebo/Black</material>
+    </gazebo> 
+
+    <gazebo reference="link_acker_front_right">
+      <material>Gazebo/Black</material>
+    </gazebo>      
+
+ 
+
+  <gazebo reference="imu_link">
+    <visual>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/Black</name>
+        </script>
+        <emissive>0 0 0 1</emissive>
+      </material>
+    </visual>
+  </gazebo>  
+
+
+    <!--transmissões das rodas-->
+
+    <xacro:macro name="wheel_transmission" params="preffix suffix">
+
+        <transmission name="${preffix}_${suffix}_wheel_trans">
+          <type>transmission_interface/SimpleTransmission</type>
+          <actuator name="${preffix}_${suffix}_wheel_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+          </actuator>
+          <joint name="joint_wheel_${preffix}_${suffix}">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+          </joint>
+        </transmission>
+
+        <gazebo reference="link_wheel_${preffix}_${suffix}">
+          <mu1 value="200.0"/>
+          <mu2 value="100.0"/>
+          <kp value="10000000.0" />
+          <kd value="1.0" />
+          <material>Gazebo/Black</material>
+        </gazebo>
+
+    </xacro:macro>
+
+    <xacro:wheel_transmission preffix="front" suffix="left"/>
+    <xacro:wheel_transmission preffix="front" suffix="right"/>
+    <xacro:wheel_transmission preffix="rear" suffix="left"/>
+    <xacro:wheel_transmission preffix="rear" suffix="right"/>
+
+</robot>

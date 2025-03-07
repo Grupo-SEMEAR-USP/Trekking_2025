@@ -1,0 +1,32 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"base_link_front" [label="base_link_front"];
+"chassi_link" [label="chassi_link"];
+"imu_link" [label="imu_link"];
+"link_acker_front_left" [label="link_acker_front_left"];
+"link_wheel_front_left" [label="link_wheel_front_left"];
+"link_acker_front_right" [label="link_acker_front_right"];
+"link_wheel_front_right" [label="link_wheel_front_right"];
+"link_wheel_rear_left" [label="link_wheel_rear_left"];
+"link_wheel_rear_right" [label="link_wheel_rear_right"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_link_front_joint" [label="xyz: 0 -0.21396 0 \nrpy: 0 -0 0"]
+"base_link_front_joint" -> "base_link_front"
+"base_link" -> "chassi_link_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"chassi_link_joint" -> "chassi_link"
+"base_link" -> "imu_joint" [label="xyz: 0 0 0.07077 \nrpy: 0 -0 0"]
+"imu_joint" -> "imu_link"
+"base_link" -> "joint_acker_front_left" [label="xyz: 0.10378 -0.21397 -0.0371 \nrpy: 0 -0 0"]
+"joint_acker_front_left" -> "link_acker_front_left"
+"link_acker_front_left" -> "joint_wheel_front_left" [label="xyz: 0.03048 0 0 \nrpy: 0 1.5708 -0"]
+"joint_wheel_front_left" -> "link_wheel_front_left"
+"base_link" -> "joint_acker_front_right" [label="xyz: -0.10624 -0.21396 -0.0371 \nrpy: 0 -0 0"]
+"joint_acker_front_right" -> "link_acker_front_right"
+"link_acker_front_right" -> "joint_wheel_front_right" [label="xyz: -0.03049 0 0 \nrpy: 0 -1.5708 0"]
+"joint_wheel_front_right" -> "link_wheel_front_right"
+"base_link" -> "joint_wheel_rear_left" [label="xyz: 0.13691 0.00033 -0.0371 \nrpy: 0 1.5708 -0"]
+"joint_wheel_rear_left" -> "link_wheel_rear_left"
+"base_link" -> "joint_wheel_rear_right" [label="xyz: -0.13691 0.00033 -0.0371 \nrpy: 0 -1.5708 0"]
+"joint_wheel_rear_right" -> "link_wheel_rear_right"
+}

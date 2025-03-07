@@ -1,0 +1,12 @@
+fourbar_geometry:
+  link_a2: 0.02
+  link_b2: 0.08
+  link_c: 0.0198
+  link_d2: 0.0935
+  phi_2_o: 2.1002
+  q2_lower_limit: 1.624
+  q2_upper_limit: 2.792
+  phi_tangent_lower_limit: -0.4262
+  phi_tangent_upper_limit: 0.4262
+
+

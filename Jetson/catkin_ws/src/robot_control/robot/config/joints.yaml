@@ -1,0 +1,18 @@
+# The joint state controller handles publishing transforms for any moving joints
+type: "joint_state_controller/JointStateController"
+publish_rate: 50
+
+#torno controllers
+
+#type: "position_controllers/JointPositionController"
+#joint: joint_acker_front_left
+
+type: "position_controllers/JointGroupPositionController"
+joints:
+  - joint_acker_front_left
+  - joint_acker_front_right
+  - joint_wheel_front_left
+  - joint_wheel_front_right
+  - joint_wheel_rear_left
+  - joint_wheel_rear_right
+

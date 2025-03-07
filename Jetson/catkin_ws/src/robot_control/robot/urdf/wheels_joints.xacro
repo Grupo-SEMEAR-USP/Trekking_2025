@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+    <xacro:macro name="wheel_joint_left" params="preffix">
+
+      <joint name="joint_wheel_${preffix}_left" type="continuous">
+          <xacro:if value="${preffix == 'front'}">
+
+            <origin xyz="0.03048 0 0" rpy="0 1.5708 0"/>
+            <parent link="link_acker_front_left"/>
+
+          </xacro:if>
+
+          <xacro:unless value="${preffix == 'front'}">
+
+            <origin xyz="0.13691 0.00033 -0.0371" rpy="0 1.5708 0"/>
+            <parent link="base_link"/>
+
+          </xacro:unless>
+
+
+        <child link="link_wheel_${preffix}_left"/>
+        <axis xyz="0 0 1.0"/>
+        <limit effort="1.0" velocity="100.0"/>
+      </joint>
+
+    </xacro:macro>
+
+    <xacro:macro name="wheel_joint_right" params="preffix">
+
+      <joint name="joint_wheel_${preffix}_right" type="continuous">
+          <xacro:if value="${preffix == 'front'}">
+
+            <origin xyz="-0.03049 0 0" rpy="0 -1.5708 0"/>
+            <parent link="link_acker_front_right"/>
+
+          </xacro:if>
+
+          <xacro:unless value="${preffix == 'front'}">
+
+            <origin xyz="-0.13691 0.00033 -0.0371" rpy="0 -1.5708 0"/>
+            <parent link="base_link"/>
+
+          </xacro:unless>
+
+
+        <child link="link_wheel_${preffix}_right"/>
+        <axis xyz="0 0 -1.0"/>
+        <limit effort="1.0" velocity="100.0"/>
+      </joint>
+
+    </xacro:macro>
+
+    <xacro:wheel_joint_left preffix="front"/>
+    <xacro:wheel_joint_right preffix="front"/>
+    <xacro:wheel_joint_left preffix="rear"/>
+    <xacro:wheel_joint_right preffix="rear"/>
+
+    <!--<joint name="joint_wheel_front_left" type="continuous">
+      <origin xyz="0.03048 0 0" rpy="0 1.5708 0"/>
+      <parent link="link_acker_front_left"/>
+      <child link="link_wheel_front_left"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>
+
+    <joint name="joint_wheel_front_right" type="continuous">
+      <origin xyz="-0.03049 0 0" rpy="0 -1.5708 0"/>
+      <parent link="link_acker_front_right"/>
+      <child link="link_wheel_front_right"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>
+
+    <joint name="joint_wheel_rear_left" type="continuous">
+      <origin xyz="0.13691 0.00033 -0.0371" rpy="0 1.5708 0"/>
+      <parent link="base_link"/>
+      <child link="link_wheel_rear_left"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>
+
+    <joint name="joint_wheel_rear_right" type="continuous">
+      <origin xyz="-0.13691 0.00033 -0.0371" rpy="0 -1.5708 0"/>
+      <parent link="base_link"/>
+      <child link="link_wheel_rear_right"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="1.0" velocity="100.0"/>
+    </joint>-->
+
+</robot>

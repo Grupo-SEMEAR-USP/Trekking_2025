@@ -1,0 +1,25 @@
+<launch>
+    <!--Loading the robot description-->
+    <param name="robot_description" command="$(find xacro)/xacro '$(find ackermann_vehicle_description)/robot/urdf/Ackermann_robot.urdf.xacro'"/>
+
+    <!--Publishing the tfs between the robot's frames and base_link-->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/> 
+
+    <node name="vehicle_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+      <param name="publish_frequency" value="30.0"/>
+    </node>
+
+    <!-- Running map server -->
+    <arg name="map_file" default="$(find navigation)/maps_hand_made/map_test.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+    
+    <!--Loading the ackermann configuration launch file - TF's basicaly-->
+    <include file="$(find navigation)/launch/ackermann_configuration.launch"/>
+
+    <!--Running RVIZ with what we wanna see-->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find ackermann_vehicle_description)/rviz/nav.rviz"/>
+
+    <!--Loading the joy_teleop launch file-->
+    <!--<include file="$(find learning_joy)/launch/joy_teleop.launch"/>-->
+
+</launch>

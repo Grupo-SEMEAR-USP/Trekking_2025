@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:property name="FL_TORNO" value="package://${package_name}/robot/meshes/stl/encaixe_front_left.stl"/>
+    <xacro:property name="FR_TORNO" value="package://${package_name}/robot/meshes/stl/encaixe_front_right.stl"/>
+
+    <xacro:macro name="default_torno_inertials">
+      <mass value="0.15"/>
+      <inertia ixx="0.002" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.002"/>
+    </xacro:macro>
+
+    <material name="link_roda_color">
+      <color rgba="0.5 0.5 0.5 1.0"/>
+    </material>
+
+    <link name="link_acker_front_left">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <xacro:default_torno_inertials/>
+      </inertial>
+      <visual name="encaixe_front_left">
+        <origin xyz="0.03048 0 0" rpy="0 3.14159 -2e-05"/>
+        <geometry>
+          <mesh filename="${FL_TORNO}" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="link_roda_color"/>
+      </visual>
+    </link>
+
+    <link name="link_acker_front_right">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <xacro:default_torno_inertials/>
+      </inertial>
+      <visual name="encaixe_front_right">
+        <origin xyz="-0.03049 0 0" rpy="0 0 -2e-05"/>
+        <geometry>
+          <mesh filename="${FR_TORNO}" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="link_roda_color"/>
+      </visual>
+    </link>
+    
+</robot>
