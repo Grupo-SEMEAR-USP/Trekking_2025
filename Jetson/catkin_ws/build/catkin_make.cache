@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/install -G Unix Makefiles
