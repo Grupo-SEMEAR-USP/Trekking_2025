@@ -7,7 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src:$ROS_PACKAGE_PATH"
+export LD_LIBRARY_PATH="/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
+export PWD='/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build'
+export ROS_PACKAGE_PATH='/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src:/opt/ros/noetic/share'

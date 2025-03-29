@@ -1,0 +1,8 @@
+# generated from catkin/cmake/template/pkg.context.pc.in
+CATKIN_PACKAGE_PREFIX = ""
+PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/hw_interface/include".split(';') if "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/hw_interface/include" != "" else []
+PROJECT_CATKIN_DEPENDS = "roscpp;rospy;std_msgs;message_runtime".replace(';', ' ')
+PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lhw_interface".split(';') if "-lhw_interface" != "" else []
+PROJECT_NAME = "hw_interface"
+PROJECT_SPACE_DIR = "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel"
+PROJECT_VERSION = "0.0.0"
