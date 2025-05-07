@@ -5,4 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("hw_interface")
+subdirs("simulation")
+subdirs("robot_control")
+subdirs("navigation")

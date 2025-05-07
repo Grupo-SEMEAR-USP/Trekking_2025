@@ -67,7 +67,7 @@ set(hw_interface_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(hw_interface_SOURCE_PREFIX /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/hw_interface)
+  set(hw_interface_SOURCE_PREFIX /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control)
   set(hw_interface_DEVEL_PREFIX /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel)
   set(hw_interface_INSTALL_PREFIX "")
   set(hw_interface_PREFIX ${hw_interface_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(hw_interface_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/hw_interface/include " STREQUAL " ")
+if(NOT "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/include " STREQUAL " ")
   set(hw_interface_INCLUDE_DIRS "")
-  set(_include_dirs "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/hw_interface/include")
+  set(_include_dirs "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/hw_
         message(FATAL_ERROR "Project 'hw_interface' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'hw_interface' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/hw_interface/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'hw_interface' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/${idir}'.  ${_report}")
     endif()
     _list_append_unique(hw_interface_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib;/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

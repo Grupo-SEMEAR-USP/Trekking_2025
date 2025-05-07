@@ -181,7 +181,7 @@ void monitor_encoder_pid_calc(void *params){
 
 }
 
-static void IRAM_ATTR monitor_encoder_pid_calc_start(void *args)
+static void x   IRAM_ATTR monitor_encoder_pid_calc_start(void *args)
 {   
 
     //reseting encoder stored ticks

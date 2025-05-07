@@ -19,6 +19,8 @@
     float global_motor_angular_speed_left = 0 ;
     float global_motor_angular_speed_right = 0;
 
+    float global_ros_servo_angle = (float) SERVO_INITIAL_ANGLE;
+
 void app_main() {
     //initializing locks
     xSemaphore_getSpeed = xSemaphoreCreateMutex();

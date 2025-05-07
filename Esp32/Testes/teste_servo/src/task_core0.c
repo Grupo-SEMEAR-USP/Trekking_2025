@@ -10,21 +10,26 @@ rotary_encoder_t *encoder_left;
 rotary_encoder_t *encoder_right;
 
 //variables for initializing pid
-    pid_handle_v2 pid_handle_left;
-    pid_handle_v2 pid_handle_right;
+pid_handle_v2 pid_handle_left;
+pid_handle_v2 pid_handle_right;
 
-    float pid_result_duty_left;
-    float pid_result_duty_right;
+float pid_result_duty_left;
+float pid_result_duty_right;
 
-    float local_ros_angular_speed_left;
-    float local_ros_angular_speed_right;
+float local_ros_angular_speed_left;
+float local_ros_angular_speed_right;
 
-    float local_motor_angular_speed_left; 
-    float local_motor_angular_speed_right;
-    
-    int count_get_real;
-    int count_get_ros;
+float local_motor_angular_speed_left; 
+float local_motor_angular_speed_right;
 
+int count_get_real;
+int count_get_ros;
+int count_servo;
+
+bool aux;
+
+//variables for servo
+float local_servo_angle;
 
 //timer function to read encoder and calculate pid
 void monitor_encoder_pid_calc(void *params);
@@ -76,8 +81,13 @@ void core0fuctions(void *params){
 
     pid_init(&pid_handle_left,&pid_handle_right);
     
+    local_servo_angle = (float) SERVO_INITIAL_ANGLE;
+
     count_get_real = 0;
     count_get_ros = 0;
+    count_servo = 0;
+
+    aux = pdTRUE;
 
     xEventGroupSetBits(initialization_groupEvent, task0_init_done);
     xEventGroupWaitBits(initialization_groupEvent, task1_init_done, true, true, portMAX_DELAY);
@@ -99,63 +109,92 @@ void core0fuctions(void *params){
 int cycle_count = 0;
 void monitor_encoder_pid_calc(void *params){
 
+    /*
     if(count_get_real == ENCODER_COUNTER_WAIT_PID_OP){
-            xSemaphoreTake(xSemaphore_getSpeed,portMAX_DELAY);
-            //global_motor_angular_speed_left = ((float) encoder_left->get_counter_value(encoder_left))*(ENCODER_RESOLUTION/((float)count));
-            //global_motor_angular_speed_right = ((float) encoder_right->get_counter_value(encoder_right))*(ENCODER_RESOLUTION/((float)count));
-            global_motor_angular_speed_left = ((float) encoder_left->get_counter_value(encoder_left))*ENCODER_RESOLUTION;
-            global_motor_angular_speed_right = ((float) encoder_right->get_counter_value(encoder_right))*ENCODER_RESOLUTION;
-            local_motor_angular_speed_left = global_motor_angular_speed_left;
-            local_motor_angular_speed_right = global_motor_angular_speed_right;
+        xSemaphoreTake(xSemaphore_getSpeed,portMAX_DELAY);
+        //global_motor_angular_speed_left = ((float) encoder_left->get_counter_value(encoder_left))*(ENCODER_RESOLUTION/((float)count));
+        //global_motor_angular_speed_right = ((float) encoder_right->get_counter_value(encoder_right))*(ENCODER_RESOLUTION/((float)count));
+        global_motor_angular_speed_left = ((float) encoder_left->get_counter_value(encoder_left))*ENCODER_RESOLUTION;
+        global_motor_angular_speed_right = ((float) encoder_right->get_counter_value(encoder_right))*ENCODER_RESOLUTION;
+        local_motor_angular_speed_left = global_motor_angular_speed_left;
+        local_motor_angular_speed_right = global_motor_angular_speed_right;
+        
+        encoder_left->reset_counter_value(encoder_left);
+        encoder_right->reset_counter_value(encoder_right);
+        
+        xSemaphoreGive(xSemaphore_getSpeed);
+    
+        count_get_real = 0;
+    }
 
-            encoder_left->reset_counter_value(encoder_left);
-            encoder_right->reset_counter_value(encoder_right);
-            xSemaphoreGive(xSemaphore_getSpeed);
+    if(count_get_ros == GET_ROS_VAL_COUNTER_WAIT_PID_OP){
+        xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY); //could be incremented in the first lock
 
-            count_get_real = 0;
-        }
+        local_ros_angular_speed_left = global_ros_angular_speed_left;
+        local_ros_angular_speed_right = global_ros_angular_speed_right;
+        
+        local_servo_angle = global_ros_servo_angle;
+        
+        xSemaphoreGive(xSemaphore_getRosSpeed);
+        
+        count_get_ros = 0;
+    }
+    */
 
-        if(count_get_ros == GET_ROS_VAL_COUNTER_WAIT_PID_OP){
+    pid_handle_left.pid_calculate(
+        &pid_handle_left,
+        local_motor_angular_speed_left,
+        local_ros_angular_speed_left,
+        &pid_result_duty_left
+    );
+
+    pid_handle_right.pid_calculate(
+        &pid_handle_right,
+        local_motor_angular_speed_right,
+        local_ros_angular_speed_right,
+        &pid_result_duty_right
+    );
+
+    //printf("left_vel_calc: %f rad/s left_vel ros: %f rad/s left_duty: %f\n",local_motor_angular_speed_left,local_ros_angular_speed_left,pid_result_duty_left);
+    //printf("right_vel_calc: %f rad/s right_vel ros: %f rad/s right_duty: %f\n",local_motor_angular_speed_right,local_ros_angular_speed_right,pid_result_duty_right);
+    //pwm_actuate(ESQ,pid_result_duty_left);
+    //pwm_actuate(DIR,pid_result_duty_right);
+
+
+    if (aux && cycle_count >= 10){
+        if (count_servo < 5){
+            xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY); //could be incremented in the first lock
+            
+            local_servo_angle++;
+            
+            xSemaphoreGive(xSemaphore_getRosSpeed);
+
+            count_servo++;
+        } else {aux = pdFALSE;}
+
+        cycle_count = 0;
+    }
+
+    if (!aux && cycle_count >= 10){
+        if (count_servo > -5){
             xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY); //could be incremented in the first lock
 
-            local_ros_angular_speed_left = global_ros_angular_speed_left;
-            local_ros_angular_speed_right = global_ros_angular_speed_right;
-
+            local_servo_angle--;
+            
             xSemaphoreGive(xSemaphore_getRosSpeed);
+            count_servo--;
+        } else {aux = pdTRUE;}
+        cycle_count = 0;  
+    }
+   
+    iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, (local_servo_angle + SERVO_OFFSET));
 
-            count_get_ros = 0;
-        }
-        
-        pid_handle_left.pid_calculate(
-            &pid_handle_left,
-            local_motor_angular_speed_left,
-            local_ros_angular_speed_left,
-            &pid_result_duty_left);
-
-        pid_handle_right.pid_calculate(
-            &pid_handle_right,
-            local_motor_angular_speed_right,
-            local_ros_angular_speed_right,
-            &pid_result_duty_right);
-
-        //printf("left_vel_calc: %f rad/s left_vel ros: %f rad/s left_duty: %f\n",local_motor_angular_speed_left,local_ros_angular_speed_left,pid_result_duty_left);
-        printf("right_vel_calc: %f rad/s right_vel ros: %f rad/s right_duty: %f\n",local_motor_angular_speed_right,local_ros_angular_speed_right,pid_result_duty_right);
-        pwm_actuate(ESQ,pid_result_duty_left);
-        pwm_actuate(DIR,pid_result_duty_right);
-
-        if(cycle_count >= 300){
-            xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);
-            global_ros_angular_speed_left=40.0-global_ros_angular_speed_left;
-            global_ros_angular_speed_right=40.0-global_ros_angular_speed_right;
-            xSemaphoreGive(xSemaphore_getRosSpeed);
-            cycle_count = 0;
-        }
-
-        //vTaskDelay(pdMS_TO_TICKS(PID_DELAY));
-
-        count_get_real++;
-        count_get_ros++;
-        cycle_count++;
+    printf("ângulo do servo: %f\n", local_servo_angle);
+    //vTaskDelay(pdMS_TO_TICKS(PID_DELAY));
+    
+    count_get_real++;
+    count_get_ros++;
+    cycle_count++;
 
 }
 

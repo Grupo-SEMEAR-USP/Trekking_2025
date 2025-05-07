@@ -131,7 +131,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/hw_interface/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/cmake_install.cmake")
 
 endif()
 

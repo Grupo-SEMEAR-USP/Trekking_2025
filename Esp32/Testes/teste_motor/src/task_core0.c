@@ -138,15 +138,15 @@ void monitor_encoder_pid_calc(void *params){
             local_ros_angular_speed_right,
             &pid_result_duty_right);
 
-        //printf("left_vel_calc: %f rad/s left_vel ros: %f rad/s left_duty: %f\n",local_motor_angular_speed_left,local_ros_angular_speed_left,pid_result_duty_left);
-        printf("right_vel_calc: %f rad/s right_vel ros: %f rad/s right_duty: %f\n",local_motor_angular_speed_right,local_ros_angular_speed_right,pid_result_duty_right);
+        printf("left_vel_calc: %f rad/s left_vel ros: %f rad/s left_duty: %f\n",local_motor_angular_speed_left,local_ros_angular_speed_left,pid_result_duty_left);
+        //printf("right_vel_calc: %f rad/s right_vel ros: %f rad/s right_duty: %f\n",local_motor_angular_speed_right,local_ros_angular_speed_right,pid_result_duty_right);
         pwm_actuate(ESQ,pid_result_duty_left);
         pwm_actuate(DIR,pid_result_duty_right);
 
         if(cycle_count >= 300){
             xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);
-            global_ros_angular_speed_left=40.0-global_ros_angular_speed_left;
-            global_ros_angular_speed_right=40.0-global_ros_angular_speed_right;
+            global_ros_angular_speed_left=40-global_ros_angular_speed_left;
+            global_ros_angular_speed_right=40-global_ros_angular_speed_right;
             xSemaphoreGive(xSemaphore_getRosSpeed);
             cycle_count = 0;
         }

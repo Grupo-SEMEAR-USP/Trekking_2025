@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/test_results
+	/usr/bin/python3.8 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
