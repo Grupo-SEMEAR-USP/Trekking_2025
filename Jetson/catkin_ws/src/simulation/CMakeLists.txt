@@ -15,7 +15,7 @@
 # limitations under the License.
 
 cmake_minimum_required(VERSION 2.8.3)
-project(ackermann_vehicle_gazebo)
+project(simulation)
 find_package(catkin REQUIRED)
 catkin_package()
 

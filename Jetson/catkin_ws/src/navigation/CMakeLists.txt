@@ -166,7 +166,6 @@ catkin_install_python(PROGRAMS
   scripts/cmd_vel_to_ackermann_drive_rod.py
   scripts/tf_publisher.py
   scripts/tf_publisher_simul.py
-  scripts/global_planner.py
   scripts/path_saver.py
   scripts/path_reader.py
   scripts/odom_front.py

@@ -1,2 +1,2 @@
-hw_interface
--DCATKIN_DEVEL_PREFIX=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install -G Unix Makefiles
+navigation:robot_control:simulation
+-DCATKIN_DEVEL_PREFIX=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/install -G Unix Makefiles

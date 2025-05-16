@@ -7,6 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
-export PWD='/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build'
-export ROS_PACKAGE_PATH='/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src:/opt/ros/noetic/share'
+export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
+export PWD='/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build'
+export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'
