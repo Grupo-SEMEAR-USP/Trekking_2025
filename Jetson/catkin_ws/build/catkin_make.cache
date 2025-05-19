@@ -1,2 +1,0 @@
-navigation:robot_control:simulation:steer_drive_ros/steer_bot_hardware_gazebo:steer_drive_ros/steer_drive_controller:steer_drive_ros/steer_drive_ros:steer_drive_ros/stepback_and_steerturn_recovery
--DCATKIN_DEVEL_PREFIX=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/install -G Unix Makefiles

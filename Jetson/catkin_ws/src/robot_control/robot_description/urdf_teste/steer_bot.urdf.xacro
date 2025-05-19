@@ -19,7 +19,8 @@
 <robot name="steer_bot" xmlns:xacro="http://wiki.ros.org/xacro">
   <!-- Include xacro for inertials, materials and wheels -->
   <xacro:include filename="$(find robot_control)/robot_description/urdf_teste/wheel.xacro"/>
-  <!--<xacro:include filename="$(find robot_control)/robot_description/urdf_teste/imu.xacro"/>-->
+  <xacro:include filename="$(find robot_control)/robot_description/urdf_teste/imu.xacro"/>
+  <xacro:include filename="$(find robot_control)/robot_description/urdf_teste/lidar.xacro"/>
 
   <xacro:property name="robot_namespace" value="/steer_bot"/>
 
@@ -34,12 +35,12 @@
     </plugin>
   </gazebo>
 
-  <!--
   <gazebo reference="imu_link">
     <sensor type="imu" name="imu_sensor">
       <pose>0 0 0 0 0 0</pose> 
       <always_on>true</always_on>
       <update_rate>100.0</update_rate>
+      <visualize>true</visualize>
       <imu>
         <noise>
           <type>gaussian</type>
@@ -53,7 +54,7 @@
           </accel>
         </noise>
       </imu>
-      <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
+      <plugin name="imu_plugin" filename="libgazebo_ros_imu_sensor.so">
         <robotNamespace>/</robotNamespace>
         <bodyName>imu_link</bodyName>
         <topicName>imu/data</topicName>
@@ -61,7 +62,9 @@
       </plugin>
     </sensor>
   </gazebo>
-  -->
+
+  
+  
   <!-- Math constants -->
   <xacro:property name="deg_to_rad" value="0.01745329251994329577"/>
 
@@ -84,6 +87,10 @@
   <!-- Axle positions -->
   <xacro:property name="axle_offset" value="0.05" />
   <xacro:property name="steer_offset" value="0.02" />
+
+  <!-- Lidar dimensions -->
+  <xacro:property name="lidar_radius" value="0.08" />
+  <xacro:property name="lidar_length" value="0.04" />
 
   <!-- Base link -->
   <link name="base_link">
@@ -177,6 +184,16 @@
     wheel_mass="${wheel_mass}">
     <origin xyz="${-base_length/2+axle_offset} ${+base_width/2+axle_offset} 0" rpy="${-90 * deg_to_rad} 0 0"/>
   </xacro:rear_wheel_lr>
+
+  <!-- RPLidar -->
+  <xacro:rplidar
+    name="rplidar"
+    parent="base_link"
+    base_length="${base_length}"
+    base_height="${base_height}"
+    radius="${lidar_radius}"
+    length="${lidar_length}">
+  </xacro:rplidar>
 
   <!-- Colour -->
   <gazebo reference="base_link">

@@ -18,7 +18,7 @@ Visualization Manager:
       Name: TF
       Value: false
   Global Options:
-    Fixed Frame: base_link
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:

@@ -51,7 +51,7 @@
                 -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"
             respawn="false" output="screen" />
         
-        <!-- Show in Rviz   -->
+        <!-- Show in Rviz -->
         <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robot_control)/robot_description/rviz/urdf.rviz"/>
 
     </group>
