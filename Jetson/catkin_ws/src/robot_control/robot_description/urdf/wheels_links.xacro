@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:property name="FL_WHEEL" value="package://${package_name}/robot/meshes/stl/wheel_front_left.stl"/>
-    <xacro:property name="FR_WHEEL" value="package://${package_name}/robot/meshes/stl/wheel_front_right.stl"/>
-    <xacro:property name="RL_WHEEL" value="package://${package_name}/robot/meshes/stl/wheel_rear_left.stl"/>
-    <xacro:property name="RR_WHEEL" value="package://${package_name}/robot/meshes/stl/wheel_rear_right.stl"/>
+    <xacro:property name="FL_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_front_left.stl"/>
+    <xacro:property name="FR_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_front_right.stl"/>
+    <xacro:property name="RL_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_rear_left.stl"/>
+    <xacro:property name="RR_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_rear_right.stl"/>
 
     <xacro:macro name="default_wheel_inertials">
       <mass value="0.15"/>

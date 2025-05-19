@@ -7,6 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
 export PWD='/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build'
-export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'

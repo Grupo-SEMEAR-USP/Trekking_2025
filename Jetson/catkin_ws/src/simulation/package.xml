@@ -12,17 +12,28 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>ackermann_msgs</run_depend>
-  <run_depend>ackermann_vehicle_description</run_depend>
-  <run_depend>controller_manager</run_depend>
   <run_depend>controller_manager_msgs</run_depend>
   <run_depend>effort_controllers</run_depend>
-  <run_depend>gazebo_ros</run_depend>
-  <run_depend>joint_state_controller</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>tf</run_depend>
   <run_depend>joy</run_depend>
   <run_depend>teleop_twist_joy</run_depend>
+
+
+  <run_depend>ackermann_steering_controller</run_depend>
+  <run_depend>controller_manager</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>roslaunch</run_depend>
+  <run_depend>rqt_robot_steering</run_depend>
+  <run_depend>steer_bot_control</run_depend>
+  <run_depend>steer_bot_description</run_depend>
+  <run_depend>steer_bot_hardware_gazebo</run_depend>
+  <run_depend>steer_drive_controller</run_depend>
+  <run_depend>xacro</run_depend>
 
   <export>
     <architecture_independent/>

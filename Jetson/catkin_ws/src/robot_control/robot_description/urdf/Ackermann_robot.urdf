@@ -21,7 +21,7 @@
     <visual name="Base">
       <origin rpy="0 -3.14159 -0.00587" xyz="-0.00055 -0.06897 0.06435"/>
       <geometry>
-        <mesh filename="package://ackermann_vehicle_description/robot/meshes/stl/Base.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://robot_control/robot_description/meshes/stl/Base.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color"/>
     </visual>
@@ -56,7 +56,7 @@
     <visual name="wheel_front_left">
       <origin rpy="-1.57081 2e-05 -2.01041" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ackermann_vehicle_description/robot/meshes/stl/wheel_front_left.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://robot_control/robot_description/meshes/stl/wheel_front_left.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="pneu_color"/>
     </visual>
@@ -76,7 +76,7 @@
     <visual name="wheel_front_right">
       <origin rpy="-1.57079 -2e-05 -2.01041" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ackermann_vehicle_description/robot/meshes/stl/wheel_front_right.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://robot_control/robot_description/meshes/stl/wheel_front_right.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="pneu_color"/>
     </visual>
@@ -96,7 +96,7 @@
     <visual name="wheel_rear_left">
       <origin rpy="-1.5708 0 1.47321" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ackermann_vehicle_description/robot/meshes/stl/wheel_rear_left.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://robot_control/robot_description/meshes/stl/wheel_rear_left.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="pneu_color"/>
     </visual>
@@ -116,7 +116,7 @@
     <visual name="wheel_rear_right">
       <origin rpy="-1.5708 0 -1.61495" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://ackermann_vehicle_description/robot/meshes/stl/wheel_rear_right.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://robot_control/robot_description/meshes/stl/wheel_rear_right.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="pneu_color"/>
     </visual>
@@ -136,7 +136,7 @@
       <visual name="wheel_front_left">
         <origin xyz="0 0 0" rpy="-1.57081 2e-05 -2.01041"/>
         <geometry>
-          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_front_left.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="package://urdf_tutorial/robot_description/meshes/stl/wheel_front_left.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="pneu_color"/>
       </visual>
@@ -157,7 +157,7 @@
       <visual name="wheel_front_right">
         <origin xyz="0 0 0" rpy="-1.57079 -2e-05 -2.01041"/>
         <geometry>
-          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_front_right.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="package://urdf_tutorial/robot_description/meshes/stl/wheel_front_right.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="pneu_color"/>
       </visual>
@@ -178,7 +178,7 @@
       <visual name="wheel_rear_left">
         <origin xyz="0 0 0" rpy="-1.5708 0 1.47321"/>
         <geometry>
-          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_rear_left.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="package://urdf_tutorial/robot_description/meshes/stl/wheel_rear_left.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="pneu_color"/>
       </visual>
@@ -199,7 +199,7 @@
       <visual name="wheel_rear_right">
         <origin xyz="0 0 0" rpy="-1.5708 0 -1.61495"/>
         <geometry>
-          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_rear_right.stl" scale="1.0 1.0 1.0"/>
+          <mesh filename="package://urdf_tutorial/robot_description/meshes/stl/wheel_rear_right.stl" scale="1.0 1.0 1.0"/>
         </geometry>
         <material name="pneu_color"/>
       </visual>
@@ -281,7 +281,7 @@
     <visual name="encaixe_front_left">
       <origin rpy="0 3.14159 -2e-05" xyz="0.03048 0 0"/>
       <geometry>
-        <mesh filename="package://ackermann_vehicle_description/robot/meshes/stl/encaixe_front_left.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://robot_control/robot_description/meshes/stl/encaixe_front_left.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="link_roda_color"/>
     </visual>
@@ -295,7 +295,7 @@
     <visual name="encaixe_front_right">
       <origin rpy="0 0 -2e-05" xyz="-0.03049 0 0"/>
       <geometry>
-        <mesh filename="package://ackermann_vehicle_description/robot/meshes/stl/encaixe_front_right.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://robot_control/robot_description/meshes/stl/encaixe_front_right.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="link_roda_color"/>
     </visual>

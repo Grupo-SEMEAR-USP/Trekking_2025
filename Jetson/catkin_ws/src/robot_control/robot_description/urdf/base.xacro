@@ -7,7 +7,7 @@
     <!--</xacro:macro>-->
     <!--<xacro:chassi_link name="chassi_link"/>-->
 
-    <xacro:property name="BASE" value="package://${package_name}/robot/meshes/stl/Base.stl"/>
+    <xacro:property name="BASE" value="package://${package_name}/robot_description/meshes/stl/Base.stl"/>
     
     <material name="base_color">
       <color rgba="0.8 0.8 0.8 1.0"/>

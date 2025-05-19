@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="Ackermann_robot" xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:property name="package_name" value="ackermann_vehicle_description"/>
+    <xacro:property name="package_name" value="robot_control"/>
 
     <xacro:include filename="base.xacro"/>
     <xacro:include filename="wheels_links.xacro"/>
@@ -16,6 +16,34 @@
             <robotNamespace>/</robotNamespace>
             <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
         </plugin>
-    </gazebo>   
+    </gazebo> 
+
+    <gazebo reference="imu_link">
+    <sensor type="imu" name="imu_sensor">
+        <pose>0 0 0 0 0 0</pose> <!-- pode ajustar caso queira deslocar -->
+        <always_on>true</always_on>
+        <update_rate>100.0</update_rate>
+        <imu>
+        <noise>
+            <type>gaussian</type>
+            <rate>
+            <mean>0.0</mean>
+            <stddev>0.0001</stddev>
+            </rate>
+            <accel>
+            <mean>0.0</mean>
+            <stddev>0.0001</stddev>
+            </accel>
+        </noise>
+        </imu>
+        <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
+        <robotNamespace>/</robotNamespace>
+        <bodyName>imu_link</bodyName>
+        <topicName>imu/data</topicName>
+        <frameName>imu_link</frameName>
+        </plugin>
+    </sensor>
+    </gazebo>
+
     
 </robot>
