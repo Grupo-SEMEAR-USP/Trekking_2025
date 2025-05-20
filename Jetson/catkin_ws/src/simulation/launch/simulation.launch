@@ -3,7 +3,7 @@
 
     <arg name="model" default="$(find robot_control)/robot_description/urdf_teste/steer_bot.urdf.xacro"/>
     <arg name="namespace" default="/steer_bot" />
-    <arg name="world_name" default="worlds/empty_world" />
+    <arg name="world_name" default="$(find simulation)/worlds/newest.world"/>
     <arg name="cmd_timeout" default="0.5"/>
     <arg name="x" default="0.0"/>
     <arg name="y" default="0.0"/>
