@@ -1,0 +1,16 @@
+<launch>
+    <!-- Running map_server -->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find navigation)/maps/map_simul.yaml"/>
+    
+    <node name="tfs" pkg="navigation" type="tf_publisher.py"/>
+
+    <!-- Running move_base with its parameters -->
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find navigation)/costmaps/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+        <rosparam file="$(find navigation)/costmaps/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find navigation)/costmaps/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find navigation)/costmaps/global_costmap_params.yaml" command="load" /> 
+        <rosparam file="$(find navigation)/config/teb_params.yaml" command="load" />
+    </node> 
+
+</launch>
