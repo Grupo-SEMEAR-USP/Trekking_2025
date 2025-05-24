@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:property name="FL_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_front_left.stl"/>
+    <xacro:property name="FR_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_front_right.stl"/>
+    <xacro:property name="RL_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_rear_left.stl"/>
+    <xacro:property name="RR_WHEEL" value="package://${package_name}/robot_description/meshes/stl/wheel_rear_right.stl"/>
+
+    <xacro:macro name="default_wheel_inertials">
+      <mass value="0.15"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </xacro:macro>
+
+    <material name="pneu_color">
+      <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <xacro:macro name="wheel_link" params="preffix suffix stl">
+
+      <link name="link_wheel_${preffix}_${suffix}">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <xacro:default_wheel_inertials/>
+        </inertial>
+        <visual name="wheel_${preffix}_${suffix}">
+
+          <xacro:if value="${preffix == 'front'}">
+
+            <xacro:if value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="-1.57081 2e-05 -2.01041"/>
+            </xacro:if>
+
+            <xacro:unless value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="-1.57079 -2e-05 -2.01041"/>
+            </xacro:unless>
+
+          </xacro:if>
+
+          <xacro:unless value="${preffix == 'front'}">
+
+            <xacro:if value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="-1.5708 0 1.47321"/>
+            </xacro:if>
+
+            <xacro:unless value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="-1.5708 0 -1.61495"/>
+            </xacro:unless>
+
+          </xacro:unless>
+
+          <geometry>
+            <mesh filename="${stl}" scale="1.0 1.0 1.0"/>
+          </geometry>
+          <material name="pneu_color"/>
+        </visual>
+        <collision name="wheel_${preffix}_${suffix}_col">
+          <xacro:if value="${preffix == 'front'}">
+
+            <xacro:if value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="-1e-05 2e-05 -2.01041"/>
+            </xacro:if>
+
+            <xacro:unless value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="1e-05 -2e-05 -2.01041"/>
+            </xacro:unless>
+
+          </xacro:if>
+
+          <xacro:unless value="${preffix == 'front'}">
+
+            <xacro:if value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="0 0 1.47321"/>
+            </xacro:if>
+
+            <xacro:unless value="${suffix == 'left'}">
+              <origin xyz="0 0 0" rpy="0 0 -1.61495"/>
+            </xacro:unless>
+
+          </xacro:unless>
+
+          <geometry>
+            <cylinder radius="0.05" length="0.05"/>
+          </geometry>
+        </collision>
+      </link>
+  
+
+    </xacro:macro>
+
+    <xacro:wheel_link preffix="front" suffix="left" stl="${FL_WHEEL}"/>
+    <xacro:wheel_link preffix="front" suffix="right" stl="${FR_WHEEL}"/>
+    <xacro:wheel_link preffix="rear" suffix="left" stl="${RL_WHEEL}"/>
+    <xacro:wheel_link preffix="rear" suffix="right" stl="${RR_WHEEL}"/>
+
+    <!--<link name="link_wheel_front_left">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_front_left">
+        <origin xyz="0 0 0" rpy="-1.57081 2e-05 -2.01041"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_front_left.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_front_left">
+        <origin xyz="0 0 0" rpy="-1e-05 2e-05 -2.01041"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_front_right">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_front_right">
+        <origin xyz="0 0 0" rpy="-1.57079 -2e-05 -2.01041"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_front_right.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_front_right">
+        <origin xyz="0 0 0" rpy="1e-05 -2e-05 -2.01041"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_rear_left">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_rear_left">
+        <origin xyz="0 0 0" rpy="-1.5708 0 1.47321"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_rear_left.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_rear_left">
+        <origin xyz="0 0 0" rpy="0 0 1.47321"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="link_wheel_rear_right">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.15"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_rear_right">
+        <origin xyz="0 0 0" rpy="-1.5708 0 -1.61495"/>
+        <geometry>
+          <mesh filename="package://urdf_tutorial/robot/meshes/stl/wheel_rear_right.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="pneu_color"/>
+      </visual>
+      <collision name="wheel_rear_right">
+        <origin xyz="0 0 0" rpy="0 0 -1.61495"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>-->
+
+</robot>

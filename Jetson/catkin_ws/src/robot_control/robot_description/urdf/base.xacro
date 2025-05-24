@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!--<link name="base_link" />-->
+
+    <!--<xacro:macro name="chassi_link" params="name">-->
+    <!--</xacro:macro>-->
+    <!--<xacro:chassi_link name="chassi_link"/>-->
+
+    <xacro:property name="BASE" value="package://${package_name}/robot_description/meshes/stl/Base.stl"/>
+    
+    <material name="base_color">
+      <color rgba="0.8 0.8 0.8 1.0"/>
+    </material>
+    
+    <link name="base_link"/>
+
+    <link name="chassi_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="2.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Base">
+        <origin xyz="-0.00055 -0.06897 0.06435" rpy="0 -3.14159 -0.00587"/>
+        <geometry>
+          <mesh filename="${BASE}" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="base_color"/>
+      </visual>
+      <collision name="Base_col">
+        <origin xyz="-0.00102 -0.09748 0.0092" rpy="0 3.14159 -0.00587"/>
+        <geometry>
+          <box size="0.22043 0.27703 0.12452"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="base_link_front">
+    </link>
+
+
+    <joint name="chassi_link_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 3.141596"/>
+        <parent link="base_link" />
+        <child link="chassi_link"/>
+    </joint>
+
+    <joint name="base_link_front_joint" type="fixed">
+      <origin xyz="0 -0.10698 0" rpy="0 0 -1.570795"/>
+      <parent link="base_link"/>
+      <child link="base_link_front"/>
+    </joint>
+
+</robot>

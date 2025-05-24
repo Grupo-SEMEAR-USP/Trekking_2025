@@ -1,7 +1,7 @@
 TebLocalPlannerROS:
 
- odom_topic: odom
- map_frame: /odom
+ odom_topic: /steer_bot/ackermann_steering_controller/odom
+ map_frame: /map
     
  # Trajectory
   
@@ -20,9 +20,6 @@ TebLocalPlannerROS:
  acc_lim_x: 0.5
  acc_lim_theta: 0.5
  min_turning_radius: 0.0
- footprint_model:
-   type: "polygon"
-   vertices: [ [0.1, 0.15], [0.1, -0.15], [-0.1, -0.15], [-0.1, 0.15]]
 
  # GoalTolerance
     
