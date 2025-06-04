@@ -1,0 +1,8 @@
+prefix=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install
+
+Name: teste_i2c
+Description: Description of teste_i2c
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

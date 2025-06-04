@@ -3,6 +3,6 @@ CATKIN_PACKAGE_PREFIX = ""
 PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
-PROJECT_NAME = "ackermann_vehicle_gazebo"
+PROJECT_NAME = "simulation"
 PROJECT_SPACE_DIR = "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install"
 PROJECT_VERSION = "0.1.3"

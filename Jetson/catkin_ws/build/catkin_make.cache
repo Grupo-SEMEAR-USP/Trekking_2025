@@ -1,2 +1,2 @@
-navigation:robot_control:simulation
+navigation:robot_control:robot_control_new:rplidar_ros:simulation:teste_i2c
 -DCATKIN_DEVEL_PREFIX=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install -G Unix Makefiles

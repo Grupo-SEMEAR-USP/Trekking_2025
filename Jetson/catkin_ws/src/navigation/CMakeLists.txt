@@ -166,12 +166,9 @@ catkin_install_python(PROGRAMS
   scripts/cmd_vel_to_ackermann_drive_rod.py
   scripts/tf_publisher.py
   scripts/tf_publisher_simul.py
-<<<<<<< HEAD
-  #scripts/global_planner.py
-=======
->>>>>>> d13945328887aa84f9f4a5002d2d733a8484c1af
   scripts/path_saver.py
   scripts/path_reader.py
+  scripts/path_follower.py
   scripts/odom_front.py
   scripts/odom_esp_test.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

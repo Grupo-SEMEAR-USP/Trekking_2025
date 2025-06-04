@@ -5,6 +5,9 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("robot_control_new")
 subdirs("simulation")
+subdirs("teste_i2c")
 subdirs("robot_control")
+subdirs("rplidar_ros")
 subdirs("navigation")

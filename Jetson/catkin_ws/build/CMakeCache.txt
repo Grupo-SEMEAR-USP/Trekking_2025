@@ -515,6 +515,18 @@ navigation_BINARY_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jet
 //Value Computed by CMake
 navigation_SOURCE_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/navigation
 
+//Value Computed by CMake
+robot_control_BINARY_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control
+
+//Value Computed by CMake
+robot_control_SOURCE_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control
+
+//Value Computed by CMake
+robot_control_new_BINARY_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control_new
+
+//Value Computed by CMake
+robot_control_new_SOURCE_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control_new
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
 
@@ -539,11 +551,29 @@ rospy_DIR:PATH=/opt/ros/noetic/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/noetic/share/rostime/cmake
 
+//Value Computed by CMake
+rplidar_ros_BINARY_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/rplidar_ros
+
+//Value Computed by CMake
+rplidar_ros_SOURCE_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/rplidar_ros
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/noetic/share/sensor_msgs/cmake
 
+//Value Computed by CMake
+simulation_BINARY_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation
+
+//Value Computed by CMake
+simulation_SOURCE_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/noetic/share/std_msgs/cmake
+
+//Value Computed by CMake
+teste_i2c_BINARY_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/teste_i2c
+
+//Value Computed by CMake
+teste_i2c_SOURCE_DIR:STATIC=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/teste_i2c
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/noetic/share/tf2/cmake
@@ -711,7 +741,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

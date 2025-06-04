@@ -1,0 +1,8 @@
+prefix=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel
+
+Name: robot_control_new
+Description: Description of robot_control_new
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

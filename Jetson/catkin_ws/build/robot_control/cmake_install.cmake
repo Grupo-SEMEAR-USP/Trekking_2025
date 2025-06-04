@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/hw_interface.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hw_interface/cmake" TYPE FILE FILES
-    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/hw_interfaceConfig.cmake"
-    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/hw_interfaceConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control/cmake" TYPE FILE FILES
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_controlConfig.cmake"
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/hw_interface" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

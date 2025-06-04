@@ -54,16 +54,22 @@ CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin
 
 # The main recursive "all" target.
 all: gtest/all
+all: robot_control_new/all
 all: simulation/all
+all: teste_i2c/all
 all: robot_control/all
+all: rplidar_ros/all
 all: navigation/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
+preinstall: robot_control_new/preinstall
 preinstall: simulation/preinstall
+preinstall: teste_i2c/preinstall
 preinstall: robot_control/preinstall
+preinstall: rplidar_ros/preinstall
 preinstall: navigation/preinstall
 
 .PHONY : preinstall
@@ -75,8 +81,11 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
+clean: robot_control_new/clean
 clean: simulation/clean
+clean: teste_i2c/clean
 clean: robot_control/clean
+clean: rplidar_ros/clean
 clean: navigation/clean
 
 .PHONY : clean
@@ -268,6 +277,44 @@ robot_control/bsc_i2c_controller/clean: robot_control/bsc_i2c_controller/CMakeFi
 .PHONY : robot_control/bsc_i2c_controller/clean
 
 #=============================================================================
+# Directory level rules for directory robot_control_new
+
+# Recursive "all" directory target.
+robot_control_new/all:
+
+.PHONY : robot_control_new/all
+
+# Recursive "preinstall" directory target.
+robot_control_new/preinstall:
+
+.PHONY : robot_control_new/preinstall
+
+# Recursive "clean" directory target.
+robot_control_new/clean: robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : robot_control_new/clean
+
+#=============================================================================
+# Directory level rules for directory rplidar_ros
+
+# Recursive "all" directory target.
+rplidar_ros/all: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all
+rplidar_ros/all: rplidar_ros/CMakeFiles/rplidarNode.dir/all
+
+.PHONY : rplidar_ros/all
+
+# Recursive "preinstall" directory target.
+rplidar_ros/preinstall:
+
+.PHONY : rplidar_ros/preinstall
+
+# Recursive "clean" directory target.
+rplidar_ros/clean: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/clean
+rplidar_ros/clean: rplidar_ros/CMakeFiles/rplidarNode.dir/clean
+
+.PHONY : rplidar_ros/clean
+
+#=============================================================================
 # Directory level rules for directory simulation
 
 # Recursive "all" directory target.
@@ -281,9 +328,27 @@ simulation/preinstall:
 .PHONY : simulation/preinstall
 
 # Recursive "clean" directory target.
-simulation/clean: simulation/CMakeFiles/_catkin_empty_exported_target.dir/clean
+simulation/clean:
 
 .PHONY : simulation/clean
+
+#=============================================================================
+# Directory level rules for directory teste_i2c
+
+# Recursive "all" directory target.
+teste_i2c/all:
+
+.PHONY : teste_i2c/all
+
+# Recursive "preinstall" directory target.
+teste_i2c/preinstall:
+
+.PHONY : teste_i2c/preinstall
+
+# Recursive "clean" directory target.
+teste_i2c/clean:
+
+.PHONY : teste_i2c/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -530,31 +595,31 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target simulation/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-simulation/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f simulation/CMakeFiles/_catkin_empty_exported_target.dir/build.make simulation/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f simulation/CMakeFiles/_catkin_empty_exported_target.dir/build.make simulation/CMakeFiles/_catkin_empty_exported_target.dir/build
+robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/build.make robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/build.make robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : simulation/CMakeFiles/_catkin_empty_exported_target.dir/all
+.PHONY : robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-simulation/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 0
-.PHONY : simulation/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: simulation/CMakeFiles/_catkin_empty_exported_target.dir/rule
+_catkin_empty_exported_target: robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 .PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-simulation/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f simulation/CMakeFiles/_catkin_empty_exported_target.dir/build.make simulation/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : simulation/CMakeFiles/_catkin_empty_exported_target.dir/clean
+robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/build.make robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Target rules for target robot_control/CMakeFiles/hw_interface.dir
@@ -1824,6 +1889,60 @@ bsc_controller: robot_control/bsc_i2c_controller/CMakeFiles/bsc_controller.dir/r
 robot_control/bsc_i2c_controller/CMakeFiles/bsc_controller.dir/clean:
 	$(MAKE) -f robot_control/bsc_i2c_controller/CMakeFiles/bsc_controller.dir/build.make robot_control/bsc_i2c_controller/CMakeFiles/bsc_controller.dir/clean
 .PHONY : robot_control/bsc_i2c_controller/CMakeFiles/bsc_controller.dir/clean
+
+#=============================================================================
+# Target rules for target rplidar_ros/CMakeFiles/rplidarNodeClient.dir
+
+# All Build rule for target.
+rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/depend
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=40,41 "Built target rplidarNodeClient"
+.PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all
+
+# Build rule for subdir invocation for target.
+rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/rplidarNodeClient.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 0
+.PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
+
+# Convenience name for target.
+rplidarNodeClient: rplidar_ros/CMakeFiles/rplidarNodeClient.dir/rule
+
+.PHONY : rplidarNodeClient
+
+# clean rule for target.
+rplidar_ros/CMakeFiles/rplidarNodeClient.dir/clean:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/clean
+.PHONY : rplidar_ros/CMakeFiles/rplidarNodeClient.dir/clean
+
+#=============================================================================
+# Target rules for target rplidar_ros/CMakeFiles/rplidarNode.dir
+
+# All Build rule for target.
+rplidar_ros/CMakeFiles/rplidarNode.dir/all:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/depend
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39 "Built target rplidarNode"
+.PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/all
+
+# Build rule for subdir invocation for target.
+rplidar_ros/CMakeFiles/rplidarNode.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 rplidar_ros/CMakeFiles/rplidarNode.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 0
+.PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/rule
+
+# Convenience name for target.
+rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/rule
+
+.PHONY : rplidarNode
+
+# clean rule for target.
+rplidar_ros/CMakeFiles/rplidarNode.dir/clean:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/clean
+.PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/clean
 
 #=============================================================================
 # Target rules for target navigation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir

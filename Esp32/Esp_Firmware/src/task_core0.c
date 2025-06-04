@@ -172,8 +172,12 @@ void monitor_encoder_pid_calc(void *params){
         pwm_actuate(DIR,pid_result_duty_right);
         iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, (local_servo_angle + SERVO_OFFSET));
 
+        /*
+        xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);
+        printf("Deslocamento total em X: %f e em Y: %f \n", global_total_x, global_total_y);
+        xSemaphoreGive(xSemaphore_getRosSpeed);
         //vTaskDelay(pdMS_TO_TICKS(PID_DELAY));
-
+        */
         count_get_real++;
         count_get_ros++;
 
@@ -181,7 +185,7 @@ void monitor_encoder_pid_calc(void *params){
 
 }
 
-static void x   IRAM_ATTR monitor_encoder_pid_calc_start(void *args)
+static void IRAM_ATTR monitor_encoder_pid_calc_start(void *args)
 {   
 
     //reseting encoder stored ticks

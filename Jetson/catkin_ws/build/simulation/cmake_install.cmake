@@ -38,26 +38,26 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/ackermann_vehicle_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulation.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_vehicle_gazebo/cmake" TYPE FILE FILES
-    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/ackermann_vehicle_gazeboConfig.cmake"
-    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/ackermann_vehicle_gazeboConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation/cmake" TYPE FILE FILES
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulationConfig.cmake"
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_vehicle_gazebo" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ackermann_vehicle_gazebo" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/ackermann_controller")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/simulation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/ackermann_controller")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ackermann_vehicle_gazebo" TYPE DIRECTORY FILES
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE DIRECTORY FILES
     "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/config"
     "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/launch"
     )

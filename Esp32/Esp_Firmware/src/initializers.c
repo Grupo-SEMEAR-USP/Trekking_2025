@@ -96,6 +96,7 @@ pid_ctrl_config_t pid_ctrl_config_info(float *k_values,float max_duty_value, flo
 
 }
 
+// Testando sem os pull_ups internos da esp
 //i2c initializers
 i2c_config_t i2c_slave_config_info(
     gpio_num_t sda_pin,
@@ -106,8 +107,8 @@ i2c_config_t i2c_slave_config_info(
         conf_slave.mode = I2C_MODE_SLAVE;
         conf_slave.sda_io_num = (int) sda_pin;
         conf_slave.scl_io_num = (int) slc_pin;          
-        conf_slave.sda_pullup_en = GPIO_PULLUP_ENABLE;           
-        conf_slave.scl_pullup_en = GPIO_PULLUP_ENABLE;
+        conf_slave.sda_pullup_en = GPIO_PULLUP_DISABLE;           
+        conf_slave.scl_pullup_en = GPIO_PULLUP_DISABLE;
         conf_slave.slave.addr_10bit_en = 0;
         conf_slave.slave.slave_addr = slave_addr;       
         conf_slave.slave.maximum_speed = 100000;

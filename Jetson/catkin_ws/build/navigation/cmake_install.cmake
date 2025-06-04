@@ -117,6 +117,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/path_follower.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/odom_front.py")
 endif()
 

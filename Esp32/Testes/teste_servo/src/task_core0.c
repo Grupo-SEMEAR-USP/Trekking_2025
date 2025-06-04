@@ -160,7 +160,7 @@ void monitor_encoder_pid_calc(void *params){
     //pwm_actuate(ESQ,pid_result_duty_left);
     //pwm_actuate(DIR,pid_result_duty_right);
 
-
+/*
     if (aux && cycle_count >= 10){
         if (count_servo < 30){
             xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY); //could be incremented in the first lock
@@ -186,11 +186,10 @@ void monitor_encoder_pid_calc(void *params){
         } else {aux = pdTRUE;}
         cycle_count = 0;  
     }
-   
+   */
     iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, (local_servo_angle + SERVO_OFFSET));
 
     printf("ângulo do servo: %f\n", local_servo_angle);
-    vTaskDelay(pdMS_TO_TICKS(PID_DELAY));
     
     count_get_real++;
     count_get_ros++;

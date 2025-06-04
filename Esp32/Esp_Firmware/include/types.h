@@ -68,10 +68,11 @@
 
 #define I2C_SLAVE_SCL_IO GPIO_NUM_22 //gpio number for i2c slave clock 
 #define I2C_SLAVE_SDA_IO GPIO_NUM_21 //gpio number for i2c slave data
-#define ESP_SLAVE_ADDR 0x69 //0x69 == ESP que controla a traseira, 0x68 == ESP que controla a frente
+#define ESP_SLAVE_ADDR 0x52
 
-#define I2C_SLAVE_TX_BUF_LEN 512 //buffer for 32 tansmitting messages
-#define I2C_SLAVE_RX_BUF_LEN 384 //buffer for 32 receiving messages
+// Testando i2c com buffers menores, valores antigos: 512 e 384
+#define I2C_SLAVE_TX_BUF_LEN 128 //buffer for 32 tansmitting messages
+#define I2C_SLAVE_RX_BUF_LEN 128 //buffer for 32 receiving messages
 
 //pid constants
 #define PID_DELAY 8//8

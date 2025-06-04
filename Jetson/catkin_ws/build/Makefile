@@ -294,7 +294,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f simulation/CMakeFiles/_catkin_empty_exported_target.dir/build.make simulation/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/build.make robot_control_new/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
@@ -909,6 +909,32 @@ bsc_controller/fast:
 .PHONY : bsc_controller/fast
 
 #=============================================================================
+# Target rules for targets named rplidarNodeClient
+
+# Build rule for target.
+rplidarNodeClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNodeClient
+.PHONY : rplidarNodeClient
+
+# fast build rule for target.
+rplidarNodeClient/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
+.PHONY : rplidarNodeClient/fast
+
+#=============================================================================
+# Target rules for targets named rplidarNode
+
+# Build rule for target.
+rplidarNode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNode
+.PHONY : rplidarNode
+
+# fast build rule for target.
+rplidarNode/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
+.PHONY : rplidarNode/fast
+
+#=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1355,6 +1381,8 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... bsc_controller"
+	@echo "... rplidarNodeClient"
+	@echo "... rplidarNode"
 	@echo "... move_base_msgs_generate_messages_nodejs"
 	@echo "... navigation_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"

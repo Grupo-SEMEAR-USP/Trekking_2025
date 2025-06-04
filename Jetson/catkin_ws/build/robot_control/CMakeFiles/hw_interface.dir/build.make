@@ -105,39 +105,39 @@ hw_interface_OBJECTS = \
 # External object files for target hw_interface
 hw_interface_EXTERNAL_OBJECTS =
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/hw_main.cpp.o
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/initializers.cpp.o
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: robot_control/CMakeFiles/hw_interface.dir/build.make
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/libbsc_controller.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libtf.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libtf2_ros.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libactionlib.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libmessage_filters.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libroscpp.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libtf2.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/librosconsole.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/librostime.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /opt/ros/noetic/lib/libcpp_common.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface: robot_control/CMakeFiles/hw_interface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface"
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/hw_main.cpp.o
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/initializers.cpp.o
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/build.make
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/libbsc_controller.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf2_ros.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libactionlib.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libmessage_filters.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libroscpp.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf2.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librostime.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libcpp_common.so
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface"
 	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw_interface.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-robot_control/CMakeFiles/hw_interface.dir/build: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/hw_interface/hw_interface
+robot_control/CMakeFiles/hw_interface.dir/build: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface
 
 .PHONY : robot_control/CMakeFiles/hw_interface.dir/build
 
