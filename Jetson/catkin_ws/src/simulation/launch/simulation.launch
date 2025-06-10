@@ -39,9 +39,9 @@
         </node>
 
         <!-- Launch a rqt steering GUI for publishing to /steer_bot/steer_drive_controller/cmd_vel -->
-        <node pkg="rqt_robot_steering" type="rqt_robot_steering" name="rqt_robot_steering" >
+        <!--node pkg="rqt_robot_steering" type="rqt_robot_steering" name="rqt_robot_steering" >
             <param name="default_topic" value="$(arg namespace)/ackermann_steering_controller/cmd_vel"/>
-        </node>
+        </node-->
 
         <!-- Spawn robot in Gazebo -->
         <node name="spawn_vehicle" pkg="gazebo_ros" type="spawn_model"

@@ -56,38 +56,6 @@ CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -112,17 +80,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -134,6 +91,49 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,201 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-navigation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-.PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_nodejs: navigation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-move_base_msgs_generate_messages_nodejs/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make navigation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
-.PHONY : move_base_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule
-.PHONY : navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-navigation_generate_messages_lisp: navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule
-
-.PHONY : navigation_generate_messages_lisp
-
-# fast build rule for target.
-navigation_generate_messages_lisp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_generate_messages_lisp.dir/build.make navigation/CMakeFiles/navigation_generate_messages_lisp.dir/build
-.PHONY : navigation_generate_messages_lisp/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : navigation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: navigation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make navigation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-.PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_eus: navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_eus
-
-# fast build rule for target.
-move_base_msgs_generate_messages_eus/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make navigation/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
-.PHONY : move_base_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : navigation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: navigation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make navigation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-.PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_lisp: navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_lisp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_lisp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make navigation/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
-.PHONY : move_base_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/navigation_gennodejs.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_gennodejs.dir/rule
-.PHONY : navigation/CMakeFiles/navigation_gennodejs.dir/rule
-
-# Convenience name for target.
-navigation_gennodejs: navigation/CMakeFiles/navigation_gennodejs.dir/rule
-
-.PHONY : navigation_gennodejs
-
-# fast build rule for target.
-navigation_gennodejs/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_gennodejs.dir/build.make navigation/CMakeFiles/navigation_gennodejs.dir/build
-.PHONY : navigation_gennodejs/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : navigation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: navigation/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make navigation/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : navigation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: navigation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make navigation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : navigation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: navigation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make navigation/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-.PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_cpp: navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_cpp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_cpp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make navigation/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
-.PHONY : move_base_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : navigation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: navigation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make navigation/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : navigation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: navigation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make navigation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
 navigation/CMakeFiles/navigation_geneus.dir/rule:
 	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_geneus.dir/rule
 .PHONY : navigation/CMakeFiles/navigation_geneus.dir/rule
@@ -378,34 +183,34 @@ navigation_geneus/fast:
 .PHONY : navigation_geneus/fast
 
 # Convenience name for target.
-navigation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : navigation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule
+.PHONY : navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: navigation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+_navigation_generate_messages_check_deps_encoders: navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_cpp
+.PHONY : _navigation_generate_messages_check_deps_encoders
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make navigation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+_navigation_generate_messages_check_deps_encoders/fast:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/build.make navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/build
+.PHONY : _navigation_generate_messages_check_deps_encoders/fast
 
 # Convenience name for target.
-navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
-.PHONY : navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
+navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule
+.PHONY : navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-move_base_msgs_generate_messages_py: navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
+navigation_generate_messages_cpp: navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule
 
-.PHONY : move_base_msgs_generate_messages_py
+.PHONY : navigation_generate_messages_cpp
 
 # fast build rule for target.
-move_base_msgs_generate_messages_py/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make navigation/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
-.PHONY : move_base_msgs_generate_messages_py/fast
+navigation_generate_messages_cpp/fast:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_generate_messages_cpp.dir/build.make navigation/CMakeFiles/navigation_generate_messages_cpp.dir/build
+.PHONY : navigation_generate_messages_cpp/fast
 
 # Convenience name for target.
 navigation/CMakeFiles/move_base_gencfg.dir/rule:
@@ -453,79 +258,19 @@ navigation_generate_messages_eus/fast:
 .PHONY : navigation_generate_messages_eus/fast
 
 # Convenience name for target.
-navigation/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : navigation/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule
+.PHONY : navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-nav_msgs_generate_messages_eus: navigation/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+navigation_generate_messages_lisp: navigation/CMakeFiles/navigation_generate_messages_lisp.dir/rule
 
-.PHONY : nav_msgs_generate_messages_eus
+.PHONY : navigation_generate_messages_lisp
 
 # fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make navigation/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule
-.PHONY : navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule
-
-# Convenience name for target.
-_navigation_generate_messages_check_deps_encoders: navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/rule
-
-.PHONY : _navigation_generate_messages_check_deps_encoders
-
-# fast build rule for target.
-_navigation_generate_messages_check_deps_encoders/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/build.make navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/build
-.PHONY : _navigation_generate_messages_check_deps_encoders/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : navigation/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: navigation/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make navigation/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : navigation/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: navigation/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make navigation/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule
-.PHONY : navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-navigation_generate_messages_cpp: navigation/CMakeFiles/navigation_generate_messages_cpp.dir/rule
-
-.PHONY : navigation_generate_messages_cpp
-
-# fast build rule for target.
-navigation_generate_messages_cpp/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_generate_messages_cpp.dir/build.make navigation/CMakeFiles/navigation_generate_messages_cpp.dir/build
-.PHONY : navigation_generate_messages_cpp/fast
+navigation_generate_messages_lisp/fast:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_generate_messages_lisp.dir/build.make navigation/CMakeFiles/navigation_generate_messages_lisp.dir/build
+.PHONY : navigation_generate_messages_lisp/fast
 
 # Convenience name for target.
 navigation/CMakeFiles/navigation_generate_messages.dir/rule:
@@ -558,6 +303,36 @@ navigation_genpy/fast:
 .PHONY : navigation_genpy/fast
 
 # Convenience name for target.
+navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule
+.PHONY : navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+navigation_generate_messages_nodejs: navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule
+
+.PHONY : navigation_generate_messages_nodejs
+
+# fast build rule for target.
+navigation_generate_messages_nodejs/fast:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/build.make navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/build
+.PHONY : navigation_generate_messages_nodejs/fast
+
+# Convenience name for target.
+navigation/CMakeFiles/navigation_gennodejs.dir/rule:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_gennodejs.dir/rule
+.PHONY : navigation/CMakeFiles/navigation_gennodejs.dir/rule
+
+# Convenience name for target.
+navigation_gennodejs: navigation/CMakeFiles/navigation_gennodejs.dir/rule
+
+.PHONY : navigation_gennodejs
+
+# fast build rule for target.
+navigation_gennodejs/fast:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_gennodejs.dir/build.make navigation/CMakeFiles/navigation_gennodejs.dir/build
+.PHONY : navigation_gennodejs/fast
+
+# Convenience name for target.
 navigation/CMakeFiles/navigation_genlisp.dir/rule:
 	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_genlisp.dir/rule
 .PHONY : navigation/CMakeFiles/navigation_genlisp.dir/rule
@@ -587,63 +362,32 @@ navigation_generate_messages_py/fast:
 	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_generate_messages_py.dir/build.make navigation/CMakeFiles/navigation_generate_messages_py.dir/build
 .PHONY : navigation_generate_messages_py/fast
 
-# Convenience name for target.
-navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule
-.PHONY : navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-navigation_generate_messages_nodejs: navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/rule
-
-.PHONY : navigation_generate_messages_nodejs
-
-# fast build rule for target.
-navigation_generate_messages_nodejs/fast:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/build.make navigation/CMakeFiles/navigation_generate_messages_nodejs.dir/build
-.PHONY : navigation_generate_messages_nodejs/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... move_base_msgs_generate_messages_nodejs"
-	@echo "... navigation_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... move_base_msgs_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... install/strip"
-	@echo "... navigation_gennodejs"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... install/local"
-	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... move_base_msgs_generate_messages_cpp"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... install"
 	@echo "... navigation_geneus"
-	@echo "... edit_cache"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... move_base_msgs_generate_messages_py"
+	@echo "... _navigation_generate_messages_check_deps_encoders"
+	@echo "... list_install_components"
+	@echo "... navigation_generate_messages_cpp"
 	@echo "... move_base_gencfg"
 	@echo "... navigation_gencpp"
 	@echo "... navigation_generate_messages_eus"
-	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... _navigation_generate_messages_check_deps_encoders"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... navigation_generate_messages_cpp"
+	@echo "... navigation_generate_messages_lisp"
 	@echo "... navigation_generate_messages"
-	@echo "... install"
 	@echo "... navigation_genpy"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... navigation_generate_messages_nodejs"
+	@echo "... test"
+	@echo "... navigation_gennodejs"
 	@echo "... navigation_genlisp"
 	@echo "... navigation_generate_messages_py"
-	@echo "... navigation_generate_messages_nodejs"
 .PHONY : help
 
 

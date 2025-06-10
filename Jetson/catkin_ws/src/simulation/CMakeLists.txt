@@ -16,8 +16,22 @@
 
 cmake_minimum_required(VERSION 2.8.3)
 project(simulation)
-find_package(catkin REQUIRED)
+find_package(catkin REQUIRED
+        roscpp
+        move_base_msgs
+        std_msgs
+        actionlib
+)
 catkin_package()
+
+include_directories(
+        include
+        ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(simple_navigation_goal src/simple_navigation_goal.cpp)
+target_link_libraries( simple_navigation_goal ${catkin_LIBRARIES})
+
 
 catkin_install_python(PROGRAMS scripts/ackermann_controller
                       DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

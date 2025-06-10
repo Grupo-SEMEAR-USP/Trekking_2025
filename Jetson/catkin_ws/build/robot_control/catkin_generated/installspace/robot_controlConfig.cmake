@@ -118,7 +118,7 @@ endif()
 
 set(libraries "hw_interface")
 foreach(library ${libraries})
-  # keep build configuration keywords, target names and absolute libraries as-is
+  # keep build configuration keywords, generator expressions, target names, and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
     list(APPEND robot_control_LIBRARIES ${library})
   elseif(${library} MATCHES "^-l")
@@ -146,6 +146,8 @@ foreach(library ${libraries})
       target_link_options("${interface_target_name}" INTERFACE "${library}")
     endif()
     list(APPEND robot_control_LIBRARIES "${interface_target_name}")
+  elseif(${library} MATCHES "^\\$<")
+    list(APPEND robot_control_LIBRARIES ${library})
   elseif(TARGET ${library})
     list(APPEND robot_control_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -154,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install/lib;/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +179,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(robot_control_EXPORTED_TARGETS "")
+set(robot_control_EXPORTED_TARGETS "robot_control_generate_messages_cpp;robot_control_generate_messages_eus;robot_control_generate_messages_lisp;robot_control_generate_messages_nodejs;robot_control_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${robot_control_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -214,7 +216,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(robot_control_EXPORTED_TARGETS ${${robot_control_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "robot_control-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${robot_control_DIR}/${extra})

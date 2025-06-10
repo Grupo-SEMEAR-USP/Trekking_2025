@@ -5,8 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp" "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o"
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_main.cpp" "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/hw_interface.dir/src/hw_main.cpp.o"
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/initializers.cpp" "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/hw_interface.dir/src/initializers.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,16 +17,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include"
   "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/bsc_i2c_controller/include"
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/bsc_i2c_controller/src"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/bsc_i2c_controller/CMakeFiles/bsc_controller.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

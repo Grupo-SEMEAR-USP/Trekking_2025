@@ -29,10 +29,16 @@
 
     <!-- Running move_base with its parameters -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <remap from="/cmd_vel" to="/steer_bot/ackermann_steering_controller/cmd_vel"/>
+
         <rosparam file="$(find navigation)/costmaps/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
         <rosparam file="$(find navigation)/costmaps/costmap_common_params.yaml" command="load" ns="local_costmap" />
+
         <rosparam file="$(find navigation)/costmaps/local_costmap_params.yaml" command="load" />
         <rosparam file="$(find navigation)/costmaps/global_costmap_params.yaml" command="load" /> 
+        
         <rosparam file="$(find navigation)/config/teb_params.yaml" command="load" />
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+        <param name="controller_frequency" value="50.0" />
     </node>     
 </launch>

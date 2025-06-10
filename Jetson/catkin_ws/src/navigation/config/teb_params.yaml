@@ -1,8 +1,9 @@
 TebLocalPlannerROS:
 
- odom_topic: /steer_bot/ackermann_steering_controller/odom
+ odom_topic: /odometry/filtered
  map_frame: /map
-    
+ cmd_vel_topic: /steer_bot/ackermann_steering_controller/cmd_vel
+
  # Trajectory
   
  teb_autosize: True

@@ -1,5 +1,5 @@
 obstacle_range: 2.5
-raytrace_range: 3.0
+raytrace_range: 5.0
 footprint: [[-0.25, 0.15], [-0.25, -0.15], [0.25, 0.15], [0.25, -0.15]] #Footprint do URDF de teste
 #robot_radius: ir_of_robot
 inflation_radius: 0.55

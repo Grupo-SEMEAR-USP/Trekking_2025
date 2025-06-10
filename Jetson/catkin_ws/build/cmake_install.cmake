@@ -118,6 +118,21 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install/setup.fish;/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install/local_setup.fish")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.fish"
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.fish"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
@@ -131,12 +146,16 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control_new/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/i2c_device_ros/cmake_install.cmake")
   include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/cmake_install.cmake")
-  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/teste_i2c/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_ros/cmake_install.cmake")
   include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/mpu6050_driver/cmake_install.cmake")
   include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/rplidar_ros/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_bot_hardware_gazebo/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/stepback_and_steerturn_recovery/cmake_install.cmake")
   include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/cmake_install.cmake")
+  include("/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_controller/cmake_install.cmake")
 
 endif()
 

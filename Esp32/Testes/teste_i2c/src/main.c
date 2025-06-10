@@ -17,7 +17,7 @@
 
 #define I2C_SLAVE_SCL_IO GPIO_NUM_22 //gpio number for i2c slave clock 
 #define I2C_SLAVE_SDA_IO GPIO_NUM_21 //gpio number for i2c slave data
-#define ESP_SLAVE_ADDR 0x69 //0x69 == ESP que controla a traseira, 0x68 == ESP que controla a frente
+#define ESP_SLAVE_ADDR 0x58 //0x69 == ESP que controla a traseira, 0x68 == ESP que controla a frente
 
 #define I2C_SLAVE_TX_BUF_LEN 256
 #define I2C_SLAVE_RX_BUF_LEN 256
@@ -74,9 +74,9 @@ void app_main() {
         if(i2c_slave_read_buffer(I2C_PORT,rx_data,(size_t)MENSAGE_SIZE,tickstowait/4) > 0 ){ //TIMEOUT_MS_READ / portTICK_RATE_MS
             memcpy(nome, rx_data,8);
             for(int i =0 ; i<8;i++){
-                printf("%d",nome[i]);
+                //printf("%d",nome[i]);
             }
-            printf("\n");
+            //printf("\n");
         }
     
         
