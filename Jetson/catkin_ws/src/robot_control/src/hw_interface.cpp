@@ -1,7 +1,8 @@
 #include "hw_interface.hpp"
+#include <cmath>
 
 RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeout_(nh.createTimer(ros::Duration(0.1), &RobotHWInterface::commandTimeoutCallback, this, true, false)) {
-    cmd_vel_sub = nh.subscribe("cmd_vel", 10, &RobotHWInterface::cmdVelCallback, this);
+     cmd_vel_sub = nh.subscribe("cmd_vel", 10, &RobotHWInterface::cmdVelCallback, this);
 
     velocity_command_pub = nh.advertise<robot_control::velocity_data>("velocity_command", 10);
 
@@ -9,14 +10,11 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
     odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 50);
 
     // Initialize parameters
-    nh.param("wheel_control/wheel_radius", wheel_radius, 0.05f); // Default value: 0.05
     nh.param("wheel_control/wheel_separation_width", wheel_separation_width, 0.2f); // Default value: 0.2
     nh.param("wheel_control/wheel_separation_length", wheel_separation_length, 0.2f); // Default value: 0.2
-    nh.param("wheel_control/max_speed", max_speed, 1.0f); // Default value: 1.0
-    nh.param("wheel_control/min_speed", min_speed, -1.0f); // Default value: -1.0
 
     // Validate parameters
-    if (wheel_radius <= 0 || wheel_separation_width <= 0 || wheel_separation_length <= 0) {
+    if (wheel_separation_width <= 0 || wheel_separation_length <= 0) {
         ROS_FATAL("Invalid geometry parameters. Please check the configuration.");
         ros::shutdown();
     }
@@ -25,12 +23,7 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
     y = 0;
     th = 0;
 
-    vel_linearx = 0;
-    vel_lineary = 0;
-    vel_angular_z = 0;
-
-    auto current_time = ros::Time::now();
-
+    timestamp = ros::Time::now();
 }
 
 void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg) {
@@ -38,17 +31,36 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
     const float vy = msg->linear.y;
     const float omega = msg->angular.z;
 
-    // Ensure wheel_radius is not zero to avoid division by zero error
-    if (wheel_radius == 0) {
-        ROS_ERROR("wheel_radius is zero, cannot calculate wheel speeds");
-        return;
+    double v = std::hypot(vx, vy);
+
+    double R = v/omega;
+
+    if (std::abs(omega) < 1e-5) {
+        rear_left_wheel_speed = v;
+        rear_right_wheel_speed = v;
     }
+    else if (omega < 0){
+        rear_left_wheel_speed = omega * (R + wheel_separation_width/2);
+        rear_right_wheel_speed = omega * (R - wheel_separation_width/2);
+    }
+    else if (omega > 0){
+        rear_left_wheel_speed = omega * (R - wheel_separation_width/2);
+        rear_right_wheel_speed = omega * (R + wheel_separation_width/2);
+    }
+    
+    double phi = std::atan(wheel_separation_length / R);
+    
+    double phi_L = std::atan((2*wheel_separation_length*std::sin(phi))/(2*wheel_separation_length*std::cos(phi)-wheel_separation_width*std::sin(phi)));
 
-    const float speed_multiplier = 1 / wheel_radius;
-    const float omega_effect = omega * base_geometry;
+    phi_L += 1.1969747762; // cheacar se está certo
+    
+    long double phi_L4 = phi_L*phi_L*phi_L*phi_L;
+    long double phi_L3 = phi_L*phi_L*phi_L;
+    long double phi_L2 = phi_L*phi_L;
 
-    rear_left_wheel_speed =  //depende do modelo dinâmico
-    rear_right_wheel_speed = //depende do modelo dinâmico
+    theta_2 = 0.00249637 * phi_L4 - 0.10561985 * phi_L3 + 0.57738126 * phi_L2 -0.49075692 * phi_L + 1.68385704;
+
+    theta_2 += 1.57049091488;
 
     // Reset the command timeout with auto-restart
     command_timeout_.stop();
@@ -62,7 +74,7 @@ void RobotHWInterface::publishWheelSpeeds() {
 
     msg.angular_speed_left = rear_left_wheel_speed;
     msg.angular_speed_right = rear_right_wheel_speed;
-    msg.servo_angle = 0;// definir depois
+    msg.servo_angle = theta_2;
 
     velocity_command_pub.publish(msg);
 }
@@ -70,31 +82,24 @@ void RobotHWInterface::publishWheelSpeeds() {
 
 void RobotHWInterface::encoderCallback(const robot_control::i2c_data::ConstPtr& msg) {
 
-    current_time = ros::Time::now();
-
-    vel_linearx = // depende do modelo dinâmico
-    vel_lineary = // depende do modelo dinâmico
-    vel_angular_z = // depende do modelo dinâmico
+    x = msg->x;
+    y = msg->y;
+    th = msg->z;
+    timestamp = ros::Time::now();
+    
     //std::cout << "Velocidade Linear X: " << vel_linearx << ", Velocidade Linear Y: " << vel_lineary << ", Velocidade Angular Z: " << vel_angular_z << std::endl;
 
     //std::cout << "Teste Encoder: " << teste << "\n";
 
 }
 
-// EU ACHO Q O VOID ABAIXO SE MANTÉM
 
 void RobotHWInterface::updateOdometry() {
-
-    current_time = ros::Time::now();
-
-    x += delta_x;
-    y += delta_y;
-    th += delta_th;
 
     geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(th);
 
     geometry_msgs::TransformStamped odom_trans;
-    odom_trans.header.stamp = current_time;
+    odom_trans.header.stamp = timestamp;
     odom_trans.header.frame_id = "odom";
     odom_trans.child_frame_id = "base_link";
 
@@ -106,7 +111,7 @@ void RobotHWInterface::updateOdometry() {
     odom_broadcaster.sendTransform(odom_trans);
 
     nav_msgs::Odometry odom;
-    odom.header.stamp = current_time;
+    odom.header.stamp = timestamp;
     odom.header.frame_id = "odom";
 
     odom.pose.pose.position.x = x;
@@ -115,8 +120,8 @@ void RobotHWInterface::updateOdometry() {
     odom.pose.pose.orientation = odom_quat;
 
     odom.child_frame_id = "base_link";
-    odom.twist.twist.linear.x = vel_linearx;
-    odom.twist.twist.linear.y = vel_lineary;
+    odom.twist.twist.linear.x = 0;
+    odom.twist.twist.linear.y = 0;
     odom.twist.twist.angular.z = 0;
 
     odom_pub.publish(odom);

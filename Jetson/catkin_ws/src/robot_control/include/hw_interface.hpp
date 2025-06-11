@@ -28,8 +28,6 @@ public:
     void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg);
     void publishWheelSpeeds(); // Publicando velocidades do cmd_vel
     void commandTimeoutCallback(const ros::TimerEvent&); // Callback para o timeout
-    void updateWheelSpeedForDeceleration(); // Desaceleração
-    float mapSpeed(float v_input); // Normalização da velocidade
     void encoderCallback(const robot_control::i2c_data::ConstPtr& msg); // Callback para os dados do encoder
     void updateOdometry();
 
@@ -46,12 +44,6 @@ private:
     ros::Subscriber encoder_sub;
     ros::Publisher odom_pub;
 
-    // Última orientação do robô (quaternion)
-    geometry_msgs::Quaternion last_orientation;
-
-    // Posição atual do robô
-    geometry_msgs::Point current_position;
-
     // Temporizador para o timeout de comandos
     ros::Timer command_timeout_; 
 
@@ -60,25 +52,23 @@ private:
     float rear_right_wheel_speed = 0.0;
 
     // Parâmetros carregados do arquivo .yaml
-    float wheel_radius; // Raio das rodas
-    float base_geometry; // Geometria da base
     float wheel_separation_width;
     float wheel_separation_length;
-    float deceleration_rate; // Taxa de desaceleração
-    float max_speed; // Velocidade máxima
-    float min_speed; // Velocidade mínima
 
-    // Parâmetros para a odometria 
-
+    // Parâmetros para a odometria e intermediarios para calculo da velocidade
     double x;
     double y;
     double th;
+    ros::Time timestamp;
 
-    double vel_linearx;
-    double vel_lineary;
-    double vel_angular_z;
+    double x_old;
+    double y_old;
+    double th_old;
+    ros::Timer timestamp_old;
 
-    ros::Time current_time;
+    // Angulo do servo
+    double theta_2;
+
     tf::TransformBroadcaster odom_broadcaster;
 };
 
