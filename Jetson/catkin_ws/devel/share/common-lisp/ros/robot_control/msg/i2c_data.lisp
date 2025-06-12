@@ -25,8 +25,8 @@
    (timestamp
     :reader timestamp
     :initarg :timestamp
-    :type cl:real
-    :initform 0))
+    :type cl:float
+    :initform 0.0))
 )
 
 (cl:defclass i2c_data (<i2c_data>)
@@ -85,16 +85,15 @@
     (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
-  (cl:let ((__sec (cl:floor (cl:slot-value msg 'timestamp)))
-        (__nsec (cl:round (cl:* 1e9 (cl:- (cl:slot-value msg 'timestamp) (cl:floor (cl:slot-value msg 'timestamp)))))))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) __sec) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) __sec) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) __sec) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) __sec) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 0) __nsec) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) __nsec) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) __nsec) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) __nsec) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'timestamp))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <i2c_data>) istream)
   "Deserializes a message object of type '<i2c_data>"
@@ -128,16 +127,16 @@
       (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
     (cl:setf (cl:slot-value msg 'z) (roslisp-utils:decode-double-float-bits bits)))
-    (cl:let ((__sec 0) (__nsec 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) __sec) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) __sec) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) __sec) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) __sec) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 0) __nsec) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) __nsec) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) __nsec) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) __nsec) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'timestamp) (cl:+ (cl:coerce __sec 'cl:double-float) (cl:/ __nsec 1e9))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'timestamp) (roslisp-utils:decode-double-float-bits bits)))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<i2c_data>)))
@@ -148,16 +147,16 @@
   "robot_control/i2c_data")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<i2c_data>)))
   "Returns md5sum for a message object of type '<i2c_data>"
-  "e71507ab43d5121e050e733639e48c42")
+  "14eb7bbd6a88245711aff1553f6d4423")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'i2c_data)))
   "Returns md5sum for a message object of type 'i2c_data"
-  "e71507ab43d5121e050e733639e48c42")
+  "14eb7bbd6a88245711aff1553f6d4423")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<i2c_data>)))
   "Returns full string definition for message of type '<i2c_data>"
-  (cl:format cl:nil "# i2c_data.msg~%float64 x~%float64 y~%float64 z ~%time timestamp~%~%"))
+  (cl:format cl:nil "# i2c_data.msg~%float64 x~%float64 y~%float64 z ~%float64 timestamp~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'i2c_data)))
   "Returns full string definition for message of type 'i2c_data"
-  (cl:format cl:nil "# i2c_data.msg~%float64 x~%float64 y~%float64 z ~%time timestamp~%~%"))
+  (cl:format cl:nil "# i2c_data.msg~%float64 x~%float64 y~%float64 z ~%float64 timestamp~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <i2c_data>))
   (cl:+ 0
      8

@@ -23,7 +23,7 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
     y = 0;
     th = 0;
 
-    timestamp = ros::Time::now();
+    delta = false;
 }
 
 void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg) {
@@ -82,24 +82,63 @@ void RobotHWInterface::publishWheelSpeeds() {
 
 void RobotHWInterface::encoderCallback(const robot_control::i2c_data::ConstPtr& msg) {
 
-    x = msg->x;
-    y = msg->y;
-    th = msg->z;
-    timestamp = ros::Time::now();
+    x = msg->x / 1000;
+    y = msg->y / 1000;
+    th = msg->z / 1000;
+    timestamp = msg->timestamp;
     
+    if (!delta){
+        x_old = x;
+        y_old = y;
+        th_old = th;
+        timestamp_old = timestamp;
+        delta = true;
+    } else if (delta && timestamp != timestamp_old){
+        vel_linear_x = (x - x_old)/(timestamp - timestamp_old);
+        vel_linear_y = (y - y_old)/(timestamp - timestamp_old);
+        vel_angular_z = (th - th_old)/(timestamp - timestamp_old);
+
+        base_vel_linear = std::hypot(vel_linear_x, vel_linear_y);
+        base_vel_angular = vel_angular_z;
+
+        delta = false;
+    }
+
     //std::cout << "Velocidade Linear X: " << vel_linearx << ", Velocidade Linear Y: " << vel_lineary << ", Velocidade Angular Z: " << vel_angular_z << std::endl;
 
     //std::cout << "Teste Encoder: " << teste << "\n";
 
 }
 
+void RobotHWInterface::commandTimeoutCallback(const ros::TimerEvent&) {
+    updateWheelSpeedForDeceleration();
+}
+
+void RobotHWInterface::updateWheelSpeedForDeceleration() {
+    // Desacelera cada roda gradualmente até zero
+
+    if (std::abs(rear_left_wheel_speed) > DECELERATION_RATE) rear_left_wheel_speed -= DECELERATION_RATE * (rear_left_wheel_speed > 0 ? 1 : -1);
+    else rear_left_wheel_speed = 0;
+
+    if (std::abs(rear_right_wheel_speed) > DECELERATION_RATE) rear_right_wheel_speed -= DECELERATION_RATE * (rear_right_wheel_speed > 0 ? 1 : -1);
+    else rear_right_wheel_speed = 0;
+
+    // Verifica se todas as velocidades chegaram a zero, se não, continua desacelerando
+    if (rear_left_wheel_speed != 0 || rear_right_wheel_speed != 0) {
+        command_timeout_.stop();
+        command_timeout_.setPeriod(ros::Duration(CMD_VEL_TIMEOUT_DEACELERATION_PERIOD), true); // Use um intervalo mais curto para desaceleração suave
+        command_timeout_.start();
+    }
+}
 
 void RobotHWInterface::updateOdometry() {
+
+    current_time = ros::Time::now();
 
     geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(th);
 
     geometry_msgs::TransformStamped odom_trans;
-    odom_trans.header.stamp = timestamp;
+    odom_trans.header.stamp = current_time;
     odom_trans.header.frame_id = "odom";
     odom_trans.child_frame_id = "base_link";
 
@@ -111,7 +150,7 @@ void RobotHWInterface::updateOdometry() {
     odom_broadcaster.sendTransform(odom_trans);
 
     nav_msgs::Odometry odom;
-    odom.header.stamp = timestamp;
+    odom.header.stamp = current_time;
     odom.header.frame_id = "odom";
 
     odom.pose.pose.position.x = x;
@@ -120,9 +159,9 @@ void RobotHWInterface::updateOdometry() {
     odom.pose.pose.orientation = odom_quat;
 
     odom.child_frame_id = "base_link";
-    odom.twist.twist.linear.x = 0;
+    odom.twist.twist.linear.x = base_vel_linear;
     odom.twist.twist.linear.y = 0;
-    odom.twist.twist.angular.z = 0;
+    odom.twist.twist.angular.z = base_vel_angular;
 
     odom_pub.publish(odom);
 

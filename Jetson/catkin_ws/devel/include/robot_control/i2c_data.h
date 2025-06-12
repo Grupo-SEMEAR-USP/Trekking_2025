@@ -27,13 +27,13 @@ struct i2c_data_
     : x(0.0)
     , y(0.0)
     , z(0.0)
-    , timestamp()  {
+    , timestamp(0.0)  {
     }
   i2c_data_(const ContainerAllocator& _alloc)
     : x(0.0)
     , y(0.0)
     , z(0.0)
-    , timestamp()  {
+    , timestamp(0.0)  {
   (void)_alloc;
     }
 
@@ -48,7 +48,7 @@ struct i2c_data_
    typedef double _z_type;
   _z_type z;
 
-   typedef ros::Time _timestamp_type;
+   typedef double _timestamp_type;
   _timestamp_type timestamp;
 
 
@@ -140,12 +140,12 @@ struct MD5Sum< ::robot_control::i2c_data_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "e71507ab43d5121e050e733639e48c42";
+    return "14eb7bbd6a88245711aff1553f6d4423";
   }
 
   static const char* value(const ::robot_control::i2c_data_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe71507ab43d5121eULL;
-  static const uint64_t static_value2 = 0x050e733639e48c42ULL;
+  static const uint64_t static_value1 = 0x14eb7bbd6a882457ULL;
+  static const uint64_t static_value2 = 0x11aff1553f6d4423ULL;
 };
 
 template<class ContainerAllocator>
@@ -168,7 +168,7 @@ struct Definition< ::robot_control::i2c_data_<ContainerAllocator> >
 "float64 x\n"
 "float64 y\n"
 "float64 z \n"
-"time timestamp\n"
+"float64 timestamp\n"
 ;
   }
 
@@ -209,14 +209,22 @@ struct Printer< ::robot_control::i2c_data_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::robot_control::i2c_data_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "x: ";
     Printer<double>::stream(s, indent + "  ", v.x);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "y: ";
     Printer<double>::stream(s, indent + "  ", v.y);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "z: ";
     Printer<double>::stream(s, indent + "  ", v.z);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "timestamp: ";
-    Printer<ros::Time>::stream(s, indent + "  ", v.timestamp);
+    Printer<double>::stream(s, indent + "  ", v.timestamp);
   }
 };
 

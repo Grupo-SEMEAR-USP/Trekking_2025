@@ -6,19 +6,18 @@ python3 = True if sys.hexversion > 0x03000000 else False
 import genpy
 import struct
 
-import genpy
 
 class i2c_data(genpy.Message):
-  _md5sum = "e71507ab43d5121e050e733639e48c42"
+  _md5sum = "14eb7bbd6a88245711aff1553f6d4423"
   _type = "robot_control/i2c_data"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """# i2c_data.msg
 float64 x
 float64 y
 float64 z 
-time timestamp"""
+float64 timestamp"""
   __slots__ = ['x','y','z','timestamp']
-  _slot_types = ['float64','float64','float64','time']
+  _slot_types = ['float64','float64','float64','float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -44,12 +43,12 @@ time timestamp"""
       if self.z is None:
         self.z = 0.
       if self.timestamp is None:
-        self.timestamp = genpy.Time()
+        self.timestamp = 0.
     else:
       self.x = 0.
       self.y = 0.
       self.z = 0.
-      self.timestamp = genpy.Time()
+      self.timestamp = 0.
 
   def _get_types(self):
     """
@@ -64,7 +63,7 @@ time timestamp"""
     """
     try:
       _x = self
-      buff.write(_get_struct_3d2I().pack(_x.x, _x.y, _x.z, _x.timestamp.secs, _x.timestamp.nsecs))
+      buff.write(_get_struct_4d().pack(_x.x, _x.y, _x.z, _x.timestamp))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -76,14 +75,11 @@ time timestamp"""
     if python3:
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
-      if self.timestamp is None:
-        self.timestamp = genpy.Time()
       end = 0
       _x = self
       start = end
       end += 32
-      (_x.x, _x.y, _x.z, _x.timestamp.secs, _x.timestamp.nsecs,) = _get_struct_3d2I().unpack(str[start:end])
-      self.timestamp.canon()
+      (_x.x, _x.y, _x.z, _x.timestamp,) = _get_struct_4d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -97,7 +93,7 @@ time timestamp"""
     """
     try:
       _x = self
-      buff.write(_get_struct_3d2I().pack(_x.x, _x.y, _x.z, _x.timestamp.secs, _x.timestamp.nsecs))
+      buff.write(_get_struct_4d().pack(_x.x, _x.y, _x.z, _x.timestamp))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -110,14 +106,11 @@ time timestamp"""
     if python3:
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
-      if self.timestamp is None:
-        self.timestamp = genpy.Time()
       end = 0
       _x = self
       start = end
       end += 32
-      (_x.x, _x.y, _x.z, _x.timestamp.secs, _x.timestamp.nsecs,) = _get_struct_3d2I().unpack(str[start:end])
-      self.timestamp.canon()
+      (_x.x, _x.y, _x.z, _x.timestamp,) = _get_struct_4d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -126,9 +119,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_3d2I = None
-def _get_struct_3d2I():
-    global _struct_3d2I
-    if _struct_3d2I is None:
-        _struct_3d2I = struct.Struct("<3d2I")
-    return _struct_3d2I
+_struct_4d = None
+def _get_struct_4d():
+    global _struct_4d
+    if _struct_4d is None:
+        _struct_4d = struct.Struct("<4d")
+    return _struct_4d

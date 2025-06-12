@@ -46,7 +46,7 @@ class i2c_data {
         this.timestamp = initObj.timestamp
       }
       else {
-        this.timestamp = {secs: 0, nsecs: 0};
+        this.timestamp = 0.0;
       }
     }
   }
@@ -60,7 +60,7 @@ class i2c_data {
     // Serialize message field [z]
     bufferOffset = _serializer.float64(obj.z, buffer, bufferOffset);
     // Serialize message field [timestamp]
-    bufferOffset = _serializer.time(obj.timestamp, buffer, bufferOffset);
+    bufferOffset = _serializer.float64(obj.timestamp, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -75,7 +75,7 @@ class i2c_data {
     // Deserialize message field [z]
     data.z = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [timestamp]
-    data.timestamp = _deserializer.time(buffer, bufferOffset);
+    data.timestamp = _deserializer.float64(buffer, bufferOffset);
     return data;
   }
 
@@ -90,7 +90,7 @@ class i2c_data {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e71507ab43d5121e050e733639e48c42';
+    return '14eb7bbd6a88245711aff1553f6d4423';
   }
 
   static messageDefinition() {
@@ -100,7 +100,7 @@ class i2c_data {
     float64 x
     float64 y
     float64 z 
-    time timestamp
+    float64 timestamp
     `;
   }
 
@@ -135,7 +135,7 @@ class i2c_data {
       resolved.timestamp = msg.timestamp;
     }
     else {
-      resolved.timestamp = {secs: 0, nsecs: 0}
+      resolved.timestamp = 0.0
     }
 
     return resolved;

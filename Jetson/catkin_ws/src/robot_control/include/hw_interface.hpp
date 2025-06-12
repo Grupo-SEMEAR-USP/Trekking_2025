@@ -21,14 +21,17 @@
 //hw params
 #define HW_IF_UPDATE_FREQ 50 //100     // diferente do da work
 #define HW_IF_TICK_PERIOD 1 / HW_IF_UPDATE_FREQ // diferente do da work
+#define CMD_VEL_TIMEOUT_DEACELERATION_PERIOD 0.05
+#define DECELERATION_RATE 0.5
 
 class RobotHWInterface {
 public:
     RobotHWInterface(ros::NodeHandle& nh); // Ajustado para receber NodeHandle por referência
     void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg);
     void publishWheelSpeeds(); // Publicando velocidades do cmd_vel
-    void commandTimeoutCallback(const ros::TimerEvent&); // Callback para o timeout
     void encoderCallback(const robot_control::i2c_data::ConstPtr& msg); // Callback para os dados do encoder
+    void commandTimeoutCallback(const ros::TimerEvent&); // Callback para o timeout
+    void updateWheelSpeedForDeceleration(); // Desaceleração
     void updateOdometry();
 
     int teste = 0;
@@ -59,15 +62,26 @@ private:
     double x;
     double y;
     double th;
-    ros::Time timestamp;
+    double timestamp;
 
     double x_old;
     double y_old;
     double th_old;
-    ros::Timer timestamp_old;
+    double timestamp_old;
+
+    bool delta;
+
+    double vel_linear_x;
+    double vel_linear_y;
+    double vel_angular_z;
+
+    double base_vel_linear;
+    double base_vel_angular;
 
     // Angulo do servo
     double theta_2;
+
+    ros::Time current_time;
 
     tf::TransformBroadcaster odom_broadcaster;
 };
