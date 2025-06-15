@@ -132,8 +132,12 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/gtest/cmake_install.cmake")
   include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/simulation/cmake_install.cmake")
+  include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_ros/cmake_install.cmake")
   include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/robot_control/cmake_install.cmake")
+  include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_bot_hardware_gazebo/cmake_install.cmake")
+  include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/stepback_and_steerturn_recovery/cmake_install.cmake")
   include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/cmake_install.cmake")
+  include("/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_controller/cmake_install.cmake")
 
 endif()
 

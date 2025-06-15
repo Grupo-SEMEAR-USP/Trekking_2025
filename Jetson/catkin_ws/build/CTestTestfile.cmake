@@ -6,5 +6,9 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("simulation")
+subdirs("steer_drive_ros/steer_drive_ros")
 subdirs("robot_control")
+subdirs("steer_drive_ros/steer_bot_hardware_gazebo")
+subdirs("steer_drive_ros/stepback_and_steerturn_recovery")
 subdirs("navigation")
+subdirs("steer_drive_ros/steer_drive_controller")
