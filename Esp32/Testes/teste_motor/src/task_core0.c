@@ -143,13 +143,14 @@ void monitor_encoder_pid_calc(void *params){
         pwm_actuate(ESQ,pid_result_duty_left);
         pwm_actuate(DIR,pid_result_duty_right);
 
+        /*
         if(cycle_count >= 300){
             xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);
             global_ros_angular_speed_left=40-global_ros_angular_speed_left;
             global_ros_angular_speed_right=40-global_ros_angular_speed_right;
             xSemaphoreGive(xSemaphore_getRosSpeed);
             cycle_count = 0;
-        }
+        }*/
 
         //vTaskDelay(pdMS_TO_TICKS(PID_DELAY));
 

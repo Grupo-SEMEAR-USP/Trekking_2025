@@ -28,7 +28,8 @@ void core1functions(void *params){
     xEventGroupSetBits(initialization_groupEvent, task1_init_done);
 
     while(true){
-        //printf("loop do ");
+
+        //printf("Dados enviados: %f, %f, %f, %d\n", global_total_x, global_total_y, global_total_theta, global_time_stamp_miliseconds);
         i2c_write(tx_data, &global_total_x, &global_total_y, &global_total_theta, &global_time_stamp_miliseconds);
         i2c_read(rx_data, &global_ros_angular_speed_left, &global_ros_angular_speed_right, &global_ros_servo_angle);
         vTaskDelay(pdMS_TO_TICKS(I2C_DELAY));

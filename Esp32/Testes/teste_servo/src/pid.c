@@ -17,7 +17,7 @@ void pid_init(pid_handle_v2 *pid_handle_left,pid_handle_v2 *pid_handle_right){
 
     pid_ctrl_set_operation set_operation_info_right = {
         .pid_config_info = pid_ctrl_config_info(ks_right,MAX_PID_VALUE, MAX_INTEGRAL_VALUE),
-        .operation_mode = GAP_DECREASED,
+        .operation_mode = DEFAULT_IMPLEMENTATION,
         .max_inertia_duty_value = MAX_INERTIA_DUTY_RIGHT,
         .min_inertia_duty_value = MIN_INERTIA_DUTY_RIGHT,
         .pos_gap_reduction = POS_GAP_REDUCTION_RIGHT,

@@ -24,8 +24,8 @@ void core1functions(void *params){
     xEventGroupSetBits(initialization_groupEvent, task1_init_done);
     //comente
     xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);    
-    global_ros_angular_speed_left=30.0;
-    global_ros_angular_speed_right=30.0;
+    global_ros_angular_speed_left=20.0;
+    global_ros_angular_speed_right=-20.0;
     xSemaphoreGive(xSemaphore_getRosSpeed);
     //comente
 

@@ -171,6 +171,7 @@ catkin_install_python(PROGRAMS
   scripts/path_follower.py
   scripts/odom_front.py
   scripts/odom_esp_test.py
+  scripts/start_navi.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

@@ -22,12 +22,12 @@ void core1functions(void *params){
     
    
     xEventGroupSetBits(initialization_groupEvent, task1_init_done);
-    //comente
+    /*/comente
     xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);    
-    global_ros_angular_speed_left=40.0;
-    global_ros_angular_speed_right=40.0;
+    global_ros_angular_speed_left=50.0;
+    global_ros_angular_speed_right=50.0;
     xSemaphoreGive(xSemaphore_getRosSpeed);
-    //comente
+    */
 
     while(true){
 
@@ -36,8 +36,8 @@ void core1functions(void *params){
         //i2c_read(rx_data, &global_ros_angular_speed_left, &global_ros_angular_speed_right);
 
         xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);    
-        //global_ros_angular_speed_left=30.0;
-        //global_ros_angular_speed_right=30.0;
+        global_ros_angular_speed_left=20.0;
+        global_ros_angular_speed_right=20.0;
         xSemaphoreGive(xSemaphore_getRosSpeed);
 
         vTaskDelay(pdMS_TO_TICKS(I2C_DELAY));

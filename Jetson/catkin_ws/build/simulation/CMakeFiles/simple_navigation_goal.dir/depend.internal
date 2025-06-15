@@ -25,6 +25,7 @@ simulation/CMakeFiles/simple_navigation_goal.dir/src/simple_navigation_goal.cpp.
  /opt/ros/noetic/include/actionlib_msgs/GoalStatusArray.h
  /opt/ros/noetic/include/geometry_msgs/Point.h
  /opt/ros/noetic/include/geometry_msgs/Pose.h
+ /opt/ros/noetic/include/geometry_msgs/PoseArray.h
  /opt/ros/noetic/include/geometry_msgs/PoseStamped.h
  /opt/ros/noetic/include/geometry_msgs/Quaternion.h
  /opt/ros/noetic/include/move_base_msgs/MoveBaseAction.h

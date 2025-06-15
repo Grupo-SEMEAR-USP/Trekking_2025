@@ -13,6 +13,10 @@ move_base_msgs/MoveBaseAction.h
 -
 actionlib/client/simple_action_client.h
 -
+geometry_msgs/PoseArray.h
+-
+geometry_msgs/Pose.h
+-
 
 /opt/ros/noetic/include/actionlib/action_definition.h
 
@@ -276,6 +280,26 @@ ros/message_operations.h
 geometry_msgs/Point.h
 -
 geometry_msgs/Quaternion.h
+-
+
+/opt/ros/noetic/include/geometry_msgs/PoseArray.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Pose.h
 -
 
 /opt/ros/noetic/include/geometry_msgs/PoseStamped.h

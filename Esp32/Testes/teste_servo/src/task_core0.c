@@ -109,7 +109,7 @@ void core0fuctions(void *params){
 int cycle_count = 0;
 void monitor_encoder_pid_calc(void *params){
 
-    /*
+    
     if(count_get_real == ENCODER_COUNTER_WAIT_PID_OP){
         xSemaphoreTake(xSemaphore_getSpeed,portMAX_DELAY);
         //global_motor_angular_speed_left = ((float) encoder_left->get_counter_value(encoder_left))*(ENCODER_RESOLUTION/((float)count));
@@ -139,7 +139,7 @@ void monitor_encoder_pid_calc(void *params){
         
         count_get_ros = 0;
     }
-    */
+    
 
     pid_handle_left.pid_calculate(
         &pid_handle_left,
@@ -156,11 +156,13 @@ void monitor_encoder_pid_calc(void *params){
     );
 
     //printf("left_vel_calc: %f rad/s left_vel ros: %f rad/s left_duty: %f\n",local_motor_angular_speed_left,local_ros_angular_speed_left,pid_result_duty_left);
-    //printf("right_vel_calc: %f rad/s right_vel ros: %f rad/s right_duty: %f\n",local_motor_angular_speed_right,local_ros_angular_speed_right,pid_result_duty_right);
-    //pwm_actuate(ESQ,pid_result_duty_left);
-    //pwm_actuate(DIR,pid_result_duty_right);
+    printf("right_vel_calc: %f rad/s right_vel ros: %f rad/s right_duty: %f\n",local_motor_angular_speed_right,local_ros_angular_speed_right,pid_result_duty_right);
+    pwm_actuate(ESQ,pid_result_duty_left);
+    pwm_actuate(DIR,pid_result_duty_right);
 
-/*
+    //printf("leituras do encoder direito: %f  leituras do encoder esquerdo: %f\n", (float) encoder_left->get_counter_value(encoder_left), (float) encoder_right->get_counter_value(encoder_right));
+
+    /*
     if (aux && cycle_count >= 10){
         if (count_servo < 30){
             xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY); //could be incremented in the first lock
@@ -185,11 +187,14 @@ void monitor_encoder_pid_calc(void *params){
             count_servo--;
         } else {aux = pdTRUE;}
         cycle_count = 0;  
-    }
-   */
+    }*/
+
+
+    //pwm_actuate(ESQ,pid_result_duty_left);
+    //pwm_actuate(DIR,pid_result_duty_right);
     iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, (local_servo_angle + SERVO_OFFSET));
 
-    printf("ângulo do servo: %f\n", local_servo_angle);
+    //printf("ângulo do servo: %f\n", local_servo_angle);
     
     count_get_real++;
     count_get_ros++;

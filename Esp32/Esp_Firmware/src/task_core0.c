@@ -170,7 +170,7 @@ void monitor_encoder_pid_calc(void *params){
         //printf("vel_calc: %f rad/s vel ros: %f rad/s duty: %f\n",local_motor_angular_speed_left,local_ros_angular_speed_left,pid_result_duty_left);
         pwm_actuate(ESQ,pid_result_duty_left);
         pwm_actuate(DIR,pid_result_duty_right);
-        iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, (local_servo_angle + SERVO_OFFSET));
+        iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, local_servo_angle);
 
         /*
         xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);

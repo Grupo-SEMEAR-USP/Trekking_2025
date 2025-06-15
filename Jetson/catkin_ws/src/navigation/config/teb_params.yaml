@@ -2,7 +2,6 @@ TebLocalPlannerROS:
 
  odom_topic: /odometry/filtered
  map_frame: /map
- cmd_vel_topic: /steer_bot/ackermann_steering_controller/cmd_vel
 
  # Trajectory
   
@@ -14,18 +13,25 @@ TebLocalPlannerROS:
  feasibility_check_no_poses: 5
     
  # Robot
-         
- max_vel_x: 0.4
- max_vel_x_backwards: 0.2
- max_vel_theta: 0.3
+
+ wheelbase: 0.3
+ max_steer_angle: 0.5
+ holonomic: false
+ max_vel_x: 0.6
+ max_vel_x_backwards: 0.3
+ max_vel_theta: 0.4
  acc_lim_x: 0.5
  acc_lim_theta: 0.5
- min_turning_radius: 0.0
+ min_turning_radius: 0.5
+
+ footprint_model: # types: "point", "circular", "line", "two_circles", "polygon"
+   type: "polygon"
+   vertices: [ [0.25, -0.26], [0.25, 0.26], [-0.25, 0.26], [-0.25, -0.26] ] # for type "polygon"
 
  # GoalTolerance
     
- xy_goal_tolerance: 0.2
- yaw_goal_tolerance: 0.1
+ xy_goal_tolerance: 0.0001
+ yaw_goal_tolerance: 0.5
  free_goal_vel: False
     
  # Obstacles
