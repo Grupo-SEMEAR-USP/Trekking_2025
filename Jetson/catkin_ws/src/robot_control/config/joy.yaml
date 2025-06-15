@@ -1,0 +1,4 @@
+joy_params:
+  joy_scale: 0.349
+  right_scale_trigger: 1.5
+  left_scale_trigger: 1.5

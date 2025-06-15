@@ -285,6 +285,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named i2c_device_ros
+
+# Build rule for target.
+i2c_device_ros: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 i2c_device_ros
+.PHONY : i2c_device_ros
+
+# fast build rule for target.
+i2c_device_ros/fast:
+	$(MAKE) -f i2c_device_ros/CMakeFiles/i2c_device_ros.dir/build.make i2c_device_ros/CMakeFiles/i2c_device_ros.dir/build
+.PHONY : i2c_device_ros/fast
+
+#=============================================================================
+# Target rules for targets named _catkin_empty_exported_target
+
+# Build rule for target.
+_catkin_empty_exported_target: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
+.PHONY : _catkin_empty_exported_target
+
+# fast build rule for target.
+_catkin_empty_exported_target/fast:
+	$(MAKE) -f i2c_device_ros/CMakeFiles/_catkin_empty_exported_target.dir/build.make i2c_device_ros/CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_generate_messages_nodejs
 
 # Build rule for target.
@@ -753,43 +779,173 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named _catkin_empty_exported_target
+# Target rules for targets named sensor_msgs_generate_messages_cpp
 
 # Build rule for target.
-_catkin_empty_exported_target: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
-.PHONY : _catkin_empty_exported_target
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	$(MAKE) -f steer_drive_ros/steer_drive_ros/CMakeFiles/_catkin_empty_exported_target.dir/build.make steer_drive_ros/steer_drive_ros/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named hw_interface
+# Target rules for targets named sensor_msgs_generate_messages_eus
 
 # Build rule for target.
-hw_interface: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hw_interface
-.PHONY : hw_interface
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
 
 # fast build rule for target.
-hw_interface/fast:
-	$(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/build
-.PHONY : hw_interface/fast
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named robot_control_genpy
+# Target rules for targets named sensor_msgs_generate_messages_lisp
 
 # Build rule for target.
-robot_control_genpy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 robot_control_genpy
-.PHONY : robot_control_genpy
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-robot_control_genpy/fast:
-	$(MAKE) -f robot_control/CMakeFiles/robot_control_genpy.dir/build.make robot_control/CMakeFiles/robot_control_genpy.dir/build
-.PHONY : robot_control_genpy/fast
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make mpu6050_driver/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named mpu6050_node_lib
+
+# Build rule for target.
+mpu6050_node_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mpu6050_node_lib
+.PHONY : mpu6050_node_lib
+
+# fast build rule for target.
+mpu6050_node_lib/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/mpu6050_node_lib.dir/build.make mpu6050_driver/CMakeFiles/mpu6050_node_lib.dir/build
+.PHONY : mpu6050_node_lib/fast
+
+#=============================================================================
+# Target rules for targets named mpu6050_node
+
+# Build rule for target.
+mpu6050_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mpu6050_node
+.PHONY : mpu6050_node
+
+# fast build rule for target.
+mpu6050_node/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/mpu6050_node.dir/build.make mpu6050_driver/CMakeFiles/mpu6050_node.dir/build
+.PHONY : mpu6050_node/fast
+
+#=============================================================================
+# Target rules for targets named mpu6050_calibration_node
+
+# Build rule for target.
+mpu6050_calibration_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mpu6050_calibration_node
+.PHONY : mpu6050_calibration_node
+
+# fast build rule for target.
+mpu6050_calibration_node/fast:
+	$(MAKE) -f mpu6050_driver/CMakeFiles/mpu6050_calibration_node.dir/build.make mpu6050_driver/CMakeFiles/mpu6050_calibration_node.dir/build
+.PHONY : mpu6050_calibration_node/fast
+
+#=============================================================================
+# Target rules for targets named joycontrol
+
+# Build rule for target.
+joycontrol: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 joycontrol
+.PHONY : joycontrol
+
+# fast build rule for target.
+joycontrol/fast:
+	$(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/build
+.PHONY : joycontrol/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_cpp
+
+# Build rule for target.
+nav_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_cpp
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named tf2_msgs_generate_messages_nodejs
+
+# Build rule for target.
+tf2_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_nodejs
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_lisp
+
+# Build rule for target.
+nav_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_lisp
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named robot_control_generate_messages_nodejs
+
+# Build rule for target.
+robot_control_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robot_control_generate_messages_nodejs
+.PHONY : robot_control_generate_messages_nodejs
+
+# fast build rule for target.
+robot_control_generate_messages_nodejs/fast:
+	$(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build
+.PHONY : robot_control_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_lisp
@@ -844,69 +1000,30 @@ robot_control_generate_messages_cpp/fast:
 .PHONY : robot_control_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_eus
+# Target rules for targets named hw_interface
 
 # Build rule for target.
-sensor_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
-.PHONY : sensor_msgs_generate_messages_eus
+hw_interface: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hw_interface
+.PHONY : hw_interface
 
 # fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	$(MAKE) -f robot_control/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make robot_control/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
+hw_interface/fast:
+	$(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/build
+.PHONY : hw_interface/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_nodejs
+# Target rules for targets named tf2_msgs_generate_messages_py
 
 # Build rule for target.
-sensor_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
-.PHONY : sensor_msgs_generate_messages_nodejs
+tf2_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_py
+.PHONY : tf2_msgs_generate_messages_py
 
 # fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f robot_control/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named nav_msgs_generate_messages_cpp
-
-# Build rule for target.
-nav_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_cpp
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named robot_control_generate_messages_nodejs
-
-# Build rule for target.
-robot_control_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 robot_control_generate_messages_nodejs
-.PHONY : robot_control_generate_messages_nodejs
-
-# fast build rule for target.
-robot_control_generate_messages_nodejs/fast:
-	$(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build
-.PHONY : robot_control_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named nav_msgs_generate_messages_lisp
-
-# Build rule for target.
-nav_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_lisp
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
+tf2_msgs_generate_messages_py/fast:
+	$(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named robot_control_gennodejs
@@ -961,19 +1078,6 @@ tf_generate_messages_eus/fast:
 .PHONY : tf_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f robot_control/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
 # Target rules for targets named robot_control_generate_messages_py
 
 # Build rule for target.
@@ -1013,32 +1117,6 @@ tf_generate_messages_cpp/fast:
 .PHONY : tf_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_nodejs
-
-# Build rule for target.
-tf2_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_nodejs
-.PHONY : tf2_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-tf2_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-.PHONY : tf2_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named tf2_msgs_generate_messages_py
-
-# Build rule for target.
-tf2_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf2_msgs_generate_messages_py
-.PHONY : tf2_msgs_generate_messages_py
-
-# fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	$(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1065,19 +1143,6 @@ robot_control_generate_messages/fast:
 .PHONY : robot_control_generate_messages/fast
 
 #=============================================================================
-# Target rules for targets named _robot_control_generate_messages_check_deps_velocity_data
-
-# Build rule for target.
-_robot_control_generate_messages_check_deps_velocity_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _robot_control_generate_messages_check_deps_velocity_data
-.PHONY : _robot_control_generate_messages_check_deps_velocity_data
-
-# fast build rule for target.
-_robot_control_generate_messages_check_deps_velocity_data/fast:
-	$(MAKE) -f robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/build.make robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/build
-.PHONY : _robot_control_generate_messages_check_deps_velocity_data/fast
-
-#=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1091,6 +1156,19 @@ nav_msgs_generate_messages_eus/fast:
 .PHONY : nav_msgs_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named _robot_control_generate_messages_check_deps_velocity_data
+
+# Build rule for target.
+_robot_control_generate_messages_check_deps_velocity_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _robot_control_generate_messages_check_deps_velocity_data
+.PHONY : _robot_control_generate_messages_check_deps_velocity_data
+
+# fast build rule for target.
+_robot_control_generate_messages_check_deps_velocity_data/fast:
+	$(MAKE) -f robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/build.make robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/build
+.PHONY : _robot_control_generate_messages_check_deps_velocity_data/fast
+
+#=============================================================================
 # Target rules for targets named robot_control_gencpp
 
 # Build rule for target.
@@ -1102,19 +1180,6 @@ robot_control_gencpp: cmake_check_build_system
 robot_control_gencpp/fast:
 	$(MAKE) -f robot_control/CMakeFiles/robot_control_gencpp.dir/build.make robot_control/CMakeFiles/robot_control_gencpp.dir/build
 .PHONY : robot_control_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f robot_control/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make robot_control/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named robot_control_generate_messages_eus
@@ -1156,19 +1221,6 @@ _robot_control_generate_messages_check_deps_i2c_data/fast:
 .PHONY : _robot_control_generate_messages_check_deps_i2c_data/fast
 
 #=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f robot_control/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-#=============================================================================
 # Target rules for targets named robot_control_geneus
 
 # Build rule for target.
@@ -1206,6 +1258,45 @@ robot_control_genlisp: cmake_check_build_system
 robot_control_genlisp/fast:
 	$(MAKE) -f robot_control/CMakeFiles/robot_control_genlisp.dir/build.make robot_control/CMakeFiles/robot_control_genlisp.dir/build
 .PHONY : robot_control_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named robot_control_genpy
+
+# Build rule for target.
+robot_control_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robot_control_genpy
+.PHONY : robot_control_genpy
+
+# fast build rule for target.
+robot_control_genpy/fast:
+	$(MAKE) -f robot_control/CMakeFiles/robot_control_genpy.dir/build.make robot_control/CMakeFiles/robot_control_genpy.dir/build
+.PHONY : robot_control_genpy/fast
+
+#=============================================================================
+# Target rules for targets named rplidarNodeClient
+
+# Build rule for target.
+rplidarNodeClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNodeClient
+.PHONY : rplidarNodeClient
+
+# fast build rule for target.
+rplidarNodeClient/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build.make rplidar_ros/CMakeFiles/rplidarNodeClient.dir/build
+.PHONY : rplidarNodeClient/fast
+
+#=============================================================================
+# Target rules for targets named rplidarNode
+
+# Build rule for target.
+rplidarNode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rplidarNode
+.PHONY : rplidarNode
+
+# fast build rule for target.
+rplidarNode/fast:
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/build
+.PHONY : rplidarNode/fast
 
 #=============================================================================
 # Target rules for targets named control_msgs_generate_messages_py
@@ -2685,6 +2776,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... i2c_device_ros"
+	@echo "... _catkin_empty_exported_target"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_py"
@@ -2721,41 +2814,46 @@ help:
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... _catkin_empty_exported_target"
-	@echo "... hw_interface"
-	@echo "... robot_control_genpy"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... mpu6050_node_lib"
+	@echo "... mpu6050_node"
+	@echo "... mpu6050_calibration_node"
+	@echo "... joycontrol"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... robot_control_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... robot_control_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... robot_control_generate_messages_nodejs"
-	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... hw_interface"
+	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... robot_control_gennodejs"
 	@echo "... tf_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... robot_control_generate_messages_py"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_cpp"
-	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... robot_control_generate_messages"
-	@echo "... _robot_control_generate_messages_check_deps_velocity_data"
 	@echo "... nav_msgs_generate_messages_eus"
+	@echo "... _robot_control_generate_messages_check_deps_velocity_data"
 	@echo "... robot_control_gencpp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... robot_control_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... _robot_control_generate_messages_check_deps_i2c_data"
-	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... robot_control_geneus"
 	@echo "... robot_control_generate_messages_lisp"
 	@echo "... robot_control_genlisp"
+	@echo "... robot_control_genpy"
+	@echo "... rplidarNodeClient"
+	@echo "... rplidarNode"
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... control_toolbox_gencfg"

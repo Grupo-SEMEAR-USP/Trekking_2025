@@ -1,0 +1,18 @@
+<launch>
+
+  <!--node name="i2c_master" pkg="robot_control" type="i2c_master.py" /--> 
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="turtle_joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+
+  <!-- Carregar parâmetros do arquivo config.yaml -->
+  <rosparam file="$(find robot_control)/config/joy.yaml" command="load" />
+
+  <!-- Iniciar o nó joycontrol -->
+  <node name="teleop_joy" pkg="robot_control" type="joycontrol" output="screen" />
+</launch>
