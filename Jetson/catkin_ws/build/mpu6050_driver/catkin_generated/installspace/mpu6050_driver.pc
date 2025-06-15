@@ -1,8 +1,0 @@
-prefix=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install
-
-Name: mpu6050_driver
-Description: Description of mpu6050_driver
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: roscpp sensor_msgs i2c_device_ros

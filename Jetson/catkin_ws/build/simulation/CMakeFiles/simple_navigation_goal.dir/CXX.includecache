@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/src/simple_navigation_goal.cpp
+/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/simulation/src/simple_navigation_goal.cpp
 ros/ros.h
 -
 move_base_msgs/MoveBaseAction.h
@@ -779,7 +779,7 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 xmlrpcpp/XmlRpcValue.h
 -
@@ -825,7 +825,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind/bind.hpp
+boost/bind.hpp
 -
 boost/thread/mutex.hpp
 -

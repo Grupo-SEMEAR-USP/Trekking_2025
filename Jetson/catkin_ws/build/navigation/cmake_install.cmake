@@ -1,8 +1,8 @@
-# Install script for directory: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/navigation
+# Install script for directory: /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,93 +38,97 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation/msg" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation/msg" TYPE FILE FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation/cmake" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigation-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation/cmake" TYPE FILE FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigation-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include/navigation")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/include/navigation")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/navigation")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/navigation")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/navigation")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/navigation")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/navigation")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/navigation")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3.8" -m compileall "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigation.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigation.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation/cmake" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigation-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation/cmake" TYPE FILE FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigation-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation/cmake" TYPE FILE FILES
-    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigationConfig.cmake"
-    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigationConfig-version.cmake"
+    "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigationConfig.cmake"
+    "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/navigationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/navigation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/navigation" TYPE FILE FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/odom_pub_simul.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/odom_pub_simul.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/cmd_vel_to_ackermann_drive.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/cmd_vel_to_ackermann_drive.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/cmd_vel_to_ackermann_drive_rod.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/cmd_vel_to_ackermann_drive_rod.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/tf_publisher.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/tf_publisher.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/tf_publisher_simul.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/tf_publisher_simul.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/path_saver.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/path_saver.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/path_reader.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/path_reader.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/path_follower.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/path_follower.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/odom_front.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/odom_front.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/odom_esp_test.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/odom_esp_test.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/navigation" TYPE PROGRAM FILES "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/catkin_generated/installspace/start_navi.py")
 endif()
 

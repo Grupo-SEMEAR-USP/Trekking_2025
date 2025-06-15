@@ -209,20 +209,12 @@ struct Printer< ::robot_control::i2c_data_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::robot_control::i2c_data_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "x: ";
     Printer<double>::stream(s, indent + "  ", v.x);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "y: ";
     Printer<double>::stream(s, indent + "  ", v.y);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "z: ";
     Printer<double>::stream(s, indent + "  ", v.z);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "timestamp: ";
     Printer<double>::stream(s, indent + "  ", v.timestamp);
   }
