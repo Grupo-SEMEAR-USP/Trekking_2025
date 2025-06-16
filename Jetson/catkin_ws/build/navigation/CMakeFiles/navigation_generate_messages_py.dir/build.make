@@ -43,33 +43,33 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for navigation_generate_messages_py.
 
 # Include the progress variables for this target.
 include navigation/CMakeFiles/navigation_generate_messages_py.dir/progress.make
 
-navigation/CMakeFiles/navigation_generate_messages_py: /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py
-navigation/CMakeFiles/navigation_generate_messages_py: /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py
+navigation/CMakeFiles/navigation_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py
+navigation/CMakeFiles/navigation_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py
 
 
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py: /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG navigation/encoders"
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg -Inavigation:/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p navigation -o /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG navigation/encoders"
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg -Inavigation:/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p navigation -o /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg
 
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py: /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for navigation"
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg --initpy
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for navigation"
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg --initpy
 
 navigation_generate_messages_py: navigation/CMakeFiles/navigation_generate_messages_py
-navigation_generate_messages_py: /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py
-navigation_generate_messages_py: /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py
+navigation_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py
+navigation_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py
 navigation_generate_messages_py: navigation/CMakeFiles/navigation_generate_messages_py.dir/build.make
 
 .PHONY : navigation_generate_messages_py
@@ -80,10 +80,10 @@ navigation/CMakeFiles/navigation_generate_messages_py.dir/build: navigation_gene
 .PHONY : navigation/CMakeFiles/navigation_generate_messages_py.dir/build
 
 navigation/CMakeFiles/navigation_generate_messages_py.dir/clean:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/navigation_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/navigation_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : navigation/CMakeFiles/navigation_generate_messages_py.dir/clean
 
 navigation/CMakeFiles/navigation_generate_messages_py.dir/depend:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/navigation_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/navigation_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/CMakeFiles/navigation_generate_messages_py.dir/depend
 

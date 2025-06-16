@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for move_base_gencfg.
 
@@ -63,10 +63,10 @@ navigation/CMakeFiles/move_base_gencfg.dir/build: move_base_gencfg
 .PHONY : navigation/CMakeFiles/move_base_gencfg.dir/build
 
 navigation/CMakeFiles/move_base_gencfg.dir/clean:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/move_base_gencfg.dir/cmake_clean.cmake
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/move_base_gencfg.dir/cmake_clean.cmake
 .PHONY : navigation/CMakeFiles/move_base_gencfg.dir/clean
 
 navigation/CMakeFiles/move_base_gencfg.dir/depend:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/move_base_gencfg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/move_base_gencfg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/CMakeFiles/move_base_gencfg.dir/depend
 

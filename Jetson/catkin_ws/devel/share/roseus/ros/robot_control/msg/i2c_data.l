@@ -45,55 +45,55 @@
   (:serialization-length
    ()
    (+
-    ;; float64 _x
-    8
-    ;; float64 _y
-    8
-    ;; float64 _z
-    8
-    ;; float64 _timestamp
-    8
+    ;; float32 _x
+    4
+    ;; float32 _y
+    4
+    ;; float32 _z
+    4
+    ;; float32 _timestamp
+    4
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; float64 _x
-       (sys::poke _x (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
-     ;; float64 _y
-       (sys::poke _y (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
-     ;; float64 _z
-       (sys::poke _z (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
-     ;; float64 _timestamp
-       (sys::poke _timestamp (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; float32 _x
+       (sys::poke _x (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _y
+       (sys::poke _y (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _z
+       (sys::poke _z (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _timestamp
+       (sys::poke _timestamp (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; float64 _x
-     (setq _x (sys::peek buf ptr- :double)) (incf ptr- 8)
-   ;; float64 _y
-     (setq _y (sys::peek buf ptr- :double)) (incf ptr- 8)
-   ;; float64 _z
-     (setq _z (sys::peek buf ptr- :double)) (incf ptr- 8)
-   ;; float64 _timestamp
-     (setq _timestamp (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; float32 _x
+     (setq _x (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _y
+     (setq _y (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _z
+     (setq _z (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _timestamp
+     (setq _timestamp (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;;
    self)
   )
 
-(setf (get robot_control::i2c_data :md5sum-) "14eb7bbd6a88245711aff1553f6d4423")
+(setf (get robot_control::i2c_data :md5sum-) "b89928ff0a35372da5cb4a4faeb57c9a")
 (setf (get robot_control::i2c_data :datatype-) "robot_control/i2c_data")
 (setf (get robot_control::i2c_data :definition-)
       "# i2c_data.msg
-float64 x
-float64 y
-float64 z 
-float64 timestamp
+float32 x
+float32 y
+float32 z 
+float32 timestamp
 ")
 
 
 
-(provide :robot_control/i2c_data "14eb7bbd6a88245711aff1553f6d4423")
+(provide :robot_control/i2c_data "b89928ff0a35372da5cb4a4faeb57c9a")
 
 

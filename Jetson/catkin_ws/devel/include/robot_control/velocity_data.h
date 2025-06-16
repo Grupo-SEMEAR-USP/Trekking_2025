@@ -37,13 +37,13 @@ struct velocity_data_
 
 
 
-   typedef double _angular_speed_left_type;
+   typedef float _angular_speed_left_type;
   _angular_speed_left_type angular_speed_left;
 
-   typedef double _angular_speed_right_type;
+   typedef float _angular_speed_right_type;
   _angular_speed_right_type angular_speed_right;
 
-   typedef double _servo_angle_type;
+   typedef float _servo_angle_type;
   _servo_angle_type servo_angle;
 
 
@@ -134,12 +134,12 @@ struct MD5Sum< ::robot_control::velocity_data_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "826270096bebd36aa4c516facc8a6a69";
+    return "e294170f2d297bc948c772795931b47a";
   }
 
   static const char* value(const ::robot_control::velocity_data_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x826270096bebd36aULL;
-  static const uint64_t static_value2 = 0xa4c516facc8a6a69ULL;
+  static const uint64_t static_value1 = 0xe294170f2d297bc9ULL;
+  static const uint64_t static_value2 = 0x48c772795931b47aULL;
 };
 
 template<class ContainerAllocator>
@@ -159,9 +159,9 @@ struct Definition< ::robot_control::velocity_data_<ContainerAllocator> >
   static const char* value()
   {
     return "# velocity_data.msg\n"
-"float64 angular_speed_left\n"
-"float64 angular_speed_right\n"
-"float64 servo_angle\n"
+"float32 angular_speed_left\n"
+"float32 angular_speed_right\n"
+"float32 servo_angle\n"
 ;
   }
 
@@ -201,12 +201,18 @@ struct Printer< ::robot_control::velocity_data_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::robot_control::velocity_data_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "angular_speed_left: ";
-    Printer<double>::stream(s, indent + "  ", v.angular_speed_left);
+    Printer<float>::stream(s, indent + "  ", v.angular_speed_left);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "angular_speed_right: ";
-    Printer<double>::stream(s, indent + "  ", v.angular_speed_right);
+    Printer<float>::stream(s, indent + "  ", v.angular_speed_right);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "servo_angle: ";
-    Printer<double>::stream(s, indent + "  ", v.servo_angle);
+    Printer<float>::stream(s, indent + "  ", v.servo_angle);
   }
 };
 

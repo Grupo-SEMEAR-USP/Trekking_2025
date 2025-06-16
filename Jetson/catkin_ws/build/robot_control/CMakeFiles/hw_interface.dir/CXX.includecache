@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/i2c_data.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/i2c_data.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/velocity_data.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/velocity_data.h
 string
 -
 vector
@@ -38,13 +38,13 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/hw_interface.hpp
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/hw_interface.hpp
 ros/ros.h
 -
 geometry_msgs/Twist.h
 -
 robot_control/velocity_data.h
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/velocity_data.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/velocity_data.h
 nav_msgs/Odometry.h
 -
 geometry_msgs/Quaternion.h
@@ -52,7 +52,7 @@ geometry_msgs/Quaternion.h
 geometry_msgs/Point.h
 -
 robot_control/i2c_data.h
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/i2c_data.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/i2c_data.h
 tf/transform_broadcaster.h
 -
 tf/tf.h
@@ -70,9 +70,9 @@ cmath
 geometry_msgs/TransformStamped.h
 -
 
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
 hw_interface.hpp
-/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.hpp
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.hpp
 cmath
 -
 
@@ -633,7 +633,7 @@ ros/init.h
 /opt/ros/noetic/include/ros/ros/init.h
 common.h
 /opt/ros/noetic/include/ros/common.h
-boost/bind.hpp
+boost/bind/bind.hpp
 -
 xmlrpcpp/XmlRpcValue.h
 -
@@ -679,7 +679,7 @@ ros/message.h
 /opt/ros/noetic/include/ros/ros/message.h
 ros/serialization.h
 /opt/ros/noetic/include/ros/ros/serialization.h
-boost/bind.hpp
+boost/bind/bind.hpp
 -
 boost/thread/mutex.hpp
 -

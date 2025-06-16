@@ -8,16 +8,16 @@ import struct
 
 
 class i2c_data(genpy.Message):
-  _md5sum = "14eb7bbd6a88245711aff1553f6d4423"
+  _md5sum = "b89928ff0a35372da5cb4a4faeb57c9a"
   _type = "robot_control/i2c_data"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """# i2c_data.msg
-float64 x
-float64 y
-float64 z 
-float64 timestamp"""
+float32 x
+float32 y
+float32 z 
+float32 timestamp"""
   __slots__ = ['x','y','z','timestamp']
-  _slot_types = ['float64','float64','float64','float64']
+  _slot_types = ['float32','float32','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -63,7 +63,7 @@ float64 timestamp"""
     """
     try:
       _x = self
-      buff.write(_get_struct_4d().pack(_x.x, _x.y, _x.z, _x.timestamp))
+      buff.write(_get_struct_4f().pack(_x.x, _x.y, _x.z, _x.timestamp))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -78,8 +78,8 @@ float64 timestamp"""
       end = 0
       _x = self
       start = end
-      end += 32
-      (_x.x, _x.y, _x.z, _x.timestamp,) = _get_struct_4d().unpack(str[start:end])
+      end += 16
+      (_x.x, _x.y, _x.z, _x.timestamp,) = _get_struct_4f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -93,7 +93,7 @@ float64 timestamp"""
     """
     try:
       _x = self
-      buff.write(_get_struct_4d().pack(_x.x, _x.y, _x.z, _x.timestamp))
+      buff.write(_get_struct_4f().pack(_x.x, _x.y, _x.z, _x.timestamp))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -109,8 +109,8 @@ float64 timestamp"""
       end = 0
       _x = self
       start = end
-      end += 32
-      (_x.x, _x.y, _x.z, _x.timestamp,) = _get_struct_4d().unpack(str[start:end])
+      end += 16
+      (_x.x, _x.y, _x.z, _x.timestamp,) = _get_struct_4f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -119,9 +119,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_4d = None
-def _get_struct_4d():
-    global _struct_4d
-    if _struct_4d is None:
-        _struct_4d = struct.Struct("<4d")
-    return _struct_4d
+_struct_4f = None
+def _get_struct_4f():
+    global _struct_4f
+    if _struct_4f is None:
+        _struct_4f = struct.Struct("<4f")
+    return _struct_4f

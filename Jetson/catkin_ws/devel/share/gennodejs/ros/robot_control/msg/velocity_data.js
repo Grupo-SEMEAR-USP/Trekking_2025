@@ -47,11 +47,11 @@ class velocity_data {
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type velocity_data
     // Serialize message field [angular_speed_left]
-    bufferOffset = _serializer.float64(obj.angular_speed_left, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.angular_speed_left, buffer, bufferOffset);
     // Serialize message field [angular_speed_right]
-    bufferOffset = _serializer.float64(obj.angular_speed_right, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.angular_speed_right, buffer, bufferOffset);
     // Serialize message field [servo_angle]
-    bufferOffset = _serializer.float64(obj.servo_angle, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.servo_angle, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -60,16 +60,16 @@ class velocity_data {
     let len;
     let data = new velocity_data(null);
     // Deserialize message field [angular_speed_left]
-    data.angular_speed_left = _deserializer.float64(buffer, bufferOffset);
+    data.angular_speed_left = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [angular_speed_right]
-    data.angular_speed_right = _deserializer.float64(buffer, bufferOffset);
+    data.angular_speed_right = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [servo_angle]
-    data.servo_angle = _deserializer.float64(buffer, bufferOffset);
+    data.servo_angle = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 24;
+    return 12;
   }
 
   static datatype() {
@@ -79,16 +79,16 @@ class velocity_data {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '826270096bebd36aa4c516facc8a6a69';
+    return 'e294170f2d297bc948c772795931b47a';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     # velocity_data.msg
-    float64 angular_speed_left
-    float64 angular_speed_right
-    float64 servo_angle
+    float32 angular_speed_left
+    float32 angular_speed_right
+    float32 servo_angle
     `;
   }
 

@@ -39,16 +39,16 @@ struct i2c_data_
 
 
 
-   typedef double _x_type;
+   typedef float _x_type;
   _x_type x;
 
-   typedef double _y_type;
+   typedef float _y_type;
   _y_type y;
 
-   typedef double _z_type;
+   typedef float _z_type;
   _z_type z;
 
-   typedef double _timestamp_type;
+   typedef float _timestamp_type;
   _timestamp_type timestamp;
 
 
@@ -140,12 +140,12 @@ struct MD5Sum< ::robot_control::i2c_data_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "14eb7bbd6a88245711aff1553f6d4423";
+    return "b89928ff0a35372da5cb4a4faeb57c9a";
   }
 
   static const char* value(const ::robot_control::i2c_data_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x14eb7bbd6a882457ULL;
-  static const uint64_t static_value2 = 0x11aff1553f6d4423ULL;
+  static const uint64_t static_value1 = 0xb89928ff0a35372dULL;
+  static const uint64_t static_value2 = 0xa5cb4a4faeb57c9aULL;
 };
 
 template<class ContainerAllocator>
@@ -165,10 +165,10 @@ struct Definition< ::robot_control::i2c_data_<ContainerAllocator> >
   static const char* value()
   {
     return "# i2c_data.msg\n"
-"float64 x\n"
-"float64 y\n"
-"float64 z \n"
-"float64 timestamp\n"
+"float32 x\n"
+"float32 y\n"
+"float32 z \n"
+"float32 timestamp\n"
 ;
   }
 
@@ -209,14 +209,22 @@ struct Printer< ::robot_control::i2c_data_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::robot_control::i2c_data_<ContainerAllocator>& v)
   {
+    if (false || !indent.empty())
+      s << std::endl;
     s << indent << "x: ";
-    Printer<double>::stream(s, indent + "  ", v.x);
+    Printer<float>::stream(s, indent + "  ", v.x);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "y: ";
-    Printer<double>::stream(s, indent + "  ", v.y);
+    Printer<float>::stream(s, indent + "  ", v.y);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "z: ";
-    Printer<double>::stream(s, indent + "  ", v.z);
+    Printer<float>::stream(s, indent + "  ", v.z);
+    if (true || !indent.empty())
+      s << std::endl;
     s << indent << "timestamp: ";
-    Printer<double>::stream(s, indent + "  ", v.timestamp);
+    Printer<float>::stream(s, indent + "  ", v.timestamp);
   }
 };
 

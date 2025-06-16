@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for std_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build: std_msgs_genera
 .PHONY : simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 
 simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/simulation && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/simulation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/simulation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : simulation/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 

@@ -54,13 +54,13 @@ class i2c_data {
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type i2c_data
     // Serialize message field [x]
-    bufferOffset = _serializer.float64(obj.x, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.x, buffer, bufferOffset);
     // Serialize message field [y]
-    bufferOffset = _serializer.float64(obj.y, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.y, buffer, bufferOffset);
     // Serialize message field [z]
-    bufferOffset = _serializer.float64(obj.z, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.z, buffer, bufferOffset);
     // Serialize message field [timestamp]
-    bufferOffset = _serializer.float64(obj.timestamp, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.timestamp, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -69,18 +69,18 @@ class i2c_data {
     let len;
     let data = new i2c_data(null);
     // Deserialize message field [x]
-    data.x = _deserializer.float64(buffer, bufferOffset);
+    data.x = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [y]
-    data.y = _deserializer.float64(buffer, bufferOffset);
+    data.y = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [z]
-    data.z = _deserializer.float64(buffer, bufferOffset);
+    data.z = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [timestamp]
-    data.timestamp = _deserializer.float64(buffer, bufferOffset);
+    data.timestamp = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 32;
+    return 16;
   }
 
   static datatype() {
@@ -90,17 +90,17 @@ class i2c_data {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '14eb7bbd6a88245711aff1553f6d4423';
+    return 'b89928ff0a35372da5cb4a4faeb57c9a';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     # i2c_data.msg
-    float64 x
-    float64 y
-    float64 z 
-    float64 timestamp
+    float32 x
+    float32 y
+    float32 z 
+    float32 timestamp
     `;
   }
 

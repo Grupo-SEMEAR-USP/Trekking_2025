@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for _navigation_generate_messages_check_deps_encoders.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/bu
 include navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/progress.make
 
 navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg 
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py navigation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation/msg/encoders.msg 
 
 _navigation_generate_messages_check_deps_encoders: navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders
 _navigation_generate_messages_check_deps_encoders: navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/build.make
@@ -67,10 +67,10 @@ navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/buil
 .PHONY : navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/build
 
 navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/clean:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/cmake_clean.cmake
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/cmake_clean.cmake
 .PHONY : navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/clean
 
 navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/depend:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/CMakeFiles/_navigation_generate_messages_check_deps_encoders.dir/depend
 

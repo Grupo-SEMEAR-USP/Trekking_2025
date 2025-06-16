@@ -40,48 +40,48 @@
   (:serialization-length
    ()
    (+
-    ;; float64 _angular_speed_left
-    8
-    ;; float64 _angular_speed_right
-    8
-    ;; float64 _servo_angle
-    8
+    ;; float32 _angular_speed_left
+    4
+    ;; float32 _angular_speed_right
+    4
+    ;; float32 _servo_angle
+    4
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; float64 _angular_speed_left
-       (sys::poke _angular_speed_left (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
-     ;; float64 _angular_speed_right
-       (sys::poke _angular_speed_right (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
-     ;; float64 _servo_angle
-       (sys::poke _servo_angle (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; float32 _angular_speed_left
+       (sys::poke _angular_speed_left (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _angular_speed_right
+       (sys::poke _angular_speed_right (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _servo_angle
+       (sys::poke _servo_angle (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; float64 _angular_speed_left
-     (setq _angular_speed_left (sys::peek buf ptr- :double)) (incf ptr- 8)
-   ;; float64 _angular_speed_right
-     (setq _angular_speed_right (sys::peek buf ptr- :double)) (incf ptr- 8)
-   ;; float64 _servo_angle
-     (setq _servo_angle (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; float32 _angular_speed_left
+     (setq _angular_speed_left (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _angular_speed_right
+     (setq _angular_speed_right (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _servo_angle
+     (setq _servo_angle (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;;
    self)
   )
 
-(setf (get robot_control::velocity_data :md5sum-) "826270096bebd36aa4c516facc8a6a69")
+(setf (get robot_control::velocity_data :md5sum-) "e294170f2d297bc948c772795931b47a")
 (setf (get robot_control::velocity_data :datatype-) "robot_control/velocity_data")
 (setf (get robot_control::velocity_data :definition-)
       "# velocity_data.msg
-float64 angular_speed_left
-float64 angular_speed_right
-float64 servo_angle
+float32 angular_speed_left
+float32 angular_speed_right
+float32 servo_angle
 ")
 
 
 
-(provide :robot_control/velocity_data "826270096bebd36aa4c516facc8a6a69")
+(provide :robot_control/velocity_data "e294170f2d297bc948c772795931b47a")
 
 
