@@ -1,10 +1,10 @@
 
 "use strict";
 
-let velocity_data = require('./velocity_data.js');
-let i2c_data = require('./i2c_data.js');
+let I2cData = require('./I2cData.js');
+let VelocityData = require('./VelocityData.js');
 
 module.exports = {
-  velocity_data: velocity_data,
-  i2c_data: i2c_data,
+  I2cData: I2cData,
+  VelocityData: VelocityData,
 };

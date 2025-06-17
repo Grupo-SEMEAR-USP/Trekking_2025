@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for move_base_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build: move_ba
 .PHONY : simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
 
 simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/clean
 
 simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : simulation/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/depend
 

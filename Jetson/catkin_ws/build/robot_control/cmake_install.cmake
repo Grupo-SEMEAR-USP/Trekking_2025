@@ -1,8 +1,8 @@
-# Install script for directory: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control
+# Install script for directory: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,59 +39,59 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control/msg" TYPE FILE FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/i2c_data.msg"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/velocity_data.msg"
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/I2cData.msg"
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/VelocityData.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control/cmake" TYPE FILE FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_control-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control/cmake" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_control-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/robot_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/robot_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/robot_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/robot_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/robot_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/robot_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control/cmake" TYPE FILE FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_control-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control/cmake" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_control-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control/cmake" TYPE FILE FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_controlConfig.cmake"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_controlConfig-version.cmake"
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_controlConfig.cmake"
+    "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/robot_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control" TYPE FILE FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robot_control" TYPE FILE FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_control" TYPE PROGRAM FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/i2c_master.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robot_control" TYPE PROGRAM FILES "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/catkin_generated/installspace/i2c_master.py")
 endif()
 

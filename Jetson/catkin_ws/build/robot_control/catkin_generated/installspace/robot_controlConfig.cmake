@@ -67,14 +67,14 @@ set(robot_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robot_control_SOURCE_PREFIX /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control)
-  set(robot_control_DEVEL_PREFIX /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel)
+  set(robot_control_SOURCE_PREFIX /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control)
+  set(robot_control_DEVEL_PREFIX /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel)
   set(robot_control_INSTALL_PREFIX "")
   set(robot_control_PREFIX ${robot_control_DEVEL_PREFIX})
 else()
   set(robot_control_SOURCE_PREFIX "")
   set(robot_control_DEVEL_PREFIX "")
-  set(robot_control_INSTALL_PREFIX /home/rmajetson/Trekking_2025/Jetson/catkin_ws/install)
+  set(robot_control_INSTALL_PREFIX /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install)
   set(robot_control_PREFIX ${robot_control_INSTALL_PREFIX})
 endif()
 
@@ -156,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/lib;/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib;/home/rmajetson/Work_2024/jetson/catkin_ws/devel/lib;/home/rmajetson/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

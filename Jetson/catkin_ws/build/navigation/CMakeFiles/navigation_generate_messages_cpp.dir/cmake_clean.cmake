@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/include/navigation/encoders.h"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include/navigation/encoders.h"
   "CMakeFiles/navigation_generate_messages_cpp"
 )
 

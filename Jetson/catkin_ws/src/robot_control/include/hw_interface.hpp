@@ -3,11 +3,11 @@
 
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
-#include "robot_control/velocity_data.h"
+#include "robot_control/VelocityData.h"
 #include <nav_msgs/Odometry.h>
 #include <geometry_msgs/Quaternion.h>
 #include <geometry_msgs/Point.h>
-#include "robot_control/i2c_data.h" 
+#include "robot_control/I2cData.h" 
 #include <tf/transform_broadcaster.h>
 #include <tf/tf.h>
 #include <unistd.h> // adicionado
@@ -29,7 +29,7 @@ public:
     RobotHWInterface(ros::NodeHandle& nh); // Ajustado para receber NodeHandle por referência
     void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg);
     void publishWheelSpeeds(); // Publicando velocidades do cmd_vel
-    void encoderCallback(const robot_control::i2c_data::ConstPtr& msg); // Callback para os dados do encoder
+    void encoderCallback(const robot_control::I2cData::ConstPtr& msg); // Callback para os dados do encoder
     void commandTimeoutCallback(const ros::TimerEvent&); // Callback para o timeout
     void updateWheelSpeedForDeceleration(); // Desaceleração
     void updateOdometry();

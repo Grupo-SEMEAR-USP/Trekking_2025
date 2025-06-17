@@ -54,8 +54,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  i2c_data.msg
-  velocity_data.msg
+  I2cData.msg
+  VelocityData.msg
 )
 
 ## Generate services in the 'srv' folder

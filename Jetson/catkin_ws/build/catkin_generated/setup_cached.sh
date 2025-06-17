@@ -7,7 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/rmajetson/Work_2024/jetson/catkin_ws/devel/lib:/home/rmajetson/catkin_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/aarch64-linux-gnu:/usr/local/lib:/usr/local/cuda-11.4/lib64'
-export PKG_CONFIG_PATH='/home/rmajetson/Work_2024/jetson/catkin_ws/devel/lib/pkgconfig:/home/rmajetson/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/aarch64-linux-gnu/pkgconfig:/usr/local/lib/pkgconfig'
-export PWD='/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build'
-export PYTHONPATH='/home/rmajetson/Work_2024/jetson/catkin_ws/devel/lib/python3/dist-packages:/home/rmajetson/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'
+export CMAKE_PREFIX_PATH="/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build'
+export PYTHONPATH="/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src:$ROS_PACKAGE_PATH"
