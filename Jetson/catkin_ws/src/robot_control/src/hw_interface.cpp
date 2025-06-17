@@ -62,15 +62,17 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
     
     double phi_L = std::atan((2*wheel_separation_length*std::sin(phi))/(2*wheel_separation_length*std::cos(phi)-wheel_separation_width*std::sin(phi)));
 
-    phi_L += 1.1969747762; // Somando diferença com a barra comum
+    phi_L += 1.944617877; // Somando diferença com a barra comum
     
     long double phi_L4 = phi_L*phi_L*phi_L*phi_L;
     long double phi_L3 = phi_L*phi_L*phi_L;
     long double phi_L2 = phi_L*phi_L;
 
-    theta_2 = 0.00249637 * phi_L4 - 0.10561985 * phi_L3 + 0.57738126 * phi_L2 -0.49075692 * phi_L + 1.68385704;
+    theta_2 = 1.67913859 * phi_L4 - 12.93393178 * phi_L3 + 35.44166937 * phi_L2 -38.12573195 * phi_L + 12.76117928;
 
     servo_angle = 180 - theta_2 * 180/M_PI;     // Converte para angulo do servo e passa para graus
+
+    ROS_INFO("Angulo do servo: %f", servo_angle);
 
     // Reset the command timeout with auto-restart
     command_timeout_.stop();
