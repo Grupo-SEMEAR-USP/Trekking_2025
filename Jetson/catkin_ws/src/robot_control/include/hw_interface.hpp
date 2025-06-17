@@ -50,13 +50,18 @@ private:
     // Temporizador para o timeout de comandos
     ros::Timer command_timeout_; 
 
-    // Variáveis membro para armazenar as velocidades das rodas
-    float rear_left_wheel_speed = 0.0;
-    float rear_right_wheel_speed = 0.0;
+    // Variáveis membro para armazenar as velocidades lineares das rodas
+    float left_wheel_speed = 0.0;
+    float right_wheel_speed = 0.0;
+
+    // Variáveis para armazenar as velocidades angulares das rodas
+    float left_wheel_angular_speed= 0.0;
+    float right_wheel_angular_speed = 0.0;
 
     // Parâmetros carregados do arquivo .yaml
     float wheel_separation_width;
     float wheel_separation_length;
+    float wheel_radius;
 
     // Parâmetros para a odometria e intermediarios para calculo da velocidade
     double x;
@@ -79,7 +84,7 @@ private:
     double base_vel_angular;
 
     // Angulo do servo
-    double theta_2;
+    double servo_angle;
 
     ros::Time current_time;
 

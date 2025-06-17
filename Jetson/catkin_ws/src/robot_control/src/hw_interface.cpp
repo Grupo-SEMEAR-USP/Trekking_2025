@@ -10,8 +10,9 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
     odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 50);
 
     // Initialize parameters
-    nh.param("wheel_control/wheel_separation_width", wheel_separation_width, 0.2f); // Default value: 0.2
-    nh.param("wheel_control/wheel_separation_length", wheel_separation_length, 0.2f); // Default value: 0.2
+    nh.param("wheel_control/wheel_separation_width", wheel_separation_width, 0.2f); 
+    nh.param("wheel_control/wheel_separation_length", wheel_separation_length, 0.2f); 
+    nh.param("ewheel_control/wheel_radius", wheel_radius, 0.2f)
 
     // Validate parameters
     if (wheel_separation_width <= 0 || wheel_separation_length <= 0) {
@@ -31,28 +32,49 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
     const float vy = msg->linear.y;
     const float omega = msg->angular.z;
 
-    double v = std::hypot(vx, vy);
+    double phi;
+    double theta_2;
+    double v;
 
-    double R = v/omega;
+    double 
+
+    double R = std::abs(v/omega);
 
     if (std::abs(omega) < 1e-5) {
-        rear_left_wheel_speed = v;
-        rear_right_wheel_speed = v;
+
+        phi = 0;
+        v = std::hypot(vx, vy);
+        double w = v / wheel_radius;
+        right_wheel_angular_speed = w;
+        left_wheel_angular_speed = w;
+
+    
     }
     else if (omega < 0){
-        rear_left_wheel_speed = omega * (R + wheel_separation_width/2);
-        rear_right_wheel_speed = omega * (R - wheel_separation_width/2);
+    
+        phi = - std::atan(wheel_separation_length / R);
+        left_wheel_speed = omega * (R + wheel_separation_width/2);
+        left_wheel_angular_speed = left_wheel_speed / wheel_radius;
+
+        right_wheel_speed = omega * (R - wheel_separation_width/2);
+        right_wheel_angular_speed = right_wheel_speed / wheel_radius;
+
+    
     }
     else if (omega > 0){
-        rear_left_wheel_speed = omega * (R - wheel_separation_width/2);
-        rear_right_wheel_speed = omega * (R + wheel_separation_width/2);
-    }
     
-    double phi = std::atan(wheel_separation_length / R);
+        phi = std::atan(wheel_separation_length / R);
+        left_wheel_speed = omega * (R - wheel_separation_width/2);
+        left_wheel_angular_speed = left_wheel_speed / wheel_radius;
+
+        right_wheel_speed = omega * (R + wheel_separation_width/2);
+        right_wheel_angular_speed = right_wheel_speed / wheel_radius;
+    
+    }
     
     double phi_L = std::atan((2*wheel_separation_length*std::sin(phi))/(2*wheel_separation_length*std::cos(phi)-wheel_separation_width*std::sin(phi)));
 
-    phi_L += 1.1969747762; // cheacar se está certo
+    phi_L += 1.1969747762; // Somando diferença com a barra comum
     
     long double phi_L4 = phi_L*phi_L*phi_L*phi_L;
     long double phi_L3 = phi_L*phi_L*phi_L;
@@ -60,7 +82,7 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
 
     theta_2 = 0.00249637 * phi_L4 - 0.10561985 * phi_L3 + 0.57738126 * phi_L2 -0.49075692 * phi_L + 1.68385704;
 
-    theta_2 += 1.57049091488;
+    servo_angle = 180 - theta_2 * 180/M_PI;     // Converte para angulo do servo e passa para graus
 
     // Reset the command timeout with auto-restart
     command_timeout_.stop();
@@ -72,9 +94,9 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
 void RobotHWInterface::publishWheelSpeeds() {
     robot_control::velocity_data msg;
 
-    msg.angular_speed_left = rear_left_wheel_speed;
-    msg.angular_speed_right = rear_right_wheel_speed;
-    msg.servo_angle = theta_2;
+    msg.angular_speed_left = left_wheel_angular_speed;
+    msg.angular_speed_right = right_wheel_angular_speed;
+    msg.servo_angle = servo_angle;
 
     velocity_command_pub.publish(msg);
 }
