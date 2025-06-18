@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/i2c_data.h"
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/velocity_data.h"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/I2cData.h"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/VelocityData.h"
   "CMakeFiles/robot_control_generate_messages_cpp"
 )
 

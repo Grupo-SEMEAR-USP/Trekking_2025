@@ -3,11 +3,11 @@
 
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
-#include "robot_control/velocity_data.h"
+#include "robot_control/VelocityData.h"
 #include <nav_msgs/Odometry.h>
 #include <geometry_msgs/Quaternion.h>
 #include <geometry_msgs/Point.h>
-#include "robot_control/i2c_data.h" 
+#include "robot_control/I2cData.h" 
 #include <tf/transform_broadcaster.h>
 #include <tf/tf.h>
 #include <unistd.h> // adicionado
@@ -29,7 +29,7 @@ public:
     RobotHWInterface(ros::NodeHandle& nh); // Ajustado para receber NodeHandle por referência
     void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg);
     void publishWheelSpeeds(); // Publicando velocidades do cmd_vel
-    void encoderCallback(const robot_control::i2c_data::ConstPtr& msg); // Callback para os dados do encoder
+    void encoderCallback(const robot_control::I2cData::ConstPtr& msg); // Callback para os dados do encoder
     void commandTimeoutCallback(const ros::TimerEvent&); // Callback para o timeout
     void updateWheelSpeedForDeceleration(); // Desaceleração
     void updateOdometry();
@@ -50,13 +50,18 @@ private:
     // Temporizador para o timeout de comandos
     ros::Timer command_timeout_; 
 
-    // Variáveis membro para armazenar as velocidades das rodas
-    float rear_left_wheel_speed = 0.0;
-    float rear_right_wheel_speed = 0.0;
+    // Variáveis membro para armazenar as velocidades lineares das rodas
+    float left_wheel_speed = 0.0;
+    float right_wheel_speed = 0.0;
+
+    // Variáveis para armazenar as velocidades angulares das rodas
+    float left_wheel_angular_speed= 0.0;
+    float right_wheel_angular_speed = 0.0;
 
     // Parâmetros carregados do arquivo .yaml
     float wheel_separation_width;
     float wheel_separation_length;
+    float wheel_radius;
 
     // Parâmetros para a odometria e intermediarios para calculo da velocidade
     double x;
@@ -79,7 +84,7 @@ private:
     double base_vel_angular;
 
     // Angulo do servo
-    double theta_2;
+    double servo_angle;
 
     ros::Time current_time;
 

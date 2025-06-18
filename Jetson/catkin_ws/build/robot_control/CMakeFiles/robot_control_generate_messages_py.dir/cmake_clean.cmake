@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py"
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_i2c_data.py"
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_velocity_data.py"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py"
   "CMakeFiles/robot_control_generate_messages_py"
 )
 

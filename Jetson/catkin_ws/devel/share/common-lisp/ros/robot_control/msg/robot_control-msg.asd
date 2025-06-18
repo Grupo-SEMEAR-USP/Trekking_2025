@@ -4,8 +4,8 @@
 (defsystem "robot_control-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
-    (:file "i2c_data" :depends-on ("_package_i2c_data"))
-    (:file "_package_i2c_data" :depends-on ("_package"))
-    (:file "velocity_data" :depends-on ("_package_velocity_data"))
-    (:file "_package_velocity_data" :depends-on ("_package"))
+    (:file "I2cData" :depends-on ("_package_I2cData"))
+    (:file "_package_I2cData" :depends-on ("_package"))
+    (:file "VelocityData" :depends-on ("_package_VelocityData"))
+    (:file "_package_VelocityData" :depends-on ("_package"))
   ))

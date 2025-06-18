@@ -1,4 +1,0 @@
-# velocity_data.msg
-float64 angular_speed_left
-float64 angular_speed_right
-float64 servo_angle

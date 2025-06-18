@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/simulation/simple_navigation_goal"
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/lib/simulation/simple_navigation_goal.pdb"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/simulation/simple_navigation_goal"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/simulation/simple_navigation_goal.pdb"
   "CMakeFiles/simple_navigation_goal.dir/src/simple_navigation_goal.cpp.o"
 )
 

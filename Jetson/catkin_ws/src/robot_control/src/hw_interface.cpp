@@ -2,16 +2,17 @@
 #include <cmath>
 
 RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeout_(nh.createTimer(ros::Duration(0.1), &RobotHWInterface::commandTimeoutCallback, this, true, false)) {
-     cmd_vel_sub = nh.subscribe("cmd_vel", 10, &RobotHWInterface::cmdVelCallback, this);
+    cmd_vel_sub = nh.subscribe("cmd_vel", 10, &RobotHWInterface::cmdVelCallback, this);
 
-    velocity_command_pub = nh.advertise<robot_control::velocity_data>("velocity_command", 10);
+    velocity_command_pub = nh.advertise<robot_control::VelocityData>("velocity_command", 10);
 
     encoder_sub = nh.subscribe("/encoder_data", 10, &RobotHWInterface::encoderCallback, this);
     odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 50);
 
     // Initialize parameters
-    nh.param("wheel_control/wheel_separation_width", wheel_separation_width, 0.2f); // Default value: 0.2
-    nh.param("wheel_control/wheel_separation_length", wheel_separation_length, 0.2f); // Default value: 0.2
+    nh.param("wheel_control/wheel_separation_width", wheel_separation_width, 0.2f); 
+    nh.param("wheel_control/wheel_separation_length", wheel_separation_length, 0.2f); 
+    nh.param("ewheel_control/wheel_radius", wheel_radius, 0.2f);
 
     // Validate parameters
     if (wheel_separation_width <= 0 || wheel_separation_length <= 0) {
@@ -27,40 +28,51 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
 }
 
 void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg) {
-    const float vx = msg->linear.x;
-    const float vy = msg->linear.y;
+    const float v = msg->linear.x;
     const float omega = msg->angular.z;
 
-    double v = std::hypot(vx, vy);
+    double phi;
+    double theta_2;
 
-    double R = v/omega;
+    double R;
 
     if (std::abs(omega) < 1e-5) {
-        rear_left_wheel_speed = v;
-        rear_right_wheel_speed = v;
+        // Movimento reto
+        phi = 0.0;
+
+        double w = v / wheel_radius;
+        left_wheel_angular_speed = w;
+        right_wheel_angular_speed = w;
     }
-    else if (omega < 0){
-        rear_left_wheel_speed = omega * (R + wheel_separation_width/2);
-        rear_right_wheel_speed = omega * (R - wheel_separation_width/2);
+    else {
+        // Movimento curvo
+        R = v / omega;  // Pode ser negativo se for movimento de ré
+
+        // Calcular o ângulo de esterçamento (Ackermann)
+        phi = std::atan(wheel_separation_length / R);
+
+        // Calcular velocidades lineares de cada roda traseira
+        double v_left = v - (omega * wheel_separation_width / 2.0);
+        double v_right = v + (omega * wheel_separation_width / 2.0);
+
+        // Converter para velocidades angulares das rodas
+        left_wheel_angular_speed = v_left / wheel_radius;
+        right_wheel_angular_speed = v_right / wheel_radius;
     }
-    else if (omega > 0){
-        rear_left_wheel_speed = omega * (R - wheel_separation_width/2);
-        rear_right_wheel_speed = omega * (R + wheel_separation_width/2);
-    }
-    
-    double phi = std::atan(wheel_separation_length / R);
     
     double phi_L = std::atan((2*wheel_separation_length*std::sin(phi))/(2*wheel_separation_length*std::cos(phi)-wheel_separation_width*std::sin(phi)));
 
-    phi_L += 1.1969747762; // cheacar se está certo
+    phi_L += 1.944617877; // Somando diferença com a barra comum
     
     long double phi_L4 = phi_L*phi_L*phi_L*phi_L;
     long double phi_L3 = phi_L*phi_L*phi_L;
     long double phi_L2 = phi_L*phi_L;
 
-    theta_2 = 0.00249637 * phi_L4 - 0.10561985 * phi_L3 + 0.57738126 * phi_L2 -0.49075692 * phi_L + 1.68385704;
+    theta_2 = 1.67913859 * phi_L4 - 12.93393178 * phi_L3 + 35.44166937 * phi_L2 -38.12573195 * phi_L + 12.76117928;
 
-    theta_2 += 1.57049091488;
+    servo_angle = 180 - theta_2 * 180/M_PI;     // Converte para angulo do servo e passa para graus
+
+    ROS_INFO("Angulo do servo: %f", servo_angle);
 
     // Reset the command timeout with auto-restart
     command_timeout_.stop();
@@ -70,17 +82,17 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
 
 
 void RobotHWInterface::publishWheelSpeeds() {
-    robot_control::velocity_data msg;
+    robot_control::VelocityData msg;
 
-    msg.angular_speed_left = rear_left_wheel_speed;
-    msg.angular_speed_right = rear_right_wheel_speed;
-    msg.servo_angle = theta_2;
+    msg.angular_speed_left = left_wheel_angular_speed;
+    msg.angular_speed_right = right_wheel_angular_speed;
+    msg.servo_angle = servo_angle;
 
     velocity_command_pub.publish(msg);
 }
 
 
-void RobotHWInterface::encoderCallback(const robot_control::i2c_data::ConstPtr& msg) {
+void RobotHWInterface::encoderCallback(const robot_control::I2cData::ConstPtr& msg) {
 
     x = msg->x / 1000;
     y = msg->y / 1000;
@@ -117,14 +129,14 @@ void RobotHWInterface::commandTimeoutCallback(const ros::TimerEvent&) {
 void RobotHWInterface::updateWheelSpeedForDeceleration() {
     // Desacelera cada roda gradualmente até zero
 
-    if (std::abs(rear_left_wheel_speed) > DECELERATION_RATE) rear_left_wheel_speed -= DECELERATION_RATE * (rear_left_wheel_speed > 0 ? 1 : -1);
-    else rear_left_wheel_speed = 0;
+    if (std::abs(left_wheel_speed) > DECELERATION_RATE) left_wheel_speed -= DECELERATION_RATE * (left_wheel_speed > 0 ? 1 : -1);
+    else left_wheel_speed = 0;
 
-    if (std::abs(rear_right_wheel_speed) > DECELERATION_RATE) rear_right_wheel_speed -= DECELERATION_RATE * (rear_right_wheel_speed > 0 ? 1 : -1);
-    else rear_right_wheel_speed = 0;
+    if (std::abs(right_wheel_speed) > DECELERATION_RATE) right_wheel_speed -= DECELERATION_RATE * (right_wheel_speed > 0 ? 1 : -1);
+    else right_wheel_speed = 0;
 
     // Verifica se todas as velocidades chegaram a zero, se não, continua desacelerando
-    if (rear_left_wheel_speed != 0 || rear_right_wheel_speed != 0) {
+    if (left_wheel_speed != 0 || right_wheel_speed != 0) {
         command_timeout_.stop();
         command_timeout_.setPeriod(ros::Duration(CMD_VEL_TIMEOUT_DEACELERATION_PERIOD), true); // Use um intervalo mais curto para desaceleração suave
         command_timeout_.start();

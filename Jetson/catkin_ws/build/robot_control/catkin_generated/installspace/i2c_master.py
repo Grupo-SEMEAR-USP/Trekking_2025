@@ -15,6 +15,7 @@ ESP32_ADDRESS = 0x58  # Endereço do dispositivo ESP32 esquerdo no barramento I2
 I2C_BUS = 1  # Número do barramento I2C na Jetson
 REG_ADDRESS = 0  # Endereço de registro (offset) a ser usado pelo PID
 SERVO_INITIAL_ANGLE = 90.0
+START_BYTE = 0xAA # Indica um byte de framing para a esp saber quando começar a leitura dos dados enviados
 
 i2c_data_global = [0, 0, 0, 0] # # Variável global para armazenar os dados enviados pela esp (x, y, z, time_stamp)
 
@@ -66,9 +67,12 @@ class I2CCommunication:
     def write_data(self):
         try:
             data = struct.pack('<fff', self.ackr_commands[0], self.ackr_commands[1], self.ackr_commands[2])  # Empacota os valores das velocidades das rodas
+            data = bytes([START_BYTE]) + data # Adicionando o byte inicial de framing
             self.i2c.write_i2c_block_data(self.device_address, REG_ADDRESS, list(data))  # Escreve valores para a ESP32
 
-            rospy.loginfo(f'Valores enviados: {self.ackr_commands}')
+            #rospy.loginfo(f'Valores enviados: {self.ackr_commands}')
+            rospy.loginfo(f'Bytes enviados: {list(data)}')
+
 
         except Exception as e:
             rospy.logerr(f"Erro na escrita: {str(e)}")

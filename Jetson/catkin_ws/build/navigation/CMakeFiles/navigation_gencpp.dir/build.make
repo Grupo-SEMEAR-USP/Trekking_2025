@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for navigation_gencpp.
 
@@ -63,10 +63,10 @@ navigation/CMakeFiles/navigation_gencpp.dir/build: navigation_gencpp
 .PHONY : navigation/CMakeFiles/navigation_gencpp.dir/build
 
 navigation/CMakeFiles/navigation_gencpp.dir/clean:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/navigation_gencpp.dir/cmake_clean.cmake
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation && $(CMAKE_COMMAND) -P CMakeFiles/navigation_gencpp.dir/cmake_clean.cmake
 .PHONY : navigation/CMakeFiles/navigation_gencpp.dir/clean
 
 navigation/CMakeFiles/navigation_gencpp.dir/depend:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/navigation_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/navigation /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/navigation/CMakeFiles/navigation_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/CMakeFiles/navigation_gencpp.dir/depend
 

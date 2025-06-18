@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/navigation/msg/encoders.lisp"
+  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/navigation/msg/encoders.lisp"
   "CMakeFiles/navigation_generate_messages_lisp"
 )
 

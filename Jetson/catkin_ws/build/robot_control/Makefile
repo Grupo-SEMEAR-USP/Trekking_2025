@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/progress.marks
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 0
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/progress.marks
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/clean
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/preinstall
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/preinstall
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 robot_control/CMakeFiles/joycontrol.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/joycontrol.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/joycontrol.dir/rule
 .PHONY : robot_control/CMakeFiles/joycontrol.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ joycontrol: robot_control/CMakeFiles/joycontrol.dir/rule
 
 # fast build rule for target.
 joycontrol/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/build
 .PHONY : joycontrol/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 .PHONY : robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ nav_msgs_generate_messages_cpp: robot_control/CMakeFiles/nav_msgs_generate_messa
 
 # fast build rule for target.
 nav_msgs_generate_messages_cpp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ tf2_msgs_generate_messages_nodejs: robot_control/CMakeFiles/tf2_msgs_generate_me
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 .PHONY : robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ nav_msgs_generate_messages_lisp: robot_control/CMakeFiles/nav_msgs_generate_mess
 
 # fast build rule for target.
 nav_msgs_generate_messages_lisp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
 .PHONY : nav_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ robot_control_generate_messages_nodejs: robot_control/CMakeFiles/robot_control_g
 
 # fast build rule for target.
 robot_control_generate_messages_nodejs/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_nodejs.dir/build
 .PHONY : robot_control_generate_messages_nodejs/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ tf2_msgs_generate_messages_lisp: robot_control/CMakeFiles/tf2_msgs_generate_mess
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_lisp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_lisp.dir/rule
 .PHONY : robot_control/CMakeFiles/tf_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ tf_generate_messages_lisp: robot_control/CMakeFiles/tf_generate_messages_lisp.di
 
 # fast build rule for target.
 tf_generate_messages_lisp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/tf_generate_messages_lisp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 .PHONY : robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ tf2_msgs_generate_messages_eus: robot_control/CMakeFiles/tf2_msgs_generate_messa
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ robot_control_generate_messages_cpp: robot_control/CMakeFiles/robot_control_gene
 
 # fast build rule for target.
 robot_control_generate_messages_cpp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_cpp.dir/build
 .PHONY : robot_control_generate_messages_cpp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/hw_interface.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/hw_interface.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/hw_interface.dir/rule
 .PHONY : robot_control/CMakeFiles/hw_interface.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ hw_interface: robot_control/CMakeFiles/hw_interface.dir/rule
 
 # fast build rule for target.
 hw_interface/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/build
 .PHONY : hw_interface/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 .PHONY : robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ tf2_msgs_generate_messages_py: robot_control/CMakeFiles/tf2_msgs_generate_messag
 
 # fast build rule for target.
 tf2_msgs_generate_messages_py/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_gennodejs.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_gennodejs.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_gennodejs.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ robot_control_gennodejs: robot_control/CMakeFiles/robot_control_gennodejs.dir/ru
 
 # fast build rule for target.
 robot_control_gennodejs/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_gennodejs.dir/build.make robot_control/CMakeFiles/robot_control_gennodejs.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_gennodejs.dir/build.make robot_control/CMakeFiles/robot_control_gennodejs.dir/build
 .PHONY : robot_control_gennodejs/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_py.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_py.dir/rule
 .PHONY : robot_control/CMakeFiles/tf_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ tf_generate_messages_py: robot_control/CMakeFiles/tf_generate_messages_py.dir/ru
 
 # fast build rule for target.
 tf_generate_messages_py/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_py.dir/build.make robot_control/CMakeFiles/tf_generate_messages_py.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_py.dir/build.make robot_control/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ tf2_msgs_generate_messages_cpp: robot_control/CMakeFiles/tf2_msgs_generate_messa
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_eus.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_eus.dir/rule
 .PHONY : robot_control/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ tf_generate_messages_eus: robot_control/CMakeFiles/tf_generate_messages_eus.dir/
 
 # fast build rule for target.
 tf_generate_messages_eus/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_eus.dir/build.make robot_control/CMakeFiles/tf_generate_messages_eus.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_eus.dir/build.make robot_control/CMakeFiles/tf_generate_messages_eus.dir/build
 .PHONY : tf_generate_messages_eus/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_generate_messages_py.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_py.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_py.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ robot_control_generate_messages_py: robot_control/CMakeFiles/robot_control_gener
 
 # fast build rule for target.
 robot_control_generate_messages_py/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_py.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_py.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_py.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_py.dir/build
 .PHONY : robot_control_generate_messages_py/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ tf_generate_messages_nodejs: robot_control/CMakeFiles/tf_generate_messages_nodej
 
 # fast build rule for target.
 tf_generate_messages_nodejs/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/tf_generate_messages_nodejs.dir/build
 .PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_cpp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/tf_generate_messages_cpp.dir/rule
 .PHONY : robot_control/CMakeFiles/tf_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,27 @@ tf_generate_messages_cpp: robot_control/CMakeFiles/tf_generate_messages_cpp.dir/
 
 # fast build rule for target.
 tf_generate_messages_cpp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/tf_generate_messages_cpp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/tf_generate_messages_cpp.dir/build.make robot_control/CMakeFiles/tf_generate_messages_cpp.dir/build
 .PHONY : tf_generate_messages_cpp/fast
 
 # Convenience name for target.
+robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_VelocityData.dir/rule:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_VelocityData.dir/rule
+.PHONY : robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_VelocityData.dir/rule
+
+# Convenience name for target.
+_robot_control_generate_messages_check_deps_VelocityData: robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_VelocityData.dir/rule
+
+.PHONY : _robot_control_generate_messages_check_deps_VelocityData
+
+# fast build rule for target.
+_robot_control_generate_messages_check_deps_VelocityData/fast:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_VelocityData.dir/build.make robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_VelocityData.dir/build
+.PHONY : _robot_control_generate_messages_check_deps_VelocityData/fast
+
+# Convenience name for target.
 robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 .PHONY : robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -449,12 +464,12 @@ nav_msgs_generate_messages_nodejs: robot_control/CMakeFiles/nav_msgs_generate_me
 
 # fast build rule for target.
 nav_msgs_generate_messages_nodejs/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
 .PHONY : nav_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_generate_messages.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -464,12 +479,12 @@ robot_control_generate_messages: robot_control/CMakeFiles/robot_control_generate
 
 # fast build rule for target.
 robot_control_generate_messages/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages.dir/build
 .PHONY : robot_control_generate_messages/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 .PHONY : robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -479,27 +494,12 @@ nav_msgs_generate_messages_eus: robot_control/CMakeFiles/nav_msgs_generate_messa
 
 # fast build rule for target.
 nav_msgs_generate_messages_eus/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
 .PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/rule
-.PHONY : robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/rule
-
-# Convenience name for target.
-_robot_control_generate_messages_check_deps_velocity_data: robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/rule
-
-.PHONY : _robot_control_generate_messages_check_deps_velocity_data
-
-# fast build rule for target.
-_robot_control_generate_messages_check_deps_velocity_data/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/build.make robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_velocity_data.dir/build
-.PHONY : _robot_control_generate_messages_check_deps_velocity_data/fast
-
-# Convenience name for target.
 robot_control/CMakeFiles/robot_control_gencpp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_gencpp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_gencpp.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_gencpp.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ robot_control_gencpp: robot_control/CMakeFiles/robot_control_gencpp.dir/rule
 
 # fast build rule for target.
 robot_control_gencpp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_gencpp.dir/build.make robot_control/CMakeFiles/robot_control_gencpp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_gencpp.dir/build.make robot_control/CMakeFiles/robot_control_gencpp.dir/build
 .PHONY : robot_control_gencpp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ robot_control_generate_messages_eus: robot_control/CMakeFiles/robot_control_gene
 
 # fast build rule for target.
 robot_control_generate_messages_eus/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_eus.dir/build
 .PHONY : robot_control_generate_messages_eus/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 .PHONY : robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -539,27 +539,27 @@ nav_msgs_generate_messages_py: robot_control/CMakeFiles/nav_msgs_generate_messag
 
 # fast build rule for target.
 nav_msgs_generate_messages_py/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make robot_control/CMakeFiles/nav_msgs_generate_messages_py.dir/build
 .PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_i2c_data.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_i2c_data.dir/rule
-.PHONY : robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_i2c_data.dir/rule
+robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_I2cData.dir/rule:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_I2cData.dir/rule
+.PHONY : robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_I2cData.dir/rule
 
 # Convenience name for target.
-_robot_control_generate_messages_check_deps_i2c_data: robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_i2c_data.dir/rule
+_robot_control_generate_messages_check_deps_I2cData: robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_I2cData.dir/rule
 
-.PHONY : _robot_control_generate_messages_check_deps_i2c_data
+.PHONY : _robot_control_generate_messages_check_deps_I2cData
 
 # fast build rule for target.
-_robot_control_generate_messages_check_deps_i2c_data/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_i2c_data.dir/build.make robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_i2c_data.dir/build
-.PHONY : _robot_control_generate_messages_check_deps_i2c_data/fast
+_robot_control_generate_messages_check_deps_I2cData/fast:
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_I2cData.dir/build.make robot_control/CMakeFiles/_robot_control_generate_messages_check_deps_I2cData.dir/build
+.PHONY : _robot_control_generate_messages_check_deps_I2cData/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_geneus.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_geneus.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_geneus.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_geneus.dir/rule
 
 # Convenience name for target.
@@ -569,12 +569,12 @@ robot_control_geneus: robot_control/CMakeFiles/robot_control_geneus.dir/rule
 
 # fast build rule for target.
 robot_control_geneus/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_geneus.dir/build.make robot_control/CMakeFiles/robot_control_geneus.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_geneus.dir/build.make robot_control/CMakeFiles/robot_control_geneus.dir/build
 .PHONY : robot_control_geneus/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -584,12 +584,12 @@ robot_control_generate_messages_lisp: robot_control/CMakeFiles/robot_control_gen
 
 # fast build rule for target.
 robot_control_generate_messages_lisp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/build.make robot_control/CMakeFiles/robot_control_generate_messages_lisp.dir/build
 .PHONY : robot_control_generate_messages_lisp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_genlisp.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_genlisp.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_genlisp.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_genlisp.dir/rule
 
 # Convenience name for target.
@@ -599,12 +599,12 @@ robot_control_genlisp: robot_control/CMakeFiles/robot_control_genlisp.dir/rule
 
 # fast build rule for target.
 robot_control_genlisp/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_genlisp.dir/build.make robot_control/CMakeFiles/robot_control_genlisp.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_genlisp.dir/build.make robot_control/CMakeFiles/robot_control_genlisp.dir/build
 .PHONY : robot_control_genlisp/fast
 
 # Convenience name for target.
 robot_control/CMakeFiles/robot_control_genpy.dir/rule:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_genpy.dir/rule
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robot_control/CMakeFiles/robot_control_genpy.dir/rule
 .PHONY : robot_control/CMakeFiles/robot_control_genpy.dir/rule
 
 # Convenience name for target.
@@ -614,7 +614,7 @@ robot_control_genpy: robot_control/CMakeFiles/robot_control_genpy.dir/rule
 
 # fast build rule for target.
 robot_control_genpy/fast:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_genpy.dir/build.make robot_control/CMakeFiles/robot_control_genpy.dir/build
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/robot_control_genpy.dir/build.make robot_control/CMakeFiles/robot_control_genpy.dir/build
 .PHONY : robot_control_genpy/fast
 
 src/hw_interface.o: src/hw_interface.cpp.o
@@ -623,7 +623,7 @@ src/hw_interface.o: src/hw_interface.cpp.o
 
 # target to build an object file
 src/hw_interface.cpp.o:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o
 .PHONY : src/hw_interface.cpp.o
 
 src/hw_interface.i: src/hw_interface.cpp.i
@@ -632,7 +632,7 @@ src/hw_interface.i: src/hw_interface.cpp.i
 
 # target to preprocess a source file
 src/hw_interface.cpp.i:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.i
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.i
 .PHONY : src/hw_interface.cpp.i
 
 src/hw_interface.s: src/hw_interface.cpp.s
@@ -641,7 +641,7 @@ src/hw_interface.s: src/hw_interface.cpp.s
 
 # target to generate assembly for a file
 src/hw_interface.cpp.s:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.s
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/hw_interface.dir/build.make robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.s
 .PHONY : src/hw_interface.cpp.s
 
 src/joycontrol.o: src/joycontrol.cpp.o
@@ -650,7 +650,7 @@ src/joycontrol.o: src/joycontrol.cpp.o
 
 # target to build an object file
 src/joycontrol.cpp.o:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/src/joycontrol.cpp.o
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/src/joycontrol.cpp.o
 .PHONY : src/joycontrol.cpp.o
 
 src/joycontrol.i: src/joycontrol.cpp.i
@@ -659,7 +659,7 @@ src/joycontrol.i: src/joycontrol.cpp.i
 
 # target to preprocess a source file
 src/joycontrol.cpp.i:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/src/joycontrol.cpp.i
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/src/joycontrol.cpp.i
 .PHONY : src/joycontrol.cpp.i
 
 src/joycontrol.s: src/joycontrol.cpp.s
@@ -668,7 +668,7 @@ src/joycontrol.s: src/joycontrol.cpp.s
 
 # target to generate assembly for a file
 src/joycontrol.cpp.s:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/src/joycontrol.cpp.s
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(MAKE) -f robot_control/CMakeFiles/joycontrol.dir/build.make robot_control/CMakeFiles/joycontrol.dir/src/joycontrol.cpp.s
 .PHONY : src/joycontrol.cpp.s
 
 # Help Target
@@ -702,14 +702,14 @@ help:
 	@echo "... robot_control_generate_messages_py"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_cpp"
+	@echo "... _robot_control_generate_messages_check_deps_VelocityData"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... robot_control_generate_messages"
 	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... _robot_control_generate_messages_check_deps_velocity_data"
 	@echo "... robot_control_gencpp"
 	@echo "... robot_control_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_py"
-	@echo "... _robot_control_generate_messages_check_deps_i2c_data"
+	@echo "... _robot_control_generate_messages_check_deps_I2cData"
 	@echo "... robot_control_geneus"
 	@echo "... robot_control_generate_messages_lisp"
 	@echo "... robot_control_genlisp"
@@ -731,6 +731,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gola/Documents/SEMEAR/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

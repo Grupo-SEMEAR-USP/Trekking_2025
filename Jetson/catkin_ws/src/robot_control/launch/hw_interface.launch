@@ -3,9 +3,9 @@
   <!--node name="i2c_master" pkg="robot_control" type="i2c_master.py" /--> 
 
   <!-- Carregar parâmetros do arquivo config.yaml -->
-  <rosparam file="$(find hw_interface)/config/wheel_control.yaml" command="load" />
-  <rosparam file="$(find hw_interface)/config/fourbar.yaml" command="load" />
+  <rosparam file="$(find robot_control)/config/wheel_control.yaml" command="load" />
+  <rosparam file="$(find robot_control)/config/fourbar.yaml" command="load" />
 
   <!-- Iniciar o nó hw_interface -->
-  <node name="hw_interface" pkg="hw_interface" type="hw_interface" output="screen" />
+  <node name="hw_interface" pkg="robot_control" type="hw_interface" output="screen" />
 </launch>
