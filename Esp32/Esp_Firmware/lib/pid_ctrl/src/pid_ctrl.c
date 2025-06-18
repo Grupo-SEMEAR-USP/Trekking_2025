@@ -6,6 +6,7 @@
 
 #include <stdbool.h>
 #include <sys/param.h>
+#include <math.h>
 #include "esp_check.h"
 #include "esp_log.h"
 #include "pid_ctrl.h"
@@ -36,6 +37,11 @@ struct pid_ctrl_block_t {
 
 static float pid_calc_positional_delta_time(pid_ctrl_block_t *pid, float error)
 {   
+    if (fabsf(error) < 1e-3f) { //If the error is negative, it means that the setpoint is 0, so the integral error needs to be nullified
+        pid->integral_err = 0.0f;
+        return 0.0f;
+    }
+
     int64_t curr_ts = esp_timer_get_time();
     float t  = (float)((curr_ts - pid->prev_ts)*((int64_t)1000000));
     pid->prev_ts = curr_ts;
@@ -70,7 +76,10 @@ static float pid_calc_positional_delta_time(pid_ctrl_block_t *pid, float error)
 
 static float pid_calc_positional(pid_ctrl_block_t *pid, float error)
 {   
-
+    if (fabsf(error) < 1e-3f) { //If the error is negative, it means that the setpoint is 0, so the integral error needs to be nullified
+        pid->integral_err = 0.0f;
+        return 0.0f;
+    }
     float output = 0;
     /* Add current error to the integral error */
     pid->integral_err += pid->Ki*error;
@@ -96,6 +105,10 @@ static float pid_calc_positional(pid_ctrl_block_t *pid, float error)
 
 static float pid_calc_positional_default(pid_ctrl_block_t *pid, float error)
 {
+    if (fabsf(error) < 1e-3f) { //If the error is negative, it means that the setpoint is 0, so the integral error needs to be nullified
+        pid->integral_err = 0.0f;
+        return 0.0f;
+    }
     float output = 0;
     
     /* Add current error to the integral error */

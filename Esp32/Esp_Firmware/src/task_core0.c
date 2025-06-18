@@ -146,7 +146,7 @@ void monitor_encoder_pid_calc(void *params){
             xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY); //could be incremented in the first lock
 
             local_ros_angular_speed_left = global_ros_angular_speed_left;
-            local_ros_angular_speed_right = global_ros_angular_speed_right;
+            local_ros_angular_speed_right = -global_ros_angular_speed_right;
 
             local_servo_angle = global_ros_servo_angle;
 
@@ -171,6 +171,7 @@ void monitor_encoder_pid_calc(void *params){
         pwm_actuate(ESQ,pid_result_duty_left);
         pwm_actuate(DIR,pid_result_duty_right);
         iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, local_servo_angle);
+        //printf("pwm_left: %f, pwm_right: %f / local_left: %f, local_right: %f\n", pid_result_duty_left, pid_result_duty_right, local_motor_angular_speed_left, local_motor_angular_speed_right);
 
         /*
         xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY);
@@ -199,7 +200,6 @@ static void IRAM_ATTR monitor_encoder_pid_calc_start(void *args)
         ,0);
 
     gpio_intr_disable(START_MOTOR_INTERRUPT_PIN);
-    
 }
 
 static void IRAM_ATTR monitor_encoder_pid_calc_stop(void *args)

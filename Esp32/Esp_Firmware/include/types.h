@@ -81,12 +81,12 @@
 #define MAX_INTEGRAL_VALUE 3880.0
 
 // Kp,Ki,Kd constants
-#define KP_LEFT 100.0
-#define KI_LEFT 2.0
+#define KP_LEFT 25.0
+#define KI_LEFT 0.5
 #define KD_LEFT 1.0
 
-#define KP_RIGHT 10.0
-#define KI_RIGHT 2.0
+#define KP_RIGHT 25.0
+#define KI_RIGHT 0.5
 #define KD_RIGHT 1.0
 
 

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "sycronization.h": "c",
+        "pwm.h": "c"
+    }
+}
