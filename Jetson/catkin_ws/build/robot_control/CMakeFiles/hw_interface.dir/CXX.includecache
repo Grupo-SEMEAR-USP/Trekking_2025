@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/I2cData.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/I2cData.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/VelocityData.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/include/robot_control/VelocityData.h
 string
 -
 vector
@@ -38,13 +38,13 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/hw_interface.hpp
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/hw_interface.hpp
 ros/ros.h
 -
 geometry_msgs/Twist.h
 -
 robot_control/VelocityData.h
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/VelocityData.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/VelocityData.h
 nav_msgs/Odometry.h
 -
 geometry_msgs/Quaternion.h
@@ -52,7 +52,7 @@ geometry_msgs/Quaternion.h
 geometry_msgs/Point.h
 -
 robot_control/I2cData.h
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/I2cData.h
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/include/robot_control/I2cData.h
 tf/transform_broadcaster.h
 -
 tf/tf.h
@@ -70,9 +70,9 @@ cmath
 geometry_msgs/TransformStamped.h
 -
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
 hw_interface.hpp
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.hpp
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.hpp
 cmath
 -
 

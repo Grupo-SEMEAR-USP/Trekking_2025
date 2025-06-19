@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
 
 # Include any dependencies generated for this target.
 include robot_control/CMakeFiles/hw_interface.dir/depend.make
@@ -58,17 +58,17 @@ include robot_control/CMakeFiles/hw_interface.dir/progress.make
 include robot_control/CMakeFiles/hw_interface.dir/flags.make
 
 robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o: robot_control/CMakeFiles/hw_interface.dir/flags.make
-robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o"
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o -c /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
+robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o"
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o -c /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp
 
 robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hw_interface.dir/src/hw_interface.cpp.i"
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp > CMakeFiles/hw_interface.dir/src/hw_interface.cpp.i
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp > CMakeFiles/hw_interface.dir/src/hw_interface.cpp.i
 
 robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hw_interface.dir/src/hw_interface.cpp.s"
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp -o CMakeFiles/hw_interface.dir/src/hw_interface.cpp.s
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/src/hw_interface.cpp -o CMakeFiles/hw_interface.dir/src/hw_interface.cpp.s
 
 # Object files for target hw_interface
 hw_interface_OBJECTS = \
@@ -77,44 +77,44 @@ hw_interface_OBJECTS = \
 # External object files for target hw_interface
 hw_interface_EXTERNAL_OBJECTS =
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/build.make
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf2_ros.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libactionlib.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libmessage_filters.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libroscpp.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf2.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librostime.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libcpp_common.so
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface"
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw_interface.dir/link.txt --verbose=$(VERBOSE)
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/build.make
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf2_ros.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libactionlib.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libmessage_filters.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libroscpp.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libpthread.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libtf2.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/librostime.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /opt/ros/noetic/lib/libcpp_common.so
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface: robot_control/CMakeFiles/hw_interface.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface"
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hw_interface.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-robot_control/CMakeFiles/hw_interface.dir/build: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface
+robot_control/CMakeFiles/hw_interface.dir/build: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface
 
 .PHONY : robot_control/CMakeFiles/hw_interface.dir/build
 
 robot_control/CMakeFiles/hw_interface.dir/clean:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -P CMakeFiles/hw_interface.dir/cmake_clean.cmake
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -P CMakeFiles/hw_interface.dir/cmake_clean.cmake
 .PHONY : robot_control/CMakeFiles/hw_interface.dir/clean
 
 robot_control/CMakeFiles/hw_interface.dir/depend:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/hw_interface.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/hw_interface.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_control/CMakeFiles/hw_interface.dir/depend
 

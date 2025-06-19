@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/src/simple_navigation_goal.cpp
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation/src/simple_navigation_goal.cpp
 ros/ros.h
 -
 move_base_msgs/MoveBaseAction.h

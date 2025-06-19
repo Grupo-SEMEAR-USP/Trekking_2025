@@ -6,7 +6,7 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
 
     velocity_command_pub = nh.advertise<robot_control::VelocityData>("velocity_command", 10);
 
-    encoder_sub = nh.subscribe("/encoder_data", 10, &RobotHWInterface::encoderCallback, this);
+    //encoder_sub = nh.subscribe("/i2c_data", 10, &RobotHWInterface::encoderCallback, this);
     odom_pub = nh.advertise<nav_msgs::Odometry>("odom", 50);
 
     // Initialize parameters
@@ -72,7 +72,7 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
 
     servo_angle = 180 - theta_2 * 180/M_PI;     // Converte para angulo do servo e passa para graus
 
-    ROS_INFO("Angulo do servo: %f", servo_angle);
+    //ROS_INFO("Angulo do servo: %f", servo_angle);
 
     // Reset the command timeout with auto-restart
     command_timeout_.stop();
@@ -92,8 +92,9 @@ void RobotHWInterface::publishWheelSpeeds() {
 }
 
 
-void RobotHWInterface::encoderCallback(const robot_control::I2cData::ConstPtr& msg) {
+/*void RobotHWInterface::encoderCallback(const robot_control::I2cData::ConstPtr& msg) {
 
+    ROS_INFO("Callback do encoder ativado!");
     x = msg->x / 1000;
     y = msg->y / 1000;
     th = msg->z / 1000;
@@ -116,11 +117,8 @@ void RobotHWInterface::encoderCallback(const robot_control::I2cData::ConstPtr& m
         delta = false;
     }
 
-    //std::cout << "Velocidade Linear X: " << vel_linearx << ", Velocidade Linear Y: " << vel_lineary << ", Velocidade Angular Z: " << vel_angular_z << std::endl;
-
-    //std::cout << "Teste Encoder: " << teste << "\n";
-
-}
+    ROS_INFO("x: %f, y: %f, vel_linear_x: %f, vel_linear_y %f", x, y, vel_linear_x, vel_linear_y);
+}*/
 
 void RobotHWInterface::commandTimeoutCallback(const ros::TimerEvent&) {
     updateWheelSpeedForDeceleration();
@@ -171,8 +169,8 @@ void RobotHWInterface::updateOdometry() {
     odom.pose.pose.orientation = odom_quat;
 
     odom.child_frame_id = "base_link";
-    odom.twist.twist.linear.x = base_vel_linear;
-    odom.twist.twist.linear.y = 0;
+    odom.twist.twist.linear.x = 0;
+    odom.twist.twist.linear.y = base_vel_linear;
     odom.twist.twist.angular.z = base_vel_angular;
 
     odom_pub.publish(odom);

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/src/simple_navigation_goal.cpp" "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/simulation/CMakeFiles/simple_navigation_goal.dir/src/simple_navigation_goal.cpp.o"
+  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation/src/simple_navigation_goal.cpp" "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/CMakeFiles/simple_navigation_goal.dir/src/simple_navigation_goal.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/simulation/include"
+  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

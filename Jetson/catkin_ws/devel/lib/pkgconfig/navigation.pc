@@ -1,8 +1,8 @@
-prefix=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel
+prefix=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel
 
 Name: navigation
 Description: Description of navigation
 Version: 0.0.0
-Cflags: -I/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/include -I/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/navigation/include
+Cflags: -I/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/include -I/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/navigation/include
 Libs: -L${prefix}/lib -lnavigation
 Requires: roscpp rospy std_msgs message_runtime move_base

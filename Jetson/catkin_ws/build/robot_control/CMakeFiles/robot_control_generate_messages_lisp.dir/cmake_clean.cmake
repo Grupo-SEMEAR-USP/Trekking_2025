@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/robot_control/msg/I2cData.lisp"
-  "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/robot_control/msg/VelocityData.lisp"
+  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/robot_control/msg/I2cData.lisp"
+  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/common-lisp/ros/robot_control/msg/VelocityData.lisp"
   "CMakeFiles/robot_control_generate_messages_lisp"
 )
 

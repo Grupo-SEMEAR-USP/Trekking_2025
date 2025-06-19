@@ -43,41 +43,41 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for robot_control_generate_messages_py.
 
 # Include the progress variables for this target.
 include robot_control/CMakeFiles/robot_control_generate_messages_py.dir/progress.make
 
-robot_control/CMakeFiles/robot_control_generate_messages_py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py
-robot_control/CMakeFiles/robot_control_generate_messages_py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py
-robot_control/CMakeFiles/robot_control_generate_messages_py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py
+robot_control/CMakeFiles/robot_control_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py
+robot_control/CMakeFiles/robot_control_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py
+robot_control/CMakeFiles/robot_control_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py
 
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/I2cData.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG robot_control/I2cData"
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/I2cData.msg -Irobot_control:/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p robot_control -o /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/I2cData.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG robot_control/I2cData"
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/I2cData.msg -Irobot_control:/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p robot_control -o /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/VelocityData.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG robot_control/VelocityData"
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/VelocityData.msg -Irobot_control:/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p robot_control -o /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/VelocityData.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG robot_control/VelocityData"
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg/VelocityData.msg -Irobot_control:/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p robot_control -o /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg
 
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py
-/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for robot_control"
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg --initpy
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py
+/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for robot_control"
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg --initpy
 
 robot_control_generate_messages_py: robot_control/CMakeFiles/robot_control_generate_messages_py
-robot_control_generate_messages_py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py
-robot_control_generate_messages_py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py
-robot_control_generate_messages_py: /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py
+robot_control_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_I2cData.py
+robot_control_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/_VelocityData.py
+robot_control_generate_messages_py: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/robot_control/msg/__init__.py
 robot_control_generate_messages_py: robot_control/CMakeFiles/robot_control_generate_messages_py.dir/build.make
 
 .PHONY : robot_control_generate_messages_py
@@ -88,10 +88,10 @@ robot_control/CMakeFiles/robot_control_generate_messages_py.dir/build: robot_con
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_py.dir/build
 
 robot_control/CMakeFiles/robot_control_generate_messages_py.dir/clean:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -P CMakeFiles/robot_control_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -P CMakeFiles/robot_control_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_py.dir/clean
 
 robot_control/CMakeFiles/robot_control_generate_messages_py.dir/depend:
-	cd /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/robot_control /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control /home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/robot_control_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/robot_control_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_control/CMakeFiles/robot_control_generate_messages_py.dir/depend
 
