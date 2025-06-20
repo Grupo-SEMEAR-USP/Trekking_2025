@@ -8,11 +8,12 @@ project(navigation)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
   rospy
+  geometry_msgs
+  move_base_msgs
+  actionlib
+  actionlib_msgs
   std_msgs
-  message_generation
-  move_base
 )
 
 ## System dependencies are found with CMake's conventions
@@ -162,6 +163,7 @@ include_directories(
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
   scripts/odom_pub_simul.py
+  scripts/set_trajectory.py
   scripts/cmd_vel_to_ackermann_drive.py
   scripts/cmd_vel_to_ackermann_drive_rod.py
   scripts/tf_publisher.py
@@ -171,7 +173,7 @@ catkin_install_python(PROGRAMS
   scripts/path_follower.py
   scripts/odom_front.py
   scripts/odom_esp_test.py
-  scripts/start_navi.py
+  scripts/set_trajectory.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

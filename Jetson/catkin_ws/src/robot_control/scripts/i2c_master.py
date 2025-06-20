@@ -4,7 +4,7 @@ import smbus
 import struct
 from std_msgs.msg import Int32
 from sensor_msgs.msg import JointState
-from robot_control.msg import i2c_data, velocity_data
+from robot_control.msg import I2cData, VelocityData
 from geometry_msgs.msg import Quaternion
 from time import sleep
 import threading
@@ -30,10 +30,10 @@ class I2CCommunication:
         self.device_address = device_address  # Define o endereço da ESP32 ao qual queremos nos comunicar
 
         # Cria um objeto de publicação para enviar dados para o tópico ROS
-        self.pub_encoder = rospy.Publisher('/i2c_data', i2c_data, queue_size=10)
-        self.sub_joints = rospy.Subscriber('/velocity_command', velocity_data, self.nav_callback)
+        self.pub_encoder = rospy.Publisher('/i2c_data', I2cData, queue_size=10)
+        self.sub_joints = rospy.Subscriber('/velocity_command', VelocityData, self.nav_callback)
 
-        self.data_msg = i2c_data()
+        self.data_msg = I2cData()
 
         self.thread = threading.Thread(target=self.update)  # Cria uma nova thread para a função update
         self.thread.start()  # Inicia a execução da thread
@@ -55,7 +55,7 @@ class I2CCommunication:
             self.data_msg.x = i2c_data_global[0]
             self.data_msg.y = i2c_data_global[1]
             self.data_msg.z = i2c_data_global[2]
-            self.data_msg.timestamp = rospy.Time.from_sec(i2c_data_global[3] / 1000.0)
+            self.data_msg.timestamp = i2c_data_global[3]
 
             self.pub_encoder.publish(self.data_msg)
 
@@ -70,8 +70,8 @@ class I2CCommunication:
             data = bytes([START_BYTE]) + data # Adicionando o byte inicial de framing
             self.i2c.write_i2c_block_data(self.device_address, REG_ADDRESS, list(data))  # Escreve valores para a ESP32
 
-            #rospy.loginfo(f'Valores enviados: {self.ackr_commands}')
-            rospy.loginfo(f'Bytes enviados: {list(data)}')
+            rospy.loginfo(f'Valores enviados: {self.ackr_commands}')
+            #rospy.loginfo(f'Bytes enviados: {list(data)}')
 
 
         except Exception as e:
@@ -79,7 +79,7 @@ class I2CCommunication:
             return None
 
     def nav_callback(self, msg):
-        print(msg)
+        #print(msg)
 
         self.ackr_commands[0] = msg.angular_speed_left
         self.ackr_commands[1] = msg.angular_speed_right

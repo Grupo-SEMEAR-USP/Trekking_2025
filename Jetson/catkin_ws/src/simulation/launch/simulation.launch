@@ -3,11 +3,11 @@
 
     <arg name="model" default="$(find robot_control)/robot_description/urdf_teste/steer_bot.urdf.xacro"/>
     <arg name="namespace" default="/steer_bot" />
-    <arg name="world_name" default="$(find simulation)/worlds/newest.world"/>
+    <arg name="world_name" default="$(find simulation)/worlds/mapatrekking2025.world"/>
     <arg name="cmd_timeout" default="0.5"/>
-    <arg name="x" default="0.0"/>
-    <arg name="y" default="0.0"/>
-    <arg name="z" default="1.0" />
+    <arg name="x" default="-1.1"/>
+    <arg name="y" default="-2.1"/>
+    <arg name="z" default="0.0" />
     <arg name="roll" default="0.0"/>
     <arg name="pitch" default="0.0"/>
     <arg name="yaw" default="0.0"/>

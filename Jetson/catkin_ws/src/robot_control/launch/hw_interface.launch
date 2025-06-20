@@ -8,4 +8,5 @@
 
   <!-- Iniciar o nó hw_interface -->
   <node name="hw_interface" pkg="robot_control" type="hw_interface" output="screen" />
+  <node name="i2c_master" pkg="robot_control" type="i2c_master.py" output="screen" />
 </launch>

@@ -1,8 +1,0 @@
-prefix=/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/install
-
-Name: navigation
-Description: Description of navigation
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lnavigation
-Requires: roscpp rospy std_msgs message_runtime move_base
