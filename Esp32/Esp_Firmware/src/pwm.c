@@ -71,6 +71,16 @@ void pwm_actuate(int channel, float duty){
         duty *= -1;
     }
 
+    if (duty > MAX_DUTY){
+        duty = MAX_DUTY;
+    }
+    else if (duty > 0 && duty < MAX_INERTIA_DUTY_LEFT){
+        duty = MAX_INERTIA_DUTY_LEFT;
+    }
+    else if (duty < 0 && duty > MIN_INERTIA_DUTY_LEFT){
+        duty = MIN_INERTIA_DUTY_LEFT;
+    }
+
     //define rotation direction 
     gpio_set_level(motor_choose_in_primary(channel), (clockwise) ? 0 : 1); 
     gpio_set_level(motor_choose_in_secundary(channel), (clockwise) ? 1 : 0);

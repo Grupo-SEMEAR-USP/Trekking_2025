@@ -22,15 +22,15 @@
 
 
 //pwm gpio constants
-#define ENABLE_A GPIO_NUM_32
-#define INPUT_1 GPIO_NUM_33
-#define INPUT_2 GPIO_NUM_18
+#define ENABLE_A GPIO_NUM_4
+#define INPUT_1 GPIO_NUM_25
+#define INPUT_2 GPIO_NUM_19
 
 #define ENABLE_DIR ENABLE_A
 
-#define ENABLE_B GPIO_NUM_4
-#define INPUT_3 GPIO_NUM_19
-#define INPUT_4 GPIO_NUM_25
+#define ENABLE_B GPIO_NUM_32
+#define INPUT_3 GPIO_NUM_33
+#define INPUT_4 GPIO_NUM_18
 
 #define ENABLE_ESQ ENABLE_B
 
@@ -81,13 +81,13 @@
 #define MAX_INTEGRAL_VALUE 3880.0
 
 // Kp,Ki,Kd constants
-#define KP_LEFT 25.0
-#define KI_LEFT 0.5
-#define KD_LEFT 1.0
+#define KP_LEFT 300.0
+#define KI_LEFT 5.0
+#define KD_LEFT 0.0
 
-#define KP_RIGHT 25.0
-#define KI_RIGHT 0.5
-#define KD_RIGHT 1.0
+#define KP_RIGHT 300.0
+#define KI_RIGHT 5.0
+#define KD_RIGHT 0.0
 
 
 //limits of pwm duty cycle values to escape inertia
@@ -107,10 +107,10 @@
 
 //encoder contasnts
 #define PCNT_CHA_LEFT 26
-#define PCNT_CHB_LEFT 5
+#define PCNT_CHB_LEFT 27
 
-#define PCNT_CHA_RIGHT 14
-#define PCNT_CHB_RIGHT 27
+#define PCNT_CHA_RIGHT 5
+#define PCNT_CHB_RIGHT 14
 
 #define PI 3.14159
 
@@ -118,6 +118,7 @@
 #define ENCODER_COUNTER_WAIT_PID_OP  4  //number of pid operations required to extrac encoder speed
 #define GET_ROS_VAL_COUNTER_WAIT_PID_OP  1
 #define ENCODER_RESOLUTION (((2*PI)/(ENCODER_RESOLUTION_TICKS))/(PID_DELAY*ENCODER_COUNTER_WAIT_PID_OP))*1000 
+
 
 
 //defining calc parameters

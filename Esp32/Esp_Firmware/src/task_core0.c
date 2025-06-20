@@ -4,6 +4,7 @@
 #include "global_variables.h"
 #include "pwm.h"
 #include "pid.h"
+#include "esp_timer.h"
 
 //variables for intializing encoder
 rotary_encoder_t *encoder_left;
@@ -27,6 +28,13 @@ int local_delta_encoder_ticks_right;
     
 int count_get_real;
 int count_get_ros;
+
+//Teste PID - speed from both wheels
+int64_t current_time = 0;
+int64_t last_time = 0;
+int64_t delta_time = 0;
+
+double ang_speed_left_wheel = 0, ang_speed_right_wheel = 0;
 
 //variables for servo
 float local_servo_angle;
@@ -61,8 +69,8 @@ void core0fuctions(void *params){
     ESP_ERROR_CHECK(rotary_encoder_new_ec11(&config_encoder_right, &encoder_right));
 
     // Filter out glitch (1us)
-    ESP_ERROR_CHECK(encoder_left->set_glitch_filter(encoder_left, 1));
-    ESP_ERROR_CHECK(encoder_right->set_glitch_filter(encoder_right, 1));
+    ESP_ERROR_CHECK(encoder_left->set_glitch_filter(encoder_left, 10));
+    ESP_ERROR_CHECK(encoder_right->set_glitch_filter(encoder_right, 10));
 
     // Start encoder
     ESP_ERROR_CHECK(encoder_left->start(encoder_left));
@@ -70,14 +78,14 @@ void core0fuctions(void *params){
     
     //initializing pid
 
-    pid_result_duty_left = 0;
-    pid_result_duty_right = 0;
+    pid_result_duty_left = 0.0;
+    pid_result_duty_right = 0.0;
 
-    local_ros_angular_speed_left = 0;
-    local_ros_angular_speed_right = 0;
+    local_ros_angular_speed_left = 0.0;
+    local_ros_angular_speed_right = 0.0;
 
-    local_motor_angular_speed_left = 0; 
-    local_motor_angular_speed_right = 0;
+    local_motor_angular_speed_left = 0.0; 
+    local_motor_angular_speed_right = 0.0;
 
     pid_init(&pid_handle_left,&pid_handle_right);
     
@@ -117,19 +125,33 @@ void monitor_encoder_pid_calc(void *params){
             //global_motor_angular_speed_left = ((float) encoder_left->get_counter_value(encoder_left))*(ENCODER_RESOLUTION/((float)count));
             //global_motor_angular_speed_right = ((float) encoder_right->get_counter_value(encoder_right))*(ENCODER_RESOLUTION/((float)count));
             
-            local_delta_encoder_ticks_left = encoder_left->get_counter_value(encoder_left);
+            local_delta_encoder_ticks_left = -encoder_left->get_counter_value(encoder_left);
             local_delta_encoder_ticks_right = encoder_right->get_counter_value(encoder_right);
+
+            //printf("left: %d, right: %d\n", local_delta_encoder_ticks_left, local_delta_encoder_ticks_right);
 
             //reseting encoder stored ticks
             encoder_left->reset_counter_value(encoder_left);
             encoder_right->reset_counter_value(encoder_right);
 
-            local_motor_angular_speed_left = ((float) local_delta_encoder_ticks_left)*ENCODER_RESOLUTION;
-            local_motor_angular_speed_right = ((float) local_delta_encoder_ticks_right)*ENCODER_RESOLUTION;
+            local_motor_angular_speed_left = (((float) local_delta_encoder_ticks_left)*ENCODER_RESOLUTION);
+            local_motor_angular_speed_right = (((float) local_delta_encoder_ticks_right)*ENCODER_RESOLUTION);
+
+            current_time = esp_timer_get_time();
+            delta_time = current_time-last_time;
+            last_time = current_time;
+            ang_speed_left_wheel = (((local_delta_encoder_ticks_left*2*PI)/ENCODER_RESOLUTION_TICKS)/(delta_time))*1000000;
+            ang_speed_right_wheel = (((local_delta_encoder_ticks_right*2*PI)/ENCODER_RESOLUTION_TICKS)/(delta_time))*1000000;
             
             //x and y displacements are given in milimeters
             global_total_x +=  (double)((local_delta_encoder_ticks_right+local_delta_encoder_ticks_left)*ENCODER_DISPLACEMENT*0.5*cos(global_total_theta));
             global_total_y +=  (double)((local_delta_encoder_ticks_right+local_delta_encoder_ticks_left)*ENCODER_DISPLACEMENT*0.5*sin(global_total_theta));
+            printf("Setpoint(L): %lf / Real(L): %lf / Setpoint(R): %lf / Real(R): %lf\n", 
+                local_ros_angular_speed_left,
+                ang_speed_left_wheel,
+                local_ros_angular_speed_right,
+                ang_speed_right_wheel
+            );
             global_total_theta += (double)(((local_delta_encoder_ticks_right-local_delta_encoder_ticks_left)*0.5*ENCODER_DISPLACEMENT)/WHELL_REAR_SEPARATION);//*ANGULAR_DISPLACEMENT);
 
             //printf("global_total_x: %lf, global_total_y: %lf, global_total_theta: %lf\n",global_total_x,global_total_y,global_total_theta);
@@ -146,7 +168,7 @@ void monitor_encoder_pid_calc(void *params){
             xSemaphoreTake(xSemaphore_getRosSpeed,portMAX_DELAY); //could be incremented in the first lock
 
             local_ros_angular_speed_left = global_ros_angular_speed_left;
-            local_ros_angular_speed_right = -global_ros_angular_speed_right;
+            local_ros_angular_speed_right = global_ros_angular_speed_right;
 
             local_servo_angle = global_ros_servo_angle;
 
@@ -155,22 +177,32 @@ void monitor_encoder_pid_calc(void *params){
             count_get_ros = 0;
         }
         
+        //Checking if the speed sent from ROS is 0. If it is, it must nullifie the integral error
+        if (fabsf(local_ros_angular_speed_left) < 1e-3f) {
+            (pid_handle_left.pid_handle)->integral_err = 0.0f;
+        }
+        if (fabsf(local_ros_angular_speed_right) < 1e-3f) {
+            (pid_handle_right.pid_handle)->integral_err = 0.0f;
+        }
+
         pid_handle_left.pid_calculate(
             &pid_handle_left,
-            local_motor_angular_speed_left,
-            local_ros_angular_speed_left,
+            ang_speed_left_wheel/*local_motor_angular_speed_left*/,
+            7.5,//local_ros_angular_speed_left,
             &pid_result_duty_left);
 
         pid_handle_right.pid_calculate(
             &pid_handle_right,
-            local_motor_angular_speed_right,
-            local_ros_angular_speed_right,
+            ang_speed_right_wheel/*local_motor_angular_speed_right*/,
+            7.5,//local_ros_angular_speed_right,
             &pid_result_duty_right);
-
-        //printf("vel_calc: %f rad/s vel ros: %f rad/s duty: %f\n",local_motor_angular_speed_left,local_ros_angular_speed_left,pid_result_duty_left);
+     
+        //printf("duty_left: %lf, duty_right:%lf\n", pid_result_duty_left, pid_result_duty_right);
         pwm_actuate(ESQ,pid_result_duty_left);
         pwm_actuate(DIR,pid_result_duty_right);
-        iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, local_servo_angle);
+        //pwm_actuate(ESQ,8191.0*(7.5/34));
+        //pwm_actuate(DIR,8191.0*(22.0/37));
+        iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, 0);
         //printf("pwm_left: %f, pwm_right: %f / local_left: %f, local_right: %f\n", pid_result_duty_left, pid_result_duty_right, local_motor_angular_speed_left, local_motor_angular_speed_right);
 
         /*
@@ -188,7 +220,6 @@ void monitor_encoder_pid_calc(void *params){
 
 static void IRAM_ATTR monitor_encoder_pid_calc_start(void *args)
 {   
-
     //reseting encoder stored ticks
     encoder_left->reset_counter_value(encoder_left);
     encoder_right->reset_counter_value(encoder_right);

@@ -47,7 +47,7 @@ void i2c_read(uint8_t *rx_data, float *angular_speed_left, float *angular_speed_
             }
             printf("\n");*/
 
-            printf("Dados recebidos: %f, %f, %f\n", global_ros_angular_speed_left, global_ros_angular_speed_right, global_ros_servo_angle);
+            //printf("Dados recebidos: %f, %f, %f\n", global_ros_angular_speed_left, global_ros_angular_speed_right, global_ros_servo_angle);
             
             memcpy(angular_speed_left, rx_data,4);
             memcpy(angular_speed_right, rx_data+4,4);
