@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/robot_control/msg/I2cData.js"
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/robot_control/msg/VelocityData.js"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/robot_control/msg/I2cData.js"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/robot_control/msg/VelocityData.js"
   "CMakeFiles/robot_control_generate_messages_nodejs"
 )
 

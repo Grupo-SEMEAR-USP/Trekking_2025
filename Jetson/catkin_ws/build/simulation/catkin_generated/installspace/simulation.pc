@@ -1,4 +1,4 @@
-prefix=/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install
+prefix=/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install
 
 Name: simulation
 Description: Description of simulation

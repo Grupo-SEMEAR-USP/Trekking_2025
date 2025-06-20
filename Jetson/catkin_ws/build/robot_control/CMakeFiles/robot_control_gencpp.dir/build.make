@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build
+CMAKE_BINARY_DIR = /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build
 
 # Utility rule file for robot_control_gencpp.
 
@@ -63,10 +63,10 @@ robot_control/CMakeFiles/robot_control_gencpp.dir/build: robot_control_gencpp
 .PHONY : robot_control/CMakeFiles/robot_control_gencpp.dir/build
 
 robot_control/CMakeFiles/robot_control_gencpp.dir/clean:
-	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -P CMakeFiles/robot_control_gencpp.dir/cmake_clean.cmake
+	cd /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/robot_control && $(CMAKE_COMMAND) -P CMakeFiles/robot_control_gencpp.dir/cmake_clean.cmake
 .PHONY : robot_control/CMakeFiles/robot_control_gencpp.dir/clean
 
 robot_control/CMakeFiles/robot_control_gencpp.dir/depend:
-	cd /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/robot_control /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control /home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/robot_control_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src/robot_control /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/robot_control /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/robot_control/CMakeFiles/robot_control_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robot_control/CMakeFiles/robot_control_gencpp.dir/depend
 

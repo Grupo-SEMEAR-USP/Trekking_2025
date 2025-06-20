@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface"
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface.pdb"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/lib/robot_control/hw_interface.pdb"
   "CMakeFiles/hw_interface.dir/src/hw_interface.cpp.o"
 )
 

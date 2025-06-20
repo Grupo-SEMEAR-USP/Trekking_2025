@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/navigation/manifest.l"
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/navigation/msg/encoders.l"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/navigation/manifest.l"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/share/roseus/ros/navigation/msg/encoders.l"
   "CMakeFiles/navigation_generate_messages_eus"
 )
 

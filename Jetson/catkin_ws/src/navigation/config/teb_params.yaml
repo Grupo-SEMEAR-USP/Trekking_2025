@@ -8,7 +8,7 @@ TebLocalPlannerROS:
  teb_autosize: True
  dt_ref: 0.3
  dt_hysteresis: 0.1
- global_plan_overwrite_orientation: True
+ global_plan_overwrite_orientation: False #antes era true
  max_global_plan_lookahead_dist: 3.0
  feasibility_check_no_poses: 5
     
@@ -30,9 +30,12 @@ TebLocalPlannerROS:
 
  # GoalTolerance
     
- xy_goal_tolerance: 0.0001
- yaw_goal_tolerance: 0.5
- free_goal_vel: False
+ xy_goal_tolerance: 0.5
+ yaw_goal_tolerance: 3.14 # antes era 0,5
+ free_goal_vel: True # antes era false
+ stop_vel_threshold: 0.05  # ajuda a considerar "cheguei", isso foi adicionado depois
+ penalty_epsilon: 0.2  # torna a penalização mais suave, isso também foi adicionado depois
+ global_plan_overwrite_orientation: false # também adicionado depois, Evita mudança brusca de orientação no final
     
  # Obstacles
     
@@ -57,8 +60,8 @@ TebLocalPlannerROS:
  weight_acc_lim_theta: 1
  weight_kinematics_nh: 1000
  weight_kinematics_forward_drive: 1
- weight_kinematics_turning_radius: 1
- weight_optimaltime: 1
+ weight_kinematics_turning_radius: 0 #antes era 1
+ weight_optimaltime: 10 #antes era 1
  weight_obstacle: 50
  weight_dynamic_obstacle: 10 # not in use yet
  alternative_time_cost: False # not in use yet

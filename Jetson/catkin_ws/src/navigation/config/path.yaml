@@ -1,0 +1,15 @@
+goals:
+  - x: 1.4
+    y: 0.0
+    theta: 0.0
+    rampa: false
+
+  - x: 2.0
+    y: 1.5
+    theta: 0.0
+    rampa: true
+
+  - x: 2.0
+    y: 1.0
+    theta: 1.57  # 90 degrees
+    rampa: false

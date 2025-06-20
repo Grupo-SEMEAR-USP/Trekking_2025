@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py"
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/__init__.py"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/lib/python3/dist-packages/navigation/msg/_encoders.py"
   "CMakeFiles/navigation_generate_messages_py"
 )
 

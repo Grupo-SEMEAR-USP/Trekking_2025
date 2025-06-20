@@ -27,7 +27,9 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
     delta = false;
 }
 
+
 void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg) {
+    
     const float v = msg->linear.x;
     const float omega = msg->angular.z;
 
@@ -80,16 +82,16 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
     command_timeout_.start();
 }
 
-
 void RobotHWInterface::publishWheelSpeeds() {
+    
     robot_control::VelocityData msg;
-
     msg.angular_speed_left = left_wheel_angular_speed;
     msg.angular_speed_right = right_wheel_angular_speed;
     msg.servo_angle = servo_angle;
 
     velocity_command_pub.publish(msg);
 }
+
 
 
 /*void RobotHWInterface::encoderCallback(const robot_control::I2cData::ConstPtr& msg) {

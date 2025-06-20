@@ -1,8 +1,8 @@
-# Install script for directory: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation
+# Install script for directory: /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src/simulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,28 +38,28 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulation.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulation.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation/cmake" TYPE FILE FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulationConfig.cmake"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulationConfig-version.cmake"
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulationConfig.cmake"
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/simulationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE FILE FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE FILE FILES "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src/simulation/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/simulation" TYPE PROGRAM FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/ackermann_controller")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/simulation" TYPE PROGRAM FILES "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/simulation/catkin_generated/installspace/ackermann_controller")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE DIRECTORY FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation/config"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/src/simulation/launch"
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src/simulation/config"
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src/simulation/launch"
     )
 endif()
 

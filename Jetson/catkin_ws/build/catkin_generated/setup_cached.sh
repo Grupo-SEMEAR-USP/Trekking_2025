@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build'
+export PWD='/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build'

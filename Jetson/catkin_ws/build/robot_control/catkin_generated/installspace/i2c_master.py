@@ -55,7 +55,7 @@ class I2CCommunication:
             self.data_msg.x = i2c_data_global[0]
             self.data_msg.y = i2c_data_global[1]
             self.data_msg.z = i2c_data_global[2]
-            self.data_msg.timestamp = rospy.Time.from_sec(i2c_data_global[3] / 1000.0)
+            self.data_msg.timestamp = i2c_data_global[3]
 
             self.pub_encoder.publish(self.data_msg)
 

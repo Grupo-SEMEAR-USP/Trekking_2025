@@ -1,8 +1,8 @@
-# Install script for directory: /home/rmajetson/Trekking_2025/Jetson/catkin_ws/src
+# Install script for directory: /home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,113 +49,98 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/_setup_util.py")
+   "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install" TYPE PROGRAM FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install" TYPE PROGRAM FILES "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/env.sh")
+   "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install" TYPE PROGRAM FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install" TYPE PROGRAM FILES "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/setup.bash;/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/local_setup.bash")
+   "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/setup.bash;/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.bash"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.bash"
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/setup.sh;/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/local_setup.sh")
+   "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/setup.sh;/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.sh"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.sh"
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/setup.zsh;/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/local_setup.zsh")
+   "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/setup.zsh;/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.zsh"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.zsh"
+    "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/setup.fish;/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/local_setup.fish")
+   "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/setup.fish"
-    "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/local_setup.fish"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install/.rosinstall")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/install" TYPE FILE FILES "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/i2c_device_ros/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/simulation/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_ros/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/mpu6050_driver/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/robot_control/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/rplidar_ros/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_bot_hardware_gazebo/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/stepback_and_steerturn_recovery/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/navigation/cmake_install.cmake")
-  include("/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_controller/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/i2c_device_ros/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/simulation/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_ros/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/mpu6050_driver/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/robot_control/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/rplidar_ros/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_bot_hardware_gazebo/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/stepback_and_steerturn_recovery/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/navigation/cmake_install.cmake")
+  include("/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/steer_drive_ros/steer_drive_controller/cmake_install.cmake")
 
 endif()
 
@@ -167,5 +152,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

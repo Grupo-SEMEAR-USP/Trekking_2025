@@ -187,21 +187,12 @@ struct Printer< ::navigation::encoders_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::navigation::encoders_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
-    s << indent << "encoderTicks: ";
-    if (v.encoderTicks.empty() || true)
-      s << "[";
+    s << indent << "encoderTicks[]" << std::endl;
     for (size_t i = 0; i < v.encoderTicks.size(); ++i)
     {
-      if (true && i > 0)
-        s << ", ";
-      else if (!true)
-        s << std::endl << indent << "  -";
-      Printer<int8_t>::stream(s, true ? std::string() : indent + "    ", v.encoderTicks[i]);
+      s << indent << "  encoderTicks[" << i << "]: ";
+      Printer<int8_t>::stream(s, indent + "  ", v.encoderTicks[i]);
     }
-    if (v.encoderTicks.empty() || true)
-      s << "]";
   }
 };
 

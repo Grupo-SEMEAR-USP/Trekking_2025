@@ -1,6 +1,6 @@
 image: map_simul.pgm
-resolution: 0.100000
-origin: [-15.000000, -15.000000, 0.000000]
+resolution: 0.01326881720430107526881720430108
+origin: [-1.300000, -1.30000, 0.000000] #calcula-se pelos dados obtidos das coordenadas com relação com a resolução
 negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196

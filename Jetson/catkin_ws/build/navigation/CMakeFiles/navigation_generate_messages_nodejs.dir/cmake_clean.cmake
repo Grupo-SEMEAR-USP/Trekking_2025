@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/rmajetson/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/navigation/msg/encoders.js"
+  "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/devel/share/gennodejs/ros/navigation/msg/encoders.js"
   "CMakeFiles/navigation_generate_messages_nodejs"
 )
 
