@@ -39,6 +39,9 @@ double ang_speed_left_wheel = 0, ang_speed_right_wheel = 0;
 //variables for servo
 float local_servo_angle;
 
+float angle = 0, real_angle = 0;
+int64_t t0 = 0, tf = 0, d_t = 0;
+
 //timer function to read encoder and calculate pid
 void monitor_encoder_pid_calc(void *params);
 
@@ -188,13 +191,13 @@ void monitor_encoder_pid_calc(void *params){
         pid_handle_left.pid_calculate(
             &pid_handle_left,
             ang_speed_left_wheel/*local_motor_angular_speed_left*/,
-            7.5,//local_ros_angular_speed_left,
+            local_ros_angular_speed_left,
             &pid_result_duty_left);
 
         pid_handle_right.pid_calculate(
             &pid_handle_right,
             ang_speed_right_wheel/*local_motor_angular_speed_right*/,
-            7.5,//local_ros_angular_speed_right,
+            local_ros_angular_speed_right,
             &pid_result_duty_right);
      
         //printf("duty_left: %lf, duty_right:%lf\n", pid_result_duty_left, pid_result_duty_right);
@@ -202,7 +205,8 @@ void monitor_encoder_pid_calc(void *params){
         pwm_actuate(DIR,pid_result_duty_right);
         //pwm_actuate(ESQ,8191.0*(7.5/34));
         //pwm_actuate(DIR,8191.0*(22.0/37));
-        iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, 0);
+        iot_servo_write_angle(LEDC_LOW_SPEED_MODE, SERVO_PWM_CHANNEL, local_servo_angle);
+        
         //printf("pwm_left: %f, pwm_right: %f / local_left: %f, local_right: %f\n", pid_result_duty_left, pid_result_duty_right, local_motor_angular_speed_left, local_motor_angular_speed_right);
 
         /*
