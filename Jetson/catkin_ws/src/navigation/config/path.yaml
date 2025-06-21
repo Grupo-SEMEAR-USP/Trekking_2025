@@ -1,29 +1,30 @@
 goals:
 
     #Primeiro Goal
-  - x: 1.4
-    y: 0.0
-    theta: 0.0
+  - x: 11.2098970413208
+    y: 6.903143405914307
+    theta: 0.8862343364885913
     rampa: false
     #Segundo Goal
-  - x: 2.0
-    y: 1.5
-    theta: 0.0
-    rampa: true
-    #Rampa
-  - x: 2.0
-    y: 1.0
-    theta: 1.57  # 90 degrees
+  - x: 8.870208740234375
+    y: 3.7719693183898926
+    theta: 0.2986780086356461
+    rampa: false
+    #Rampa 1
+  - x: 10.683098793029785
+    y: 0.3402290344238281
+    theta: 0.4662448227070299
+  # 90 degrees
     rampa: false
     #Terceiro Goal
-  - x: 2.0
-    y: 1.0
-    theta: 1.57  # 90 degrees
+  - x: -11.9868803024292
+    y: -0.7665548324584961
+    theta: 0.8801277268073782  # 90 degrees
     rampa: false
     #Objetivo 1
-  - x: 2.0
-    y: 1.0
-    theta: 1.57  # 90 degrees
+  - x: 10.447052001953125
+    y: 3.908215045928955
+    theta: 0.3952696764407095 # 90 degrees
     rampa: false
     #Quarto Goal
   - x: 2.0
@@ -35,6 +36,11 @@ goals:
     y: 1.0
     theta: 1.57  # 90 degrees
     rampa: false
+    #Rampa 2
+  - x: 2.0
+    y: 1.0
+    theta: 1.57  # 90 degrees
+    rampa: true
     #Objetivo 2
   - x: 2.0
     y: 1.0
@@ -45,11 +51,11 @@ goals:
     y: 1.0
     theta: 1.57  # 90 degrees
     rampa: false
-    #Sexto Goal
+    #Rampa 2
   - x: 2.0
     y: 1.0
     theta: 1.57  # 90 degrees
-    rampa: false
+    rampa: true
     #Sétimo Goal
   - x: 2.0
     y: 1.0

@@ -65,7 +65,7 @@ def main():
     # Lista de goals: cada um é um dicionário com pose + tipo
     # path_to_yaml = rospy.get_param('~goal_file', 'goals.yaml')
     # TODO: generalizar o caminho para o YAML depois
-    path_to_yaml = "/home/fernando/Documentos/Trekking_2025/Jetson/catkin_ws/src/navigation/config/path.yaml"
+    path_to_yaml = "/home/matheus-mt/Documents/semear/Trekking_2025/Jetson/catkin_ws/src/navigation/config/path.yaml"
     goals = load_goals_from_yaml(path_to_yaml)
 
     publish_via_points(via_points_pub, goals)

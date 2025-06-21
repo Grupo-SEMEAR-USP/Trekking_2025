@@ -2,7 +2,8 @@
 #include <cmath>
 
 RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeout_(nh.createTimer(ros::Duration(0.1), &RobotHWInterface::commandTimeoutCallback, this, true, false)) {
-    cmd_vel_sub = nh.subscribe("cmd_vel", 10, &RobotHWInterface::cmdVelCallback, this);
+    //cmd_vel_sub = nh.subscribe("cmd_vel", 10, &RobotHWInterface::cmdVelCallback, this);
+    ack_drive_sub = nh.subscribe("/ackermann_cmd", 10, &RobotHWInterface::AckermannDriveCallback, this);
 
     velocity_command_pub = nh.advertise<robot_control::VelocityData>("velocity_command", 10);
 
@@ -12,7 +13,7 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
     // Initialize parameters
     nh.param("wheel_control/wheel_separation_width", wheel_separation_width, 0.2f); 
     nh.param("wheel_control/wheel_separation_length", wheel_separation_length, 0.2f); 
-    nh.param("ewheel_control/wheel_radius", wheel_radius, 0.2f);
+    nh.param("wheel_control/wheel_radius", wheel_radius, 0.2f);
 
     // Validate parameters
     if (wheel_separation_width <= 0 || wheel_separation_length <= 0) {
@@ -27,7 +28,7 @@ RobotHWInterface::RobotHWInterface(ros::NodeHandle& nh) : nh(nh), command_timeou
     delta = false;
 }
 
-
+/*
 void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg) {
     
     const float v = msg->linear.x;
@@ -80,6 +81,58 @@ void RobotHWInterface::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
     command_timeout_.stop();
     command_timeout_.setPeriod(ros::Duration(0.05), true);
     command_timeout_.start();
+}*/
+
+void RobotHWInterface::AckermannDriveCallback(const ackermann_msgs::AckermannDrive::ConstPtr& msg) {
+    
+    double phi = msg->steering_angle;
+    double v = msg->speed;
+
+    double theta_2;
+
+    double R;
+
+    if (std::abs(phi) < 1e-5) {
+        // Movimento reto
+        phi = 0.0;
+
+        double w = v / wheel_radius;
+        left_wheel_angular_speed = w;
+        right_wheel_angular_speed = w;
+    }
+    else {
+        // Movimento curvo
+        R = wheel_separation_length / std::tan(phi);  // Pode ser negativo se for movimento de ré
+
+        double w = v / R;
+
+        // Calcular velocidades lineares de cada roda traseira
+        double v_left = v - (w * wheel_separation_width / 2.0);
+        double v_right = v + (w * wheel_separation_width / 2.0);
+
+        // Converter para velocidades angulares das rodas
+        left_wheel_angular_speed = v_left / wheel_radius;
+        right_wheel_angular_speed = v_right / wheel_radius;
+    }
+    
+    double phi_L = std::atan((2*wheel_separation_length*std::sin(phi))/(2*wheel_separation_length*std::cos(phi)-wheel_separation_width*std::sin(phi)));
+
+    phi_L += 1.944617877; // Somando diferença com a barra comum
+    
+    long double phi_L4 = phi_L*phi_L*phi_L*phi_L;
+    long double phi_L3 = phi_L*phi_L*phi_L;
+    long double phi_L2 = phi_L*phi_L;
+
+    theta_2 = 1.67913859 * phi_L4 - 12.93393178 * phi_L3 + 35.44166937 * phi_L2 -38.12573195 * phi_L + 12.76117928;
+
+    servo_angle = 180 - theta_2 * 180/M_PI;     // Converte para angulo do servo e passa para graus
+
+    //ROS_INFO("Angulo do servo: %f", servo_angle);
+
+    // Reset the command timeout with auto-restart
+    command_timeout_.stop();
+    command_timeout_.setPeriod(ros::Duration(0.05), true);
+    command_timeout_.start();
 }
 
 void RobotHWInterface::publishWheelSpeeds() {
@@ -93,8 +146,7 @@ void RobotHWInterface::publishWheelSpeeds() {
 }
 
 
-
-/*void RobotHWInterface::encoderCallback(const robot_control::I2cData::ConstPtr& msg) {
+void RobotHWInterface::encoderCallback(const robot_control::I2cData::ConstPtr& msg) {
 
     ROS_INFO("Callback do encoder ativado!");
     x = msg->x / 1000;
@@ -120,7 +172,7 @@ void RobotHWInterface::publishWheelSpeeds() {
     }
 
     ROS_INFO("x: %f, y: %f, vel_linear_x: %f, vel_linear_y %f", x, y, vel_linear_x, vel_linear_y);
-}*/
+}
 
 void RobotHWInterface::commandTimeoutCallback(const ros::TimerEvent&) {
     updateWheelSpeedForDeceleration();

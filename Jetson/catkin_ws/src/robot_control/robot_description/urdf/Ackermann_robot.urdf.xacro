@@ -10,6 +10,7 @@
     <xacro:include filename="torno_arckermann_joints.xacro"/>
     <xacro:include filename="imu.xacro"/>
     <xacro:include filename="transmissions.xacro"/>
+    <xacro:include filename="lidar.xacro"/>
     
     <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">

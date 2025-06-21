@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+    <!-- Parâmetros configuráveis do LiDAR -->
+    <xacro:property name="lidar_radius" value="0.038"/>   <!-- 5 cm de raio -->
+    <xacro:property name="lidar_height" value="0.041"/>   <!-- 2 cm de altura -->
+    
+    <!-- Link do LiDAR -->
+    <link name="lidar_link">
+        <visual>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
+            </geometry>
+            <material name="Grey">
+                <color rgba="0.6 0.6 0.6 1.0"/>
+            </material>
+        </visual>
 
+        <collision>
+            <geometry>
+                <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Local para você criar a junta entre o LiDAR e o link pai -->
+
+    <joint name="lidar_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar_link"/>
+        <origin xyz="0 0.02945 0" rpy="0 0 0"/>  <!-- Ajuste a posição e orientação do LiDAR -->
+    </joint>
 
 </robot>

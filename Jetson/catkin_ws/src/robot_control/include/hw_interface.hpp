@@ -17,6 +17,8 @@
 #include <cmath>
 #include <geometry_msgs/TransformStamped.h>
 
+#include <ackermann_msgs/AckermannDrive.h>
+
 
 //hw params
 #define HW_IF_UPDATE_FREQ 50 //100     // diferente do da work
@@ -27,7 +29,8 @@
 class RobotHWInterface {
 public:
     RobotHWInterface(ros::NodeHandle& nh); // Ajustado para receber NodeHandle por referência
-    void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg);
+    //void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& msg);
+    void AckermannDriveCallback(const ackermann_msgs::AckermannDrive::ConstPtr& msg);
     void publishWheelSpeeds(); // Publicando velocidades do cmd_vel
     void encoderCallback(const robot_control::I2cData::ConstPtr& msg); // Callback para os dados do encoder
     void commandTimeoutCallback(const ros::TimerEvent&); // Callback para o timeout
@@ -41,7 +44,8 @@ private:
 
     // Hw Interface 
     ros::Publisher velocity_command_pub;
-    ros::Subscriber cmd_vel_sub;
+    //ros::Subscriber cmd_vel_sub;
+    ros::Subscriber ack_drive_sub;
 
     // Odometria
     ros::Subscriber encoder_sub;

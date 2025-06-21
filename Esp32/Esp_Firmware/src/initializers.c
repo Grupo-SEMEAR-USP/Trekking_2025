@@ -79,7 +79,7 @@ pid_ctrl_config_t pid_ctrl_config_info(float *k_values,float max_duty_value, flo
     pid_ctrl_parameter_t config_parameter = {
         .kp = k_values[0],
         .ki = k_values[1],
-        .kd = k_values[2],
+        .kd = k_values[3],
         .max_output = max_duty_value,
         .min_output = -max_duty_value,
         .max_integral = max_integral,

@@ -1,0 +1,47 @@
+<launch>
+    <!-- Running map_server -->
+    <arg name="map_file" default="$(find navigation)/maps/map_simul.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+    <!-- Running AMCL -->
+    <node name="amcl" pkg="amcl" type="amcl" output="screen">
+        <param name="odom_frame_id" value="odom"/>
+        <param name="base_frame_id" value="base_link"/>
+        <param name="global_frame_id" value="map"/>
+        <param name="update_min_d" value="0.2"/>
+        <param name="update_min_a" value="0.2"/>
+        <param name="min_particles" value="500"/>
+        <param name="max_particles" value="2000"/>
+        <param name="laser_max_range" value="12.0"/>
+        <param name="resample_interval" value="1"/>
+        <param name="use_map_topic" value="true"/>
+        <remap from="scan" to="/steer_bot/scan"/>
+    </node>
+    
+    <!-- Running the HW Interface launch from package robot_control -->
+    <include file="$(find robot_control)/launch/hw_interface.launch"/>
+    
+    <!--<node name="tfs" pkg="navigation" type="tf_publisher.py"/>-->
+
+    <!-- Sensor Fusion - EKF 
+    <rosparam file="$(find navigation)/config/ekf.yaml" command="load" />
+
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_filter_node" output="screen">
+        <param name="use_sim_time" value="true"/>
+    </node>-->
+
+    <!-- Running move_base with its parameters -->
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <remap from="/cmd_vel" to="/steer_bot/ackermann_steering_controller/cmd_vel"/>
+
+        <rosparam file="$(find navigation)/costmaps/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+        <rosparam file="$(find navigation)/costmaps/costmap_common_params.yaml" command="load" ns="local_costmap" />
+
+        <rosparam file="$(find navigation)/costmaps/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find navigation)/costmaps/global_costmap_params.yaml" command="load" /> 
+        
+        <rosparam file="$(find navigation)/config/teb_params.yaml" command="load" />
+        <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+        <param name="controller_frequency" value="50.0" />
+    </node>     
+</launch>
